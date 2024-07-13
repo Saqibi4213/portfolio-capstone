@@ -2,6 +2,7 @@
 
 ## Project Description 📝
 This capstone portfolio project represents the culmination of my skills in front-end web development using HTML, CSS, and JavaScript. It serves as a comprehensive showcase of my professional profile, projects, and technical abilities.and It includes a responsive design with interactive elements to highlight my professional profile, projects, and achievements.
+> And Also with the help of my UI/UX Designer its completed the design 
 
 
 ## Demo 📸
@@ -51,6 +52,12 @@ you can access to my project through git clone
 - Website: [website.com]( )
 - LinkedIn: [Mehria saqibi](https://www.linkedin.com/in/mehria-saqibi-a386a41a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - Email: [email](mosawermh@gmail.com)
+
+### UI/UX Author 👩‍💻 
+- Website: [website.com]( )
+- LinkedIn: []()
+- Email: [email]()
+
 
 ## Contributing 🤝
 
