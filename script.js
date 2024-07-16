@@ -1,25 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const navLinks = document.getElementById('nav-links');
+  const headLine = document.getElementById('head-line');
+  const intro = document.getElementById('intro');
 
-  menuIcon.addEventListener('click', () => {
+  const toggleMenu = () => {
     if (navLinks.style.display === 'flex') {
       navLinks.style.display = 'none';
-      menuIcon.innerHTML = '&#9776;';
-    } else {
-      navLinks.style.display = 'flex';
-      menuIcon.innerHTML = '&times;';
+      menuIcon.innerHTML = '&#9776';
     }
-  });
-
-  const navLinksItems = navLinks.querySelectorAll('a');
-  navLinksItems.forEach((item) => {
+  };
+  menuIcon.addEventListener('click', toggleMenu);
+  navLinks.querySelectorAll('a').forEach((item) =>{
     item.addEventListener('click', () => {
       navLinks.style.display = 'none';
-      menuIcon.innerHTML = '&#9776;';
+      menuIcon.innerHTML = '&#9776';
     });
   });
-
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
       navLinks.style.display = 'flex';
