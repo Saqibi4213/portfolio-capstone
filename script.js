@@ -207,8 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () =>  {
-  const contactForm = document.getElementById('contact-form'); 
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contact-form');
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const messageInput = document.getElementById('message');
@@ -239,7 +239,9 @@ document.addEventListener('DOMContentLoaded', () =>  {
       const formUrl = 'https://formspree.io/your_form_id_here';
       const requestOptions = {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify(formData)
       };
       
