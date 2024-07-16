@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const skillsExperiencesContainer = document.getElementById('skills-experiences');
-  skillsExperiencesContainer.innerHTML = skillsExperiences.map(item= () => `
+  skillsExperiencesContainer.innerHTML = skillsExperiences.map(item = () => `
       <div class="skill-experience">
       <h3>${item.skill}</h3>
       <p>${item.experience}</p>
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
-      title: "Survey Form",
+      title: 'Survey Form',
       description: 'This is simple survey form project my first work as junior developer using html css',
       image: 'path/to/survey-form.png',
       screenshots: ['path/to/project1-screenshot1.jpg', 'path/to/project1-screenshot2.jpg'],
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/tribute-page',
       sourceLink: 'https://github.com/Saqibi4213/tribute-page.git',
-      },
+    },
     {
       title: 'Product Landing page',
       description: 'This is product landing page using html css and the project is about Skin Care',
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/skin-care/',
       sourceLink: 'https://github.com/Saqibi4213/skin-care.git',
-      },
+    },
     {
       title: 'Coffee shop',
       description: 'This is Coffee shop website using html and css',
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/product-landing-page/',
       sourceLink: 'https://github.com/Saqibi4213/product-landing-page.git',
-      },
+    },
     {
       title: 'Portfolio',
       description: 'This is my portfolio using html and css',
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/my-portfolio/',
       sourceLink: 'https://github.com/Saqibi4213/my-portfolio',
-      },
+    },
     {
       title: 'Roman Numeral Converter',
       description: 'Using this project user can convert number to roman',
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Roman-numeral-converter/',
       sourceLink: 'https://github.com/Saqibi4213/Roman-numeral-converter',
-      },
+    },
     {
       title: 'palindrome-checker',
       description: 'palindrome-checker is for the help of user to search word palindrome',
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/palindrome-checker/',
       sourceLink: 'https://github.com/Saqibi4213/palindrome-checker',
-      },
+    },
     {
       title: 'Telephone-Number-Validator',
       description: 'The Telephone Number Validator is  designed to validate telephone numbers using HTML, CSS, and JavaScript. This   application ensures users enter valid telephone numbers in the correct format.',
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Telephone-Number-Validator/',
       sourceLink: 'https://github.com/Saqibi4213/Telephone-Number-Validator',
-      },
+    },
     {
       title: 'Cash-register',
       description: 'This project is a simple Cash Register application built with HTML, CSS, and JavaScript. ',
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Cash-register/',
       sourceLink: 'https://github.com/Saqibi4213/Cash-register',
-      },
+    },
     {
       title: 'Pokemon-search-App',
       description: 'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
@@ -168,13 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
       sourceLink: 'https://github.com/Saqibi4213/Pokemon-search-App',
-      },
-    ];
+    },
+  ];
 
   const worksSection = document.getElementById('works');
   const projectPopup = document.getElementById('project-popup');
   const closeBtn = document.getElementById('close-btn');
-  
   projects.forEach((project, index) => {
     const projectCard = document.createElement('div');
     projectCard.classList.add('project');
@@ -196,8 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('live-link').href = project.liveLink;
     document.getElementById('source-link').href = project.sourceLink;
     projectPopup.style.display = 'block';
-  }
-  
+  };
   closeBtn.addEventListener('click', () => {
     projectPopup.style.display = 'none';
   });
