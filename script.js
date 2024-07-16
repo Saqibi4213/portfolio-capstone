@@ -174,6 +174,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const worksSection = document.getElementById('works');
   const projectPopup = document.getElementById('project-popup');
   const closeBtn = document.getElementById('close-btn');
+  const openProjectPopup = (index) => {
+    const project = projects[index];
+    document.getElementById('popup-title').textContent = project.title;
+    document.getElementById('popup-description').textContent = project.description;
+    document.getElementById('popup-image').src = project.image;
+    document.getElementById('live-link').href = project.liveLink;
+    document.getElementById('source-link').href = project.sourceLink;
+    projectPopup.style.display = 'block';
+  };
   projects.forEach((project, index) => {
     const projectCard = document.createElement('div');
     projectCard.classList.add('project');
@@ -195,16 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
       projectPopup.style.display = 'none';
     }
   });
-
-  const openProjectPopup = (index) => {
-    const project = projects[index];
-    document.getElementById('popup-title').textContent = project.title;
-    document.getElementById('popup-description').textContent = project.description;
-    document.getElementById('popup-image').src = project.image;
-    document.getElementById('live-link').href = project.liveLink;
-    document.getElementById('source-link').href = project.sourceLink;
-    projectPopup.style.display = 'block';
-  };
 });
 
 document.addEventListener('DOMContentLoaded', () => {
