@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const navLinksItems = navLinks.querySelectorAll('a');
-  navLinksItems.forEach(item = () => {
+  navLinksItems.forEach((item) => {
     item.addEventListener('click', () => {
       navLinks.style.display = 'none';
       menuIcon.innerHTML = '&#9776;';
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const skillsExperiencesContainer = document.getElementById('skills-experiences');
-  skillsExperiencesContainer.innerHTML = skillsExperiences.map(item = () => `
+  skillsExperiencesContainer.innerHTML = skillsExperiences.map((item) => `
       <div class="skill-experience">
       <h3>${item.skill}</h3>
       <p>${item.experience}</p>
@@ -228,7 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    
     if (validateForm()) {
       const formData = {
         name: nameInput.value.trim(),
