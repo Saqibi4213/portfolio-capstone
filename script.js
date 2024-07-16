@@ -113,6 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       skill: 'GITHUB',
       experience: '6 months',
+      link: 'https://github.com/Saqibi4213'
     },
   ];
 
@@ -125,8 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('');
   const certificationImage = document.getElementById('certification-image');
   const certificationLink = document.getElementById('certification-link');
-  certificationImage.src = 'path/to/your/certification-screenshot.jpg';
-  certificationLink.href = 'https://www.freecodecamp.org/certification-link';
+  certificationImage.src = 'images/responsive.png', 'images/js.png';
+  certificationLink.href = 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design', 'https://www.freecodecamp.org/certification/Mehria-Saqibi/javascript-algorithms-and-data-structures-v8';
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -134,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Survey Form',
       description: 'This is simple survey form project my first work as junior developer using html css',
-      image: 'path/to/survey-form.png',
-      screenshots: ['path/to/project1-screenshot1.jpg', 'path/to/project1-screenshot2.jpg'],
+      image: 'images/survey-form.png',
+      screenshots: ['images/survey-form.png'],
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/survey-form/',
       sourceLink: 'https://github.com/Saqibi4213/survey-form.git',
@@ -143,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Tribute Page',
       description: 'This is simple project using html and css and project is about Ahmad shah baba',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/atribute-page.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/tribute-page',
@@ -152,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Product Landing page',
       description: 'This is product landing page using html css and the project is about Skin Care',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/skin-care.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/skin-care/',
@@ -161,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Coffee shop',
       description: 'This is Coffee shop website using html and css',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/project-landing.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/product-landing-page/',
@@ -170,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Portfolio',
       description: 'This is my portfolio using html and css',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/mehr1.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/my-portfolio/',
@@ -179,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Roman Numeral Converter',
       description: 'Using this project user can convert number to roman',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/roman.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Roman-numeral-converter/',
@@ -188,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'palindrome-checker',
       description: 'palindrome-checker is for the help of user to search word palindrome',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/palindrome.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/palindrome-checker/',
@@ -197,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Telephone-Number-Validator',
       description: 'The Telephone Number Validator is  designed to validate telephone numbers using HTML, CSS, and JavaScript. This   application ensures users enter valid telephone numbers in the correct format.',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/phone-validator.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Telephone-Number-Validator/',
@@ -206,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Cash-register',
       description: 'This project is a simple Cash Register application built with HTML, CSS, and JavaScript. ',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/cash reg.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Cash-register/',
@@ -215,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Pokemon-search-App',
       description: 'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
-      image: 'path/to/project2-image.jpg',
+      image: 'images/pokemn.png',
       screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
