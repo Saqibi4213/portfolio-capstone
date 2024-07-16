@@ -215,6 +215,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const errorMessage = document.getElementById('error-message');
   const successMessage = document.getElementById('success-message');
 
+  
+  const validateForm = () => {
+    if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+      errorMessage.textContent = 'Please fill out all fields.';
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value.trim())) {
+      errorMessage.textContent = 'Please enter a valid email address.';
+      return false;
+    }
+
+    if (emailInput.value !== emailInput.value.toLowerCase()) {
+      errorMessage.textContent = 'Email must be in lowercase.';
+      return false;
+    }
+    errorMessage.textContent = '';
+    return true;
+  };
+  
   const formData = JSON.parse(localStorage.getItem('formData')) || {};
   nameInput.value = formData.name || '';
   emailInput.value = formData.email || '';
@@ -256,29 +276,10 @@ document.addEventListener('DOMContentLoaded', () => {
             successMessage.style.display = 'none';
           }, 5000);
         })
-        .catch((error) => {
+        .catch(() => {
           // eslint-disable-next-line no-alert
           alert('There was an issue sending your message. Please try again later.');
         });
     }
   });
-
-  const validateForm = () => {
-    if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
-      errorMessage.textContent = 'Please fill out all fields.';
-      return false;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailInput.value.trim())) {
-      errorMessage.textContent = 'Please enter a valid email address.';
-      return false;
-    }
-
-    if (emailInput.value !== emailInput.value.toLowerCase()) {
-      errorMessage.textContent = 'Email must be in lowercase.';
-      return false;
-    }
-    errorMessage.textContent = '';
-    return true;
-  };
 });
