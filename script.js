@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const myName = 'Mehria Saqibi';
-  const myIntro = `Hello I am <span>${myName}</span>, a passionate web development student from <span class="highlight">Afghanistan</span>. I love learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always eager to take on new challenges.;`
+  const myIntro = `Hello I am <span>${myName}</span>, a passionate web development student from <span class="highlight">Afghanistan</span>. I love learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always eager to take on new challenges.`;
   const headline = document.getElementById('headline');
   const intro = document.getElementById('intro');
   headline.innerHTML = myName;
