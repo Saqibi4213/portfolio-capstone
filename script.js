@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const navLinks = document.getElementById('nav-links');
+  const headline = document.getElementById('headline');
+  const intro = document.getElementById('intro');
 
   menuIcon.addEventListener('click', () => {
     if (navLinks.style.display === 'flex') {
@@ -38,6 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.style.display = 'none';
     menuIcon.style.display = 'block';
   }
+});
+
+const myName = 'Mehria Saqibi';
+const myIntro = `Hello I am <span>${Mehria}</span>, a passionate  web development student from <span class="highlight">${Afghanistan}</span>. I love learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvment and always eager to take on new challenges.`;
+
+headline.innerHTML = myName;
+intro.innerHTML = myIntro;
+
+document.querySelectorAll('.highlight').forEach((element) => {
+  element.style.fontWeight = 'bold';
+  element.style.color = 'darkyellow';
 });
 
 document.addEventListener('DOMContentLoaded', () => {
