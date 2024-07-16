@@ -187,6 +187,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const seeMoreBtn = projectCard.querySelector('.see-more-btn');
     seeMoreBtn.addEventListener('click', () => openProjectPopup(index));
   });
+  closeBtn.addEventListener('click', () => {
+    projectPopup.style.display = 'none';
+  });
+  window.addEventListener('click', (event) => {
+    if (event.target === projectPopup) {
+      projectPopup.style.display = 'none';
+    }
+  });
+
   const openProjectPopup = (index) => {
     const project = projects[index];
     document.getElementById('popup-title').textContent = project.title;
@@ -196,15 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('source-link').href = project.sourceLink;
     projectPopup.style.display = 'block';
   };
-  closeBtn.addEventListener('click', () => {
-    projectPopup.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === projectPopup) {
-      projectPopup.style.display = 'none';
-    }
-  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (emailInput.value !== emailInput.value.toLowerCase()) {
       errorMessage.textContent = 'Email must be in lowercase.';
       return false;
-    } 
+    }
     errorMessage.textContent = '';
     return true;
   };
