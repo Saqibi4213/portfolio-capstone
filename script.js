@@ -239,53 +239,53 @@ document.addEventListener('DOMContentLoaded', () => {
       const requestOptions = {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       };
       
       fetch(formUrl, requestOptions)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        
-        successMessage.textContent = 'Message sent successfully!';
-        successMessage.style.display = 'block';
-        successMessage.style.color = 'green';
-        contactForm.reset();
-        localStorage.removeItem('formData');
-        setTimeout(() => {
-          successMessage.style.display = 'none';
-        }, 5000);
-      })
+        .then(response = () => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          
+          successMessage.textContent = 'Message sent successfully!';
+          successMessage.style.display = 'block';
+          successMessage.style.color = 'green';
+          contactForm.reset();
+          localStorage.removeItem('formData');
+          setTimeout(() => {
+            successMessage.style.display = 'none';
+          }, 5000);
+        })
       
-      .catch(error => {
-        console.error('Error:', error);
-         // eslint-disable-next-line no-alert
-        alert('There was an issue sending your message. Please try again later.');
-      });
-        }
-    });
-
-    const validateForm = () => {
-      if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
-        errorMessage.textContent = 'Please fill out all fields.';
-        return false;
-      }
-      
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(emailInput.value.trim())) {
-        errorMessage.textContent = 'Please enter a valid email address.';
-        return false;
-      }
-
-      if (emailInput.value !== emailInput.value.toLowerCase()) {
-        errorMessage.textContent = 'Email must be in lowercase.';
-        return false;
-      };
-      
-      errorMessage.textContent = '';
-      return true;
+        .catch(error = () => {
+          console.error('Error:', error);
+          // eslint-disable-next-line no-alert
+          alert('There was an issue sending your message. Please try again later.');
+        });
     }
+  });
+
+  const validateForm = () => {
+    if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+      errorMessage.textContent = 'Please fill out all fields.';
+      return false;
+    }
+      
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value.trim())) {
+      errorMessage.textContent = 'Please enter a valid email address.';
+      return false;
+    }
+
+    if (emailInput.value !== emailInput.value.toLowerCase()) {
+      errorMessage.textContent = 'Email must be in lowercase.';
+      return false;
+    }
+      
+    errorMessage.textContent = '';
+    return true;
+  };
 });
