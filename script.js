@@ -215,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const errorMessage = document.getElementById('error-message');
   const successMessage = document.getElementById('success-message');
 
-  
   const validateForm = () => {
     if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
       errorMessage.textContent = 'Please fill out all fields.';
@@ -234,7 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
     errorMessage.textContent = '';
     return true;
   };
-  
   const formData = JSON.parse(localStorage.getItem('formData')) || {};
   nameInput.value = formData.name || '';
   emailInput.value = formData.email || '';
