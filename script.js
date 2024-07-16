@@ -1,82 +1,82 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const navLinks = document.getElementById('nav-links');
 
-menuIcon.addEventListener('click', () => {
-  if (navLinks.style.display === 'flex') {
-    navLinks.style.display = 'none';
-    menuIcon.innerHTML = '&#9776;';
-  } else {
-    navLinks.style.display = 'flex';
-    menuIcon.innerHTML = '&times;';
-  }
+  menuIcon.addEventListener('click', () => {
+    if (navLinks.style.display === 'flex') {
+      navLinks.style.display = 'none';
+      menuIcon.innerHTML = '&#9776;';
+    } else {
+      navLinks.style.display = 'flex';
+      menuIcon.innerHTML = '&times;';
+    }
 });
 
-const navLinksItems = navLinks.querySelectorAll('a');
-navLinksItems.forEach(item => {
-  item.addEventListener('click', () => {
-    navLinks.style.display = 'none';
-    menuIcon.innerHTML = '&#9776;';
+  const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(item = () => {
+    item.addEventListener('click', () => {
+      navLinks.style.display = 'none';
+      menuIcon.innerHTML = '&#9776;';
+    });
   });
-});
 
-window.addEventListener('resize', () => {
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navLinks.style.display = 'flex';
+      menuIcon.style.display = 'none';
+    } else {
+    navLinks.style.display = 'none';
+    menuIcon.style.display = 'block';
+    menuIcon.innerHTML = '&#9776;';
+  }
+  });
+
   if (window.innerWidth > 768) {
     navLinks.style.display = 'flex';
     menuIcon.style.display = 'none';
   } else {
     navLinks.style.display = 'none';
     menuIcon.style.display = 'block';
-    menuIcon.innerHTML = '&#9776;';
   }
-});
+  });
 
-if (window.innerWidth > 768) {
-  navLinks.style.display = 'flex';
-  menuIcon.style.display = 'none';
-} else {
-  navLinks.style.display = 'none';
-  menuIcon.style.display = 'block';
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const skillsExperiences = [
-    {
-      skill: "HTML",
-      experience: "junior programmer"
-    },
-    {
-    skill: "CSS",
-    experience: "junior developer"
-    },
-    {
-    skill: "JavaScript",
-    experience: "junior coder"
-    },
-    {
-    skill: "GIT",
-    experience: "6 months"
-    },
-    {
-    skill: "GITHUB",
-    experience: "6 months"
-    },
-  ];
+  document.addEventListener('DOMContentLoaded', () => {
+    const skillsExperiences = [
+      {
+        skill: 'HTML',
+        experience: 'junior programmer'
+      },
+      {
+        skill: 'CSS',
+        experience: 'junior developer'
+      },
+      {
+      skill: 'JavaScript',
+      experience: 'junior coder'
+      },
+      {
+      skill: 'GIT',
+      experience: '6 months'
+      },
+      {
+      skill: 'GITHUB',
+      experience: '6 months'
+      },
+    ];
 
   const skillsExperiencesContainer = document.getElementById('skills-experiences');
-  skillsExperiencesContainer.innerHTML = skillsExperiences.map(item => `
-    <div class="skill-experience">
-    <h3>${item.skill}</h3>
-    <p>${item.experience}</p>
-    </div>
-    `).join("");
+    skillsExperiencesContainer.innerHTML = skillsExperiences.map(item => `
+      <div class="skill-experience">
+      <h3>${item.skill}</h3>
+      <p>${item.experience}</p>
+      </div>
+      `).join("");
     
-    const certificationImage = document.getElementById('certification-image');
+  const certificationImage = document.getElementById('certification-image');
     const certificationLink = document.getElementById('certification-link');
     certificationImage.src = 'path/to/your/certification-screenshot.jpg';
     certificationLink.href = 'https://www.freecodecamp.org/certification-link';
-});
+  });
 
 document.addEventListener('DOMContentLoaded', () => {
   const projects = [
