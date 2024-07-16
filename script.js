@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/survey-form/',
       sourceLink: 'https://github.com/Saqibi4213/survey-form.git',
-      },
+    },
     {
       title: 'Tribute Page',
       description: 'This is simple project using html and css and project is about Ahmad shah baba',
@@ -207,19 +207,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-  document.addEventListener('DOMContentLoaded', () =>  {
-    const contactForm = document.getElementById('contact-form'); 
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
-    const errorMessage = document.getElementById('error-message');
-    const successMessage = document.getElementById('success-message');
+document.addEventListener('DOMContentLoaded', () =>  {
+  const contactForm = document.getElementById('contact-form'); 
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+  const errorMessage = document.getElementById('error-message');
+  const successMessage = document.getElementById('success-message');
 
   const formData = JSON.parse(localStorage.getItem('formData')) || {};
   nameInput.value = formData.name || '';
   emailInput.value = formData.email || '';
   messageInput.value = formData.message || '';
-  
   [nameInput, emailInput, messageInput].forEach(input => {
     input.addEventListener('input', () => {
       formData[input.name] = input.value;
