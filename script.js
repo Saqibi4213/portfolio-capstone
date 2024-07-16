@@ -43,35 +43,34 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const skillsExperiences = [
     {
-    skill: 'HTML',
-    experience: 'junior programmer'
+      skill: 'HTML',
+      experience: 'junior programmer',
     },
     {
-    skill: 'CSS',
-    experience: 'junior developer'
+      skill: 'CSS',
+      experience: 'junior developer',
     },
     {
-    skill: 'JavaScript',
-    experience: 'junior coder'
+      skill: 'JavaScript',
+      experience: 'junior coder',
     },
     {
-    skill: 'GIT',
-    experience: '6 months'
+      skill: 'GIT',
+      experience: '6 months',
     },
     {
-    skill: 'GITHUB',
-    experience: '6 months'
+      skill: 'GITHUB',
+      experience: '6 months',
     },
   ];
 
   const skillsExperiencesContainer = document.getElementById('skills-experiences');
-    skillsExperiencesContainer.innerHTML = skillsExperiences.map(item => `
+  skillsExperiencesContainer.innerHTML = skillsExperiences.map(item= () => `
       <div class="skill-experience">
       <h3>${item.skill}</h3>
       <p>${item.experience}</p>
       </div>
       `).join('');
-  
   const certificationImage = document.getElementById('certification-image');
   const certificationLink = document.getElementById('certification-link');
   certificationImage.src = 'path/to/your/certification-screenshot.jpg';
