@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.style.display = 'flex';
       menuIcon.innerHTML = '&times;';
     }
-});
+  });
 
   const navLinksItems = navLinks.querySelectorAll('a');
-    navLinksItems.forEach(item = () => {
+  navLinksItems.forEach(item = () => {
     item.addEventListener('click', () => {
       navLinks.style.display = 'none';
       menuIcon.innerHTML = '&#9776;';
@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.style.display = 'flex';
       menuIcon.style.display = 'none';
     } else {
-    navLinks.style.display = 'none';
-    menuIcon.style.display = 'block';
-    menuIcon.innerHTML = '&#9776;';
-  }
+      navLinks.style.display = 'none';
+      menuIcon.style.display = 'block';
+      menuIcon.innerHTML = '&#9776;';
+    }
   });
 
   if (window.innerWidth > 768) {
@@ -38,31 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.style.display = 'none';
     menuIcon.style.display = 'block';
   }
-  });
+});
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const skillsExperiences = [
-      {
-        skill: 'HTML',
-        experience: 'junior programmer'
-      },
-      {
-        skill: 'CSS',
-        experience: 'junior developer'
-      },
-      {
-      skill: 'JavaScript',
-      experience: 'junior coder'
-      },
-      {
-      skill: 'GIT',
-      experience: '6 months'
-      },
-      {
-      skill: 'GITHUB',
-      experience: '6 months'
-      },
-    ];
+document.addEventListener('DOMContentLoaded', () => {
+  const skillsExperiences = [
+    {
+    skill: 'HTML',
+    experience: 'junior programmer'
+    },
+    {
+    skill: 'CSS',
+    experience: 'junior developer'
+    },
+    {
+    skill: 'JavaScript',
+    experience: 'junior coder'
+    },
+    {
+    skill: 'GIT',
+    experience: '6 months'
+    },
+    {
+    skill: 'GITHUB',
+    experience: '6 months'
+    },
+  ];
 
   const skillsExperiencesContainer = document.getElementById('skills-experiences');
     skillsExperiencesContainer.innerHTML = skillsExperiences.map(item => `
@@ -70,105 +70,105 @@ document.addEventListener('DOMContentLoaded', () => {
       <h3>${item.skill}</h3>
       <p>${item.experience}</p>
       </div>
-      `).join("");
-    
+      `).join('');
+  
   const certificationImage = document.getElementById('certification-image');
-    const certificationLink = document.getElementById('certification-link');
-    certificationImage.src = 'path/to/your/certification-screenshot.jpg';
-    certificationLink.href = 'https://www.freecodecamp.org/certification-link';
-  });
+  const certificationLink = document.getElementById('certification-link');
+  certificationImage.src = 'path/to/your/certification-screenshot.jpg';
+  certificationLink.href = 'https://www.freecodecamp.org/certification-link';
+});
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const projects = [
-      {
-        title: "Survey Form",
-        description: "This is simple survey form project my first work as junior developer using html css",
-        image: "path/to/survey-form.png",
-        screenshots: ["path/to/project1-screenshot1.jpg", "path/to/project1-screenshot2.jpg"],
-        technologies: ["HTML", "CSS"],
-        liveLink: "https://saqibi4213.github.io/survey-form/",
-        sourceLink: "https://github.com/Saqibi4213/survey-form.git"
+document.addEventListener('DOMContentLoaded', () => {
+  const projects = [
+    {
+      title: "Survey Form",
+      description: 'This is simple survey form project my first work as junior developer using html css',
+      image: 'path/to/survey-form.png',
+      screenshots: ['path/to/project1-screenshot1.jpg', 'path/to/project1-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS'],
+      liveLink: 'https://saqibi4213.github.io/survey-form/',
+      sourceLink: 'https://github.com/Saqibi4213/survey-form.git',
       },
-      {
-        title: "Tribute Page",
-        description: "This is simple project using html and css and project is about Ahmad shah baba",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS"],
-        liveLink: "https://saqibi4213.github.io/tribute-page",
-        sourceLink: "https://github.com/Saqibi4213/tribute-page.git"
+    {
+      title: 'Tribute Page',
+      description: 'This is simple project using html and css and project is about Ahmad shah baba',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS'],
+      liveLink: 'https://saqibi4213.github.io/tribute-page',
+      sourceLink: 'https://github.com/Saqibi4213/tribute-page.git',
       },
-      {
-        title: "Product Landing page",
-        description: "This is product landing page using html css and the project is about Skin Care",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS"],
-        liveLink: "https://saqibi4213.github.io/skin-care/",
-        sourceLink: "https://github.com/Saqibi4213/skin-care.git"
+    {
+      title: 'Product Landing page',
+      description: 'This is product landing page using html css and the project is about Skin Care',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS'],
+      liveLink: 'https://saqibi4213.github.io/skin-care/',
+      sourceLink: 'https://github.com/Saqibi4213/skin-care.git',
       },
-      {
-        title: "Coffee shop",
-        description: "This is Coffee shop website using html and css",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS"],
-        liveLink: "https://saqibi4213.github.io/product-landing-page/",
-        sourceLink: "https://github.com/Saqibi4213/product-landing-page.git"
+    {
+      title: 'Coffee shop',
+      description: 'This is Coffee shop website using html and css',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS'],
+      liveLink: 'https://saqibi4213.github.io/product-landing-page/',
+      sourceLink: 'https://github.com/Saqibi4213/product-landing-page.git',
       },
-      {
-        title: "Portfolio",
-        description: "This is my portfolio using html and css",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS"],
-        liveLink: "https://saqibi4213.github.io/my-portfolio/",
-        sourceLink: "https://github.com/Saqibi4213/my-portfolio"
+    {
+      title: 'Portfolio',
+      description: 'This is my portfolio using html and css',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS'],
+      liveLink: 'https://saqibi4213.github.io/my-portfolio/',
+      sourceLink: 'https://github.com/Saqibi4213/my-portfolio',
       },
-      {
-        title: "Roman Numeral Converter",
-        description: "Using this project user can convert number to roman",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS", "JS"],
-        liveLink: "https://saqibi4213.github.io/Roman-numeral-converter/",
-        sourceLink: "https://github.com/Saqibi4213/Roman-numeral-converter"
+    {
+      title: 'Roman Numeral Converter',
+      description: 'Using this project user can convert number to roman',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS', 'JS'],
+      liveLink: 'https://saqibi4213.github.io/Roman-numeral-converter/',
+      sourceLink: 'https://github.com/Saqibi4213/Roman-numeral-converter',
       },
-      {
-        title: "palindrome-checker",
-        description: "palindrome-checker is for the help of user to search word palindrome",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS", "JS"],
-        liveLink: "https://saqibi4213.github.io/palindrome-checker/",
-        sourceLink: "https://github.com/Saqibi4213/palindrome-checker"
+    {
+      title: 'palindrome-checker',
+      description: 'palindrome-checker is for the help of user to search word palindrome',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS', 'JS'],
+      liveLink: 'https://saqibi4213.github.io/palindrome-checker/',
+      sourceLink: 'https://github.com/Saqibi4213/palindrome-checker',
       },
-      {
-        title: "Telephone-Number-Validator",
-        description: "The Telephone Number Validator is  designed to validate telephone numbers using HTML, CSS, and JavaScript. This   application ensures users enter valid telephone numbers in the correct format.",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS", "JS"],
-        liveLink: "https://saqibi4213.github.io/Telephone-Number-Validator/",
-        sourceLink: "https://github.com/Saqibi4213/Telephone-Number-Validator"
+    {
+      title: 'Telephone-Number-Validator',
+      description: 'The Telephone Number Validator is  designed to validate telephone numbers using HTML, CSS, and JavaScript. This   application ensures users enter valid telephone numbers in the correct format.',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS', 'JS'],
+      liveLink: 'https://saqibi4213.github.io/Telephone-Number-Validator/',
+      sourceLink: 'https://github.com/Saqibi4213/Telephone-Number-Validator',
       },
-      {
-        title: "Cash-register",
-        description: "This project is a simple Cash Register application built with HTML, CSS, and JavaScript. ",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS", "JS"],
-        liveLink: "https://saqibi4213.github.io/Cash-register/",
-        sourceLink: "https://github.com/Saqibi4213/Cash-register"
+    {
+      title: 'Cash-register',
+      description: 'This project is a simple Cash Register application built with HTML, CSS, and JavaScript. ',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS', 'JS'],
+      liveLink: 'https://saqibi4213.github.io/Cash-register/',
+      sourceLink: 'https://github.com/Saqibi4213/Cash-register',
       },
-      {
-        title: "Pokemon-search-App",
-        description: "The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript,",
-        image: "path/to/project2-image.jpg",
-        screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
-        technologies: ["HTML", "CSS", "JS"],
-        liveLink: "https://saqibi4213.github.io/Pokemon-search-App/",
-        sourceLink: "https://github.com/Saqibi4213/Pokemon-search-App"
+    {
+      title: 'Pokemon-search-App',
+      description: 'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
+      image: 'path/to/project2-image.jpg',
+      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      technologies: ['HTML', 'CSS', 'JS'],
+      liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
+      sourceLink: 'https://github.com/Saqibi4213/Pokemon-search-App',
       },
     ];
 
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (emailInput.value !== emailInput.value.toLowerCase()) {
         errorMessage.textContent = 'Email must be in lowercase.';
         return false;
-      }
+      };
       
       errorMessage.textContent = '';
       return true;
