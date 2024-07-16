@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
   nameInput.value = formData.name || '';
   emailInput.value = formData.email || '';
   messageInput.value = formData.message || '';
-  [nameInput, emailInput, messageInput].forEach(input = () => {
+  [nameInput, emailInput, messageInput].forEach((input) => {
     input.addEventListener('input', () => {
       formData[input.name] = input.value;
       localStorage.setItem('formData', JSON.stringify(formData));
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(formData),
       };
       fetch(formUrl, requestOptions)
-        .then(response = () => {
+        .then((response) => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
             successMessage.style.display = 'none';
           }, 5000);
         })
-        .catch(error = () => {
+        .catch((error) => {
           // eslint-disable-next-line no-alert
           alert('There was an issue sending your message. Please try again later.');
         });
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
       errorMessage.textContent = 'Please fill out all fields.';
       return false;
-    }  
+    }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value.trim())) {
       errorMessage.textContent = 'Please enter a valid email address.';
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (emailInput.value !== emailInput.value.toLowerCase()) {
       errorMessage.textContent = 'Email must be in lowercase.';
       return false;
-    }  
+    } 
     errorMessage.textContent = '';
     return true;
   };
