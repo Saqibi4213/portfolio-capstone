@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const navLinks = document.getElementById('nav-links');
-  const headline = document.getElementById('headline');
-  const intro = document.getElementById('intro');
 
   menuIcon.addEventListener('click', () => {
     if (navLinks.style.display === 'flex') {
@@ -42,15 +40,59 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-const myName = 'Mehria Saqibi';
-const myIntro = `Hello I am <span>${Mehria}</span>, a passionate  web development student from <span class="highlight">${Afghanistan}</span>. I love learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvment and always eager to take on new challenges.`;
+document.addEventListener('DOMContentLoaded', () => {
+  const menuIcon = document.getElementById('menu-icon');
+  const navLinks = document.getElementById('nav-links');
 
-headline.innerHTML = myName;
-intro.innerHTML = myIntro;
+  menuIcon.addEventListener('click', () => {
+    if (navLinks.style.display === 'flex') {
+      navLinks.style.display = 'none';
+      menuIcon.innerHTML = '&#9776;';
+    } else {
+      navLinks.style.display = 'flex';
+      menuIcon.innerHTML = '&times;';
+    }
+  });
 
-document.querySelectorAll('.highlight').forEach((element) => {
-  element.style.fontWeight = 'bold';
-  element.style.color = 'darkyellow';
+  const navLinksItems = navLinks.querySelectorAll('a');
+  navLinksItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      navLinks.style.display = 'none';
+      menuIcon.innerHTML = '&#9776;';
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navLinks.style.display = 'flex';
+      menuIcon.style.display = 'none';
+    } else {
+      navLinks.style.display = 'none';
+      menuIcon.style.display = 'block';
+      menuIcon.innerHTML = '&#9776;';
+    }
+  });
+
+  if (window.innerWidth > 768) {
+    navLinks.style.display = 'flex';
+    menuIcon.style.display = 'none';
+  } else {
+    navLinks.style.display = 'none';
+    menuIcon.style.display = 'block';
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const myName = 'Mehria Saqibi';
+  const myIntro = `Hello I am <span>${myName}</span>, a passionate web development student from <span class="highlight">Afghanistan</span>. I love learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always eager to take on new challenges.;`
+  const headline = document.getElementById('headline');
+  const intro = document.getElementById('intro');
+  headline.innerHTML = myName;
+  intro.innerHTML = myIntro;
+  document.querySelectorAll('.highlight').forEach((element) => {
+    element.style.fontWeight = 'bold';
+    element.style.color = 'blue';
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
