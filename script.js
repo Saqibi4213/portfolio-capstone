@@ -1,0 +1,310 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', function() {
+        if (navLinks.style.display === 'flex') {
+            navLinks.style.display = 'none';
+            menuIcon.innerHTML = '&#9776;'; // Hamburger icon
+        } else {
+            navLinks.style.display = 'flex';
+            menuIcon.innerHTML = '&times;'; // Cross icon
+        }
+    });
+
+    const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navLinks.style.display = 'none';
+            menuIcon.innerHTML = '&#9776;'; // Reset to hamburger icon
+        });
+    });
+
+    // Adjust the menu visibility based on the window width
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navLinks.style.display = 'flex';
+            menuIcon.style.display = 'none';
+        } else {
+            navLinks.style.display = 'none';
+            menuIcon.style.display = 'block';
+            menuIcon.innerHTML = '&#9776;'; // Reset to hamburger icon
+        }
+    });
+
+    // Initial check on load
+    if (window.innerWidth > 768) {
+        navLinks.style.display = 'flex';
+        menuIcon.style.display = 'none';
+    } else {
+        navLinks.style.display = 'none';
+        menuIcon.style.display = 'block';
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const skillsExperiences = [
+        {
+            skill: "HTML",
+            experience: "junior programmer"
+        },
+        {
+            skill: "CSS",
+            experience: "junior developer"
+        },
+        {
+            skill: "JavaScript",
+            experience: "junior coder"
+        },
+        {
+            skill: "GIT",
+            experience: "6 months"
+        },
+        {
+            skill: "GITHUB",
+            experience: "6 months"
+        },
+        
+        // Add more skills and experiences as needed
+    ];
+
+    const skillsExperiencesContainer = document.getElementById('skills-experiences');
+    skillsExperiencesContainer.innerHTML = skillsExperiences.map(item => `
+        <div class="skill-experience">
+            <h3>${item.skill}</h3>
+            <p>${item.experience}</p>
+        </div>
+    `).join('');
+
+    // Update certification image and link dynamically if needed
+    const certificationImage = document.getElementById('certification-image');
+    const certificationLink = document.getElementById('certification-link');
+    certificationImage.src = 'path/to/your/certification-screenshot.jpg';
+    certificationLink.href = 'https://www.freecodecamp.org/certification-link';
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const projects = [
+        {
+            title: "Survey Form",
+            description: "This is simple survey form project my first work as junior developer using html css",
+            image: "path/to/survey-form.png",
+            screenshots: ["path/to/project1-screenshot1.jpg", "path/to/project1-screenshot2.jpg"],
+            technologies: ["HTML", "CSS"],
+            liveLink: "https://saqibi4213.github.io/survey-form/",
+            sourceLink: "https://github.com/Saqibi4213/survey-form.git"
+        },
+        {
+            title: "Tribute Page",
+            description: "This is simple project using html and css and project is about Ahmad shah baba",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS"],
+            liveLink: "https://saqibi4213.github.io/tribute-page",
+            sourceLink: "https://github.com/Saqibi4213/tribute-page.git"
+        },
+        {
+            title: "Product Landing page",
+            description: "This is product landing page using html css and the project is about Skin Care",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS"],
+            liveLink: "https://saqibi4213.github.io/skin-care/",
+            sourceLink: "https://github.com/Saqibi4213/skin-care.git"
+        },
+        {
+            title: "Coffee shop",
+            description: "This is Coffee shop website using html and css",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS"],
+            liveLink: "https://saqibi4213.github.io/product-landing-page/",
+            sourceLink: "https://github.com/Saqibi4213/product-landing-page.git"
+        },
+        {
+            title: "Portfolio",
+            description: "This is my portfolio using html and css",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS"],
+            liveLink: "https://saqibi4213.github.io/my-portfolio/",
+            sourceLink: "https://github.com/Saqibi4213/my-portfolio"
+        },
+        {
+            title: "Roman Numeral Converter",
+            description: "Using this project user can convert number to roman",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS", "JS"],
+            liveLink: "https://saqibi4213.github.io/Roman-numeral-converter/",
+            sourceLink: "https://github.com/Saqibi4213/Roman-numeral-converter"
+        },
+        {
+            title: "palindrome-checker",
+            description: "palindrome-checker is for the help of user to search word palindrome",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS", "JS"],
+            liveLink: "https://saqibi4213.github.io/palindrome-checker/",
+            sourceLink: "https://github.com/Saqibi4213/palindrome-checker"
+        },
+        {
+            title: "Telephone-Number-Validator",
+            description: "The Telephone Number Validator is  designed to validate telephone numbers using HTML, CSS, and JavaScript. This application ensures users enter valid telephone numbers in the correct format.",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS", "JS"],
+            liveLink: "https://saqibi4213.github.io/Telephone-Number-Validator/",
+            sourceLink: "https://github.com/Saqibi4213/Telephone-Number-Validator"
+        },
+        {
+            title: "Cash-register",
+            description: "This project is a simple Cash Register application built with HTML, CSS, and JavaScript. ",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS", "JS"],
+            liveLink: "https://saqibi4213.github.io/Cash-register/",
+            sourceLink: "https://github.com/Saqibi4213/Cash-register"
+        },
+        {
+            title: "Pokemon-search-App",
+            description: "The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript,",
+            image: "path/to/project2-image.jpg",
+            screenshots: ["path/to/project2-screenshot1.jpg", "path/to/project2-screenshot2.jpg"],
+            technologies: ["HTML", "CSS", "JS"],
+            liveLink: "https://saqibi4213.github.io/Pokemon-search-App/",
+            sourceLink: "https://github.com/Saqibi4213/Pokemon-search-App"
+        },
+        // Add more projects as needed
+    ];
+
+    const worksSection = document.getElementById('works');
+    const projectPopup = document.getElementById('project-popup');
+    const closeBtn = document.getElementById('close-btn');
+
+    projects.forEach((project, index) => {
+        const projectCard = document.createElement('div');
+        projectCard.classList.add('project');
+        projectCard.innerHTML = `
+            <h3 class="project-title">${project.title}</h3>
+            <p class="project-description">${project.description}</p>
+            <img src="${project.image}" alt="${project.title}" class="project-image">
+            <button class="see-more-btn" data-index="${index}">See More</button>
+        `;
+        worksSection.appendChild(projectCard);
+
+        const seeMoreBtn = projectCard.querySelector('.see-more-btn');
+        seeMoreBtn.addEventListener('click', () => openProjectPopup(index));
+    });
+
+    function openProjectPopup(index) {
+        const project = projects[index];
+        document.getElementById('popup-title').textContent = project.title;
+        document.getElementById('popup-description').textContent = project.description;
+        document.getElementById('popup-image').src = project.image;
+        document.getElementById('live-link').href = project.liveLink;
+        document.getElementById('source-link').href = project.sourceLink;
+        projectPopup.style.display = 'block';
+    }
+
+    closeBtn.addEventListener('click', () => {
+        projectPopup.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === projectPopup) {
+            projectPopup.style.display = 'none';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const errorMessage = document.getElementById('error-message');
+    const successMessage = document.getElementById('success-message');
+
+    // Initialize form data from localStorage
+    const formData = JSON.parse(localStorage.getItem('formData')) || {};
+    nameInput.value = formData.name || '';
+    emailInput.value = formData.email || '';
+    messageInput.value = formData.message || '';
+
+    // Save form data to localStorage on input change
+    [nameInput, emailInput, messageInput].forEach(input => {
+        input.addEventListener('input', () => {
+            formData[input.name] = input.value;
+            localStorage.setItem('formData', JSON.stringify(formData));
+        });
+    });
+
+    // Form submission event listener
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        if (validateForm()) {
+            const formData = {
+                name: nameInput.value.trim(),
+                email: emailInput.value.trim().toLowerCase(), // Ensure email is in lowercase
+                message: messageInput.value.trim()
+            };
+
+            // Submit form using Formspree
+            const formUrl = 'https://formspree.io/your_form_id_here'; // Replace with your Formspree endpoint
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            };
+
+            fetch(formUrl, requestOptions)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    successMessage.textContent = 'Message sent successfully!';
+                    successMessage.style.display = 'block'; // Show success message
+                    successMessage.style.color = 'green'; // Set color to green
+                    contactForm.reset();
+                    localStorage.removeItem('formData');
+                    setTimeout(() => {
+                        successMessage.style.display = 'none'; // Hide success message after 5 seconds
+                    }, 5000);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an issue sending your message. Please try again later.');
+                });
+        }
+    });
+
+    // Function to validate the form
+    function validateForm() {
+        if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+            errorMessage.textContent = 'Please fill out all fields.';
+            return false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim())) {
+            errorMessage.textContent = 'Please enter a valid email address.';
+            return false;
+        }
+
+        // Check if email is in lowercase
+        if (emailInput.value !== emailInput.value.toLowerCase()) {
+            errorMessage.textContent = 'Email must be in lowercase.';
+            return false;
+        }
+
+        errorMessage.textContent = ''; // Clear error message
+        return true;
+    }
+});
+
