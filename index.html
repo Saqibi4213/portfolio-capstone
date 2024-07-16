@@ -1,99 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capstone | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capstone | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="menu-icon" id="menu-icon">
-            &#9776; <!-- Hamburger icon -->
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <header class="headline-section">
-        <div class="container">
-            <h1>Mehria Saqibi</h1>
-            <p>Hello! I am Mehria Saqibi, a passionate web development student from Afghanistan. I love learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always eager to take on new challenges.</p>
-        </div>
-    </header>
-    <!-- About Myself Section -->
-    <section id="about-myself" class="about-myself-section">
-        <div class="container">
-            <h2>About Myself</h2>
-            <div id="skills-experiences"></div>
-            <div class="certification">
-                <h3>Certifications</h3>
-                <img id="certification-image" src="path/to/certification-screenshot.jpg" alt="Certification Screenshot">
-                <p><a id="certification-link" href="https://www.freecodecamp.org/certification-link" target="_blank">View Certification</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section (Placeholder) -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <!-- Your projects content here -->
-    </section>
-    <!-- Works Section -->
-    <section id="works" class="works-section">
-        <div class="container">
-            <!-- Projects will be dynamically added here -->
-        </div>
-    </section>
-
-    <!-- Projects Popup -->
-    <div id="project-popup" class="project-popup">
-        <div class="popup-content">
-            <span class="close-btn" id="close-btn">&times;</span>
-            <div class="popup-details">
-                <h2 id="popup-title"></h2>
-                <div class="popup-description" id="popup-description"></div>
-                <img src="" alt="Project Screenshot" id="popup-image">
-                <div class="popup-links">
-                    <a href="#" id="live-link" target="_blank">Live Version</a>
-                    <a href="#" id="source-link" target="_blank">Source Code</a>
-                </div>
-            </div>
-        </div>
+  <nav>
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
     </div>
-
-    <section class="contact-form">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <div class="form-control">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name (up to 30 characters)" maxlength="30" required>
-                </div>
-                <div class="form-control">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-control">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Enter your message (up to 500 characters)" maxlength="500" required></textarea>
-                </div>
-                <div id="error-message" class="error-message"></div>
-                <button type="submit" id="submit-btn">Send Message</button>
-                <div id="success-message" class="success-message"></div>
-
-            </form>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact Me</a></li>
+    </ul>
+  </nav>
+  <header class="headline-section">
+    <div class="container">
+      <h1>Mehria Saqibi</h1>
+      <p>Hello! I am Mehria Saqibi, a passionate web development student from Afghanistan. I love learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always eager to take on new challenges.</p>
+    </div>
+  </header>
+  <section id="about-myself" class="about-myself-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <div id="skills-experiences"></div>
+      <div class="certification">
+        <h3>Certificates</h3>
+        <img id="certification-image" src="path/to/certification-screenshot.jpg" alt="Certification Screenshot">
+        <p><a id="certification-link" href="https://www.freecodecamp.org/certification-link" target="_blank">View Certification</a></p>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+  </section>
+  <section id="works" class="works-section">
+    <div class="container">
+    </div>
+  </section>
+  <div id="project-popup" class="project-popup">
+    <div class="popup-content">
+      <span class="close-btn" id="close-btn">&times;</span>
+      <div class="popup-details">
+        <h2 id="popup-title"></h2>
+        <div class="popup-description" id="popup-description"></div>
+        <img src="" alt="Project Screenshot" id="popup-image">
+        <div class="popup-links">
+          <a href="#" id="live-link" target="_blank">Live Demo</a>
+          <a href="#" id="source-link" target="_blank">Source Code</a>
         </div>
-    </section>
-  <!-- Footer Section -->
+      </div>
+    </div>
+  </div>
+  <section class="contact-form">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-control">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name (up to 30 characters)" maxlength="30" required>
+        </div>
+        <div class="form-control">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-control">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Enter your message (up to 500 characters)" maxlength="500" required></textarea>
+        </div>
+        <div id="error-message" class="error-message"></div>
+        <button type="submit" id="submit-btn">Send Message</button>
+        <div id="success-message" class="success-message"></div>
+      </form>
+    </div>
+  </section>
   <footer class="footer">
     <div class="container">
-        <p>Built with Luv by Mehria Saqibi</p>
+      <p>Built with Luv by Mehria Saqibi</p>
     </div>
-</footer>
-    <script src="script.js"></script>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
