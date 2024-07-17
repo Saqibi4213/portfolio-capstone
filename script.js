@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       skill: 'Responsive web design',
       experience: 'New certification description',
-      link: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design', 
+      link: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design',
       imageSrc: 'images/responsive.png',
     },
     {
