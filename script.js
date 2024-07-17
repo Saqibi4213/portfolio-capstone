@@ -115,6 +115,18 @@ document.addEventListener('DOMContentLoaded', () => {
       experience: '6 months',
       link: 'https://github.com/Saqibi4213',
     },
+    {
+      skill: 'Responsive web design', // Update with your new certification title
+      experience: 'New certification description', // Update with description
+      link: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design', // Update with certification link
+      imageSrc: 'images/responsive.png' // Path to new certification image
+    },
+    {
+      skill: 'Java Script', // Update with your new certification title
+      experience: 'New certification description', // Update with description
+      link: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/javascript-algorithms-and-data-structures-v8', // Update with certification link
+      imageSrc: 'images/js.png' // Path to new certification image
+    },
   ];
 
   const skillsExperiencesContainer = document.getElementById('skills-experiences');
@@ -124,10 +136,27 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>${item.experience}</p>
       </div>
       `).join('');
-  const certificationImage = document.getElementById('certification-image');
-  const certificationLink = document.getElementById('certification-link');
-  certificationImage.src = 'images/responsive.png';
-  certificationLink.href = 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design';
+      const certificationContainer = document.getElementById('certification-content');
+      skillsExperiences.forEach((certification) => {
+        if (certification.imageSrc && certification.link) {
+          const certificationDiv = document.createElement('div');
+          certificationDiv.classList.add('certification-item');
+          const certificationTitle = document.createElement('h4');
+          certificationTitle.textContent = certification.skill;
+          certificationDiv.appendChild(certificationTitle);
+          const certificationImage = document.createElement('img');
+          certificationImage.src = certification.imageSrc;
+          certificationImage.alt = `Certification for ${certification.skill}`;
+          certificationDiv.appendChild(certificationImage);
+          const certificationLink = document.createElement('a');
+          certificationLink.href = certification.link;
+          certificationLink.textContent = 'View Certification';
+          certificationLink.textContent = 'View Certification';
+          certificationLink.target = '_blank';
+          certificationDiv.appendChild(certificationLink);
+          certificationContainer.appendChild(certificationDiv);
+        }
+      });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -227,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const worksSection = document.getElementById('works');
   const projectPopup = document.getElementById('project-popup');
   const closeBtn = document.getElementById('close-btn');
+  
   const openProjectPopup = (index) => {
     const project = projects[index];
     document.getElementById('popup-title').textContent = project.title;
