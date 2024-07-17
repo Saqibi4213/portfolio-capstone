@@ -41,7 +41,6 @@ nav {
   text-decoration: none;
 }
 
-
 .popup-links a {
   display: inline-block;
   margin-right: 10px;
@@ -225,17 +224,6 @@ nav {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
-}
-
-.popup-links a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-.popup-links a:hover {
-  text-decoration: underline;
 }
 
 .contact-form {
