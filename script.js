@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const navLinks = document.getElementById('nav-links');
-  const headLine = document.getElementById('head-line');
+  const headLine = document.getElementById('headline');
   const intro = document.getElementById('intro');
 
   const toggleMenu = () => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
   menuIcon.addEventListener('click', toggleMenu);
-  navLinks.querySelectorAll('a').forEach((item) =>{
+  navLinks.querySelectorAll('a').forEach((item) => {
     item.addEventListener('click', () => {
       navLinks.style.display = 'none';
       menuIcon.innerHTML = '&#9776';
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       skill: 'GITHUB',
       experience: '6 months',
-      link: 'https://github.com/Saqibi4213'
+      link: 'https://github.com/Saqibi4213',
     },
   ];
 
@@ -126,8 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('');
   const certificationImage = document.getElementById('certification-image');
   const certificationLink = document.getElementById('certification-link');
-  certificationImage.src = 'images/responsive.png', 'images/js.png';
-  certificationLink.href = 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design', 'https://www.freecodecamp.org/certification/Mehria-Saqibi/javascript-algorithms-and-data-structures-v8';
+  certificationImage.src = 'images/responsive.png';
+  certificationLink.href = 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design';
 });
 
 document.addEventListener('DOMContentLoaded', () => {
