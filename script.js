@@ -1,83 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuIcon = document.getElementById('menu-icon');
-  const navLinks = document.getElementById('nav-links');
-  const headLine = document.getElementById('headline');
-  const intro = document.getElementById('intro');
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+    const navLinksItems = navLinks.querySelectorAll('a');
+    const headline = document.getElementById('headline');
+    const intro = document.getElementById('intro');
 
-  const toggleMenu = () => {
-    if (navLinks.style.display === 'flex') {
-      navLinks.style.display = 'none';
-      menuIcon.innerHTML = '&#9776';
-    }
-  };
-  menuIcon.addEventListener('click', toggleMenu);
-  navLinks.querySelectorAll('a').forEach((item) => {
-    item.addEventListener('click', () => {
-      navLinks.style.display = 'none';
-      menuIcon.innerHTML = '&#9776';
+    const scrollToSection = (id) => {
+      const section = document.getElementById(id);
+      section.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    menuIcon.addEventListener('click', () => {
+      if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+        menuIcon.innerHTML = '&#9776;';
+      } else {
+        navLinks.style.display = 'flex';
+        menuIcon.innerHTML = '&times;';
+      }
     });
-  });
-  window.addEventListener('resize', () => {
+  
+    navLinksItems.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        if (event.target.tagName === 'A') {
+          event.preventDefault(); // Prevent default anchor behavior
+        
+        const targetId = item.getAttribute('href').substring(1); // Get target section id
+        scrollToSection(targetId); // Smooth scroll to target section
+        }
+        navLinks.style.display = 'none';
+        menuIcon.innerHTML = '&#9776;';
+      });
+    });
+  
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navLinks.style.display = 'flex';
+        menuIcon.style.display = 'none';
+      } else {
+        navLinks.style.display = 'none';
+        menuIcon.style.display = 'block';
+        menuIcon.innerHTML = '&#9776;';
+      }
+    });
+  
     if (window.innerWidth > 768) {
       navLinks.style.display = 'flex';
       menuIcon.style.display = 'none';
     } else {
       navLinks.style.display = 'none';
       menuIcon.style.display = 'block';
-      menuIcon.innerHTML = '&#9776;';
     }
   });
-
-  if (window.innerWidth > 768) {
-    navLinks.style.display = 'flex';
-    menuIcon.style.display = 'none';
-  } else {
-    navLinks.style.display = 'none';
-    menuIcon.style.display = 'block';
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const menuIcon = document.getElementById('menu-icon');
-  const navLinks = document.getElementById('nav-links');
-
-  menuIcon.addEventListener('click', () => {
-    if (navLinks.style.display === 'flex') {
-      navLinks.style.display = 'none';
-      menuIcon.innerHTML = '&#9776;';
-    } else {
-      navLinks.style.display = 'flex';
-      menuIcon.innerHTML = '&times;';
-    }
-  });
-
-  const navLinksItems = navLinks.querySelectorAll('a');
-  navLinksItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      navLinks.style.display = 'none';
-      menuIcon.innerHTML = '&#9776;';
-    });
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-      navLinks.style.display = 'flex';
-      menuIcon.style.display = 'none';
-    } else {
-      navLinks.style.display = 'none';
-      menuIcon.style.display = 'block';
-      menuIcon.innerHTML = '&#9776;';
-    }
-  });
-
-  if (window.innerWidth > 768) {
-    navLinks.style.display = 'flex';
-    menuIcon.style.display = 'none';
-  } else {
-    navLinks.style.display = 'none';
-    menuIcon.style.display = 'block';
-  }
-});
+  
 
 document.addEventListener('DOMContentLoaded', () => {
   const myName = 'Mehria Saqibi';
@@ -116,10 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
       link: 'https://github.com/Saqibi4213',
     },
     {
-      skill: 'Responsive web design',
-      experience: 'New certification description',
-      link: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design',
-      imageSrc: 'images/responsive.png',
+      skill: 'Responsive web design', // Update with your new certification title
+      experience: 'New certification description', // Update with description
+      link: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design', 
+      imageSrc: 'images/responsive.png'
     },
     {
       skill: 'Java Script',
@@ -136,27 +111,27 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>${item.experience}</p>
       </div>
       `).join('');
-  const certificationContainer = document.getElementById('certification-content');
-  skillsExperiences.forEach((certification) => {
-    if (certification.imageSrc && certification.link) {
-      const certificationDiv = document.createElement('div');
-      certificationDiv.classList.add('certification-item');
-      const certificationTitle = document.createElement('h4');
-      certificationTitle.textContent = certification.skill;
-      certificationDiv.appendChild(certificationTitle);
-      const certificationImage = document.createElement('img');
-      certificationImage.src = certification.imageSrc;
-      certificationImage.alt = `Certification for ${certification.skill}`;
-      certificationDiv.appendChild(certificationImage);
-      const certificationLink = document.createElement('a');
-      certificationLink.href = certification.link;
-      certificationLink.textContent = 'View Certification';
-      certificationLink.textContent = 'View Certification';
-      certificationLink.target = '_blank';
-      certificationDiv.appendChild(certificationLink);
-      certificationContainer.appendChild(certificationDiv);
-    }
-  });
+      const certificationContainer = document.getElementById('certification-content');
+      skillsExperiences.forEach((certification) => {
+        if (certification.imageSrc && certification.link) {
+          const certificationDiv = document.createElement('div');
+          certificationDiv.classList.add('certification-item');
+          const certificationTitle = document.createElement('h4');
+          certificationTitle.textContent = certification.skill;
+          certificationDiv.appendChild(certificationTitle);
+          const certificationImage = document.createElement('img');
+          certificationImage.src = certification.imageSrc;
+          certificationImage.alt = `Certification for ${certification.skill}`;
+          certificationDiv.appendChild(certificationImage);
+          const certificationLink = document.createElement('a');
+          certificationLink.href = certification.link;
+          certificationLink.textContent = 'View Certification';
+          certificationLink.textContent = 'View Certification';
+          certificationLink.target = '_blank';
+          certificationDiv.appendChild(certificationLink);
+          certificationContainer.appendChild(certificationDiv);
+        }
+      });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -252,39 +227,43 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/Pokemon-search-App',
     },
   ];
-
   const worksSection = document.getElementById('works');
   const projectPopup = document.getElementById('project-popup');
   const closeBtn = document.getElementById('close-btn');
-  const openProjectPopup = (index) => {
-    const project = projects[index];
-    document.getElementById('popup-title').textContent = project.title;
-    document.getElementById('popup-description').textContent = project.description;
-    document.getElementById('popup-image').src = project.image;
-    document.getElementById('live-link').href = project.liveLink;
-    document.getElementById('source-link').href = project.sourceLink;
-    projectPopup.style.display = 'block';
-  };
+
   projects.forEach((project, index) => {
-    const projectCard = document.createElement('div');
-    projectCard.classList.add('project');
-    projectCard.innerHTML = `
-    <h3 class="project-title">${project.title}</h3>
-    <p class="project-description">${project.description}</p>
-    <img src="${project.image}" alt="${project.title}" class="project-image">
-    <button class="see-more-btn" data-index="${index}">See More</button>
-    `;
-    worksSection.appendChild(projectCard);
-    const seeMoreBtn = projectCard.querySelector('.see-more-btn');
-    seeMoreBtn.addEventListener('click', () => openProjectPopup(index));
+      const projectCard = document.createElement('div');
+      projectCard.classList.add('project');
+      projectCard.innerHTML = `
+          <h3 class="project-title">${project.title}</h3>
+          <p class="project-description">${project.description}</p>
+          <img src="${project.image}" alt="${project.title}" class="project-image">
+          <button class="see-more-btn" data-index="${index}">See More</button>
+      `;
+      worksSection.appendChild(projectCard);
+
+      const seeMoreBtn = projectCard.querySelector('.see-more-btn');
+      seeMoreBtn.addEventListener('click', () => openProjectPopup(index));
   });
+
+  const openProjectPopup = (index) => {
+      const project = projects[index];
+      document.getElementById('popup-title').textContent = project.title;
+      document.getElementById('popup-description').textContent = project.description;
+      document.getElementById('popup-image').src = project.image;
+      document.getElementById('live-link').href = project.liveLink;
+      document.getElementById('source-link').href = project.sourceLink;
+      projectPopup.style.display = 'block';
+  }
+
   closeBtn.addEventListener('click', () => {
-    projectPopup.style.display = 'none';
-  });
-  window.addEventListener('click', (event) => {
-    if (event.target === projectPopup) {
       projectPopup.style.display = 'none';
-    }
+  });
+
+  window.addEventListener('click', (event) => {
+      if (event.target === projectPopup) {
+          projectPopup.style.display = 'none';
+      }
   });
 });
 

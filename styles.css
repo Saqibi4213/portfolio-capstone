@@ -87,8 +87,8 @@ nav {
 }
 
 .headline-section .container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 800px; /* Redundant if not overriding */
+  margin: 0 auto; /* Redundant if not overriding */
 }
 
 .headline-section h1 {
@@ -102,6 +102,7 @@ nav {
   color: #666;
   margin-top: 10px;
 }
+
 
 .about-myself-section {
   background-color: #f9f9f9;
@@ -170,6 +171,21 @@ nav {
   cursor: pointer;
 }
 
+
+.see-more-btn {
+  display: block;
+  width: 100px;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #1e90ff;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Popup Styles */
 .project-popup {
   display: none;
   position: fixed;
@@ -216,6 +232,13 @@ nav {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
+}
+
+.popup-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #1e90ff;
+  text-decoration: none;
 }
 
 .popup-links a:hover {
