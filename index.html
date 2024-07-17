@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capstone | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
 </head>
 <body>
   <nav>
@@ -23,6 +24,7 @@
       <h1 id="headline" class="headline"></h1>
       <p id="intro" class="intro"></p>
     </div>
+    <div class="social-icons" id="social-icons-desktop"></div>
   </header>
   <section id="about-myself" class="about-myself-section">
     <div class="container">
@@ -34,14 +36,19 @@
         </div>
       </div>
     </div>
+    <div class="social-icons" id="social-icons-mobile-about"></div>
   </section>
   <section id="projects">
     <h2>Projects</h2>
+    <!-- Social icons for mobile version (added at the bottom of each section) -->
+    <div class="social-icons" id="social-icons-mobile-projects"></div>
   </section>
   <section id="works" class="works-section">
     <div class="container">
         <!-- Projects will be dynamically added here -->
     </div>
+      <!-- Social icons for mobile version (added at the bottom of each section) -->
+      <div class="social-icons" id="social-icons-mobile-works"></div>
 </section>
 
 <!-- Projects Popup -->
@@ -80,10 +87,14 @@
         <div id="success-message" class="success-message"></div>
       </form>
     </div>
+        <!-- Social icons for mobile version (added at the bottom of each section) -->
+        <div class="social-icons" id="social-icons-mobile-contact"></div>
   </section>
   <footer class="footer">
     <div class="container">
       <p>Built with Luv by Mehria Saqibi</p>
+        <!-- Social icons for mobile version (added at the bottom of the footer) -->
+        <div class="social-icons" id="social-icons-mobile-footer"></div>
     </div>
   </footer>
   <script src="script.js"></script>

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const section = document.getElementById(id);
     section.scrollIntoView({ behavior: 'smooth' });
   };
+  
   menuIcon.addEventListener('click', () => {
     if (navLinks.style.display === 'flex') {
       navLinks.style.display = 'none';
@@ -329,4 +330,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
   });
+  document.addEventListener('DOMContentLoaded', () => {
+    const socialIconsData = [
+      { img: 'images/', name: 'GitHub', url: 'https://github.com' },
+      { img: 'images/fb.png', name: 'Facebook', url: 'https://facebook.com' },
+      { img: 'path/to/linkedin-icon.png', name: 'LinkedIn', url: 'https://linkedin.com' },
+      { img: 'path/to/whatsapp-icon.png', name: 'WhatsApp', url: 'https://whatsapp.com' },
+    ];
+  
+    const createSocialIcon = ({ img, name, url }) => {
+      const a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.classList.add('social-icon');
+  
+      const imgElement = document.createElement('img');
+      imgElement.src = img;
+      imgElement.alt = name;
+  
+      const span = document.createElement('span');
+      span.textContent = name;
+  
+      a.appendChild(imgElement);
+      a.appendChild(span);
+  
+      return a;
+    };
+  
+    const socialIconsDesktop = document.getElementById('social-icons-desktop');
+    const socialIconsMobileAbout = document.getElementById('social-icons-mobile-about');
+    const socialIconsMobileProjects = document.getElementById('social-icons-mobile-projects');
+    const socialIconsMobileWorks = document.getElementById('social-icons-mobile-works');
+    const socialIconsMobileContact = document.getElementById('social-icons-mobile-contact');
+    const socialIconsMobileFooter = document.getElementById('social-icons-mobile-footer');
+  
+    socialIconsData.forEach(iconData => {
+      const iconElement = createSocialIcon(iconData);
+  
+      socialIconsDesktop.appendChild(iconElement.cloneNode(true));
+      socialIconsMobileAbout.appendChild(iconElement.cloneNode(true));
+      socialIconsMobileProjects.appendChild(iconElement.cloneNode(true));
+      socialIconsMobileWorks.appendChild(iconElement.cloneNode(true));
+      socialIconsMobileContact.appendChild(iconElement.cloneNode(true));
+      socialIconsMobileFooter.appendChild(iconElement.cloneNode(true));
+    });
+  });
+  
 });

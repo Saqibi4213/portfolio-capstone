@@ -283,6 +283,47 @@ nav {
 #submit-btn:hover {
   background-color: #147bcd;
 }
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: darkyellow;
+  text-decoration: none;
+}
+
+.social-icon span {
+  color: darkyellow;
+}
+
+/* Only show social icons on home section for desktop */
+@media (min-width: 768px) {
+  #social-icons-desktop {
+    display: flex;
+  }
+  .social-icons:not(#social-icons-desktop) {
+    display: none;
+  }
+}
+
+/* Show social icons on all sections for mobile */
+@media (max-width: 767px) {
+  .social-icons {
+    display: flex;
+  }
+}
 
 .footer {
   background-color: #333;
