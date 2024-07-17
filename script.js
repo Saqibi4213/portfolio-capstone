@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const navLinks = document.getElementById('nav-links');
   const navLinksItems = navLinks.querySelectorAll('a');
-  const headline = document.getElementById('headline');
-  const intro = document.getElementById('intro');
+  
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -237,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const seeMoreBtn = projectCard.querySelector('.see-more-btn');
     seeMoreBtn.addEventListener('click', () => openProjectPopup(index));
-    });
+  });
 
   const openProjectPopup = (index) => {
     const project = projects[index];
