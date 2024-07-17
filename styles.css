@@ -41,6 +41,13 @@ nav {
   text-decoration: none;
 }
 
+.popup-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #1e90ff;
+  text-decoration: none;
+}
+
 .nav-links a:hover {
   background-color: #575757;
   border-radius: 5px;
@@ -115,13 +122,6 @@ nav {
 .certification img {
   max-width: 100%;
   height: auto;
-}
-
-.popup-links a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #1e90ff;
-  text-decoration: none;
 }
 
 .certification a:hover {
