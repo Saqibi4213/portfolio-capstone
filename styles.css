@@ -103,7 +103,6 @@ nav {
   margin-top: 10px;
 }
 
-
 .about-myself-section {
   background-color: #f9f9f9;
   padding: 50px 20px;
@@ -171,21 +170,6 @@ nav {
   cursor: pointer;
 }
 
-
-.see-more-btn {
-  display: block;
-  width: 100px;
-  margin: 10px auto;
-  padding: 8px 16px;
-  background-color: #1e90ff;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Popup Styles */
 .project-popup {
   display: none;
   position: fixed;
