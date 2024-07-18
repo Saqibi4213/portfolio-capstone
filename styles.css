@@ -3,25 +3,28 @@ body {
   margin: 0;
   padding: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+/* General Navbar Styles */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
   padding: 10px 20px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
-}
-
+/* Navbar Links */
 .nav-links {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
@@ -33,6 +36,53 @@ nav {
   color: white;
   padding: 5px 10px;
 }
+
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Highlight Active Link */
+.highlight {
+  font-weight: bold;
+  color: blue;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
+
 
 .certification a {
   display: inline-block;
@@ -60,6 +110,13 @@ nav {
 .popup-links a:hover {
   text-decoration: underline;
 }
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Center the icons vertically */
+}
+
 
 @media (max-width: 768px) {
   .menu-icon {
@@ -173,54 +230,57 @@ nav {
   border-radius: 5px;
   cursor: pointer;
 }
-
+/* Popup styling */
 .project-popup {
-  display: none;
+  display: none; /* Hide by default */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it's above other content */
   overflow: auto;
 }
 
+/* Popup content styling */
 .popup-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 600px;
   position: relative;
+  margin: 15% auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
 }
 
+/* Highlighted: Added styles for the popup images container */
+.popup-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.popup-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+/* Close button styling */
 .close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;
-  font-size: 30px;
+  right: 10px;
+  font-size: 24px;
   cursor: pointer;
-  color: #aaa;
+  color: #333; /* Change color as needed */
+  background: transparent; /* No background */
+  border: none; /* No border */
 }
 
-.popup-details {
-  text-align: center;
-}
 
-.popup-details h2 {
-  margin-bottom: 10px;
-}
-
-.popup-description {
-  margin-bottom: 20px;
-}
-
-.popup-image {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
 
 .contact-form {
   padding: 50px 20px;
@@ -296,34 +356,6 @@ nav {
   margin-right: 10px;
 }
 
-.social-icon {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: darkyellow;
-  text-decoration: none;
-}
-
-.social-icon span {
-  color: darkyellow;
-}
-
-/* Only show social icons on home section for desktop */
-@media (min-width: 768px) {
-  #social-icons-desktop {
-    display: flex;
-  }
-  .social-icons:not(#social-icons-desktop) {
-    display: none;
-  }
-}
-
-/* Show social icons on all sections for mobile */
-@media (max-width: 767px) {
-  .social-icons {
-    display: flex;
-  }
-}
 
 .footer {
   background-color: #333;

@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinksItems = navLinks.querySelectorAll('a');
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
-    section.scrollIntoView({ behavior: 'smooth' });
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.error(`Section with ID "${id}" not found.`);
+    }
   };
   
   menuIcon.addEventListener('click', () => {
@@ -44,10 +48,24 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.style.display = 'none';
     menuIcon.style.display = 'block';
   }
+  const adjustMenuDisplay = () => {
+    if (window.innerWidth > 768) {
+      navLinks.style.display = 'flex';
+      menuIcon.style.display = 'none';
+    } else {
+      navLinks.style.display = 'none';
+      menuIcon.style.display = 'block';
+      menuIcon.innerHTML = '&#9776;';
+    }
+  };
+  
+  window.addEventListener('resize', adjustMenuDisplay);
+  adjustMenuDisplay(); // Call once on initial load
 });
+
 document.addEventListener('DOMContentLoaded', () => {
-  const myName = 'Mehria Saqibi';
-  const myIntro = `Hello I am <span>${myName}</span>, a passionate web development student from <span class="highlight">Afghanistan</span>. I love learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always eager to take on new challenges.`;
+  const myName = 'I am Mehria Saqibi';
+  const myIntro = `Hello there, <span class="highlight">${myName}</span>, a passionate web development student <span class="highlight">A Junior Web Developer</span> from <span class="highlight">Afghanistan</span>. I <span class="highlight">love</span> learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always <span class="highlight">eager</span> to take on new challenges.`;
   const headline = document.getElementById('headline');
   const intro = document.getElementById('intro');
   headline.innerHTML = myName;
@@ -57,73 +75,62 @@ document.addEventListener('DOMContentLoaded', () => {
     element.style.color = 'blue';
   });
 });
-
 document.addEventListener('DOMContentLoaded', () => {
-  const skillsExperiences = [
-    {
-      skill: 'HTML',
-      experience: 'junior programmer',
-    },
-    {
-      skill: 'CSS',
-      experience: 'junior developer',
-    },
-    {
-      skill: 'JavaScript',
-      experience: 'junior coder',
-    },
-    {
-      skill: 'GIT',
-      experience: '6 months',
-    },
-    {
-      skill: 'GITHUB',
-      experience: '6 months',
-      link: 'https://github.com/Saqibi4213',
-    },
-    {
-      skill: 'Responsive web design', // Update with your new certification title
-      experience: 'New certification description', // Update with description
-      link: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design',
-      imageSrc: 'images/responsive.png',
-    },
-    {
-      skill: 'Java Script',
-      experience: 'New certification description',
-      link: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/javascript-algorithms-and-data-structures-v8',
-      imageSrc: 'images/js.png',
-    },
-  ];
+  const aboutContent = {
+    description: `
+      I'm Mehria Saqibi, a junior web developer with a Computer Science degree. With two years of teaching experience, one year as a consultant in an NGO, and a year as a translator for RUMIE BUILD VOLUNTEER, I bring a diverse skill set including web development, problem-solving, and communication. I thrive on creating elegant web solutions and contributing to meaningful projects.
+    `,
+    skills: [
+      { name: 'HTML', image: 'images/html-5 2.png', alt: 'HTML' },
+      { name: 'CSS', image: 'images/css-3 2.png', alt: 'CSS' },
+      { name: 'JavaScript', image: 'images/java-script 2.png', alt: 'JavaScript' },
+      { name: 'GitHub', image: 'images/GitHub.png', alt: 'GitHub' },
+    ],
+    certifications: [
+      { title: 'Responsive Web Design', image: 'images/responsive.png', link: 'https://link-to-certificate1' },
+      { title: 'Java Script', image: 'images/js.png', link: 'https://link-to-certificate2' },
+      // Add more certifications as needed
+    ],
+  };
 
-  const skillsExperiencesContainer = document.getElementById('skills-experiences');
-  skillsExperiencesContainer.innerHTML = skillsExperiences.map((item) => `
-      <div class="skill-experience">
-      <h3>${item.skill}</h3>
-      <p>${item.experience}</p>
-      </div>
-      `).join('');
-  const certificationContainer = document.getElementById('certification-content');
-  skillsExperiences.forEach((certification) => {
-    if (certification.imageSrc && certification.link) {
-      const certificationDiv = document.createElement('div');
-      certificationDiv.classList.add('certification-item');
-      const certificationTitle = document.createElement('h4');
-      certificationTitle.textContent = certification.skill;
-      certificationDiv.appendChild(certificationTitle);
-      const certificationImage = document.createElement('img');
-      certificationImage.src = certification.imageSrc;
-      certificationImage.alt = `Certification for ${certification.skill}`;
-      certificationDiv.appendChild(certificationImage);
-      const certificationLink = document.createElement('a');
-      certificationLink.href = certification.link;
-      certificationLink.textContent = 'View Certification';
-      certificationLink.textContent = 'View Certification';
-      certificationLink.target = '_blank';
-      certificationDiv.appendChild(certificationLink);
-      certificationContainer.appendChild(certificationDiv);
-    }
+  const aboutContentDiv = document.getElementById('about-content');
+  const skillsExperiencesDiv = document.getElementById('skills-experiences');
+  const certificationContentDiv = document.getElementById('certification-content');
+
+  // Populate description
+  const descriptionSpan = document.createElement('span');
+  descriptionSpan.innerHTML = aboutContent.description;
+  aboutContentDiv.appendChild(descriptionSpan);
+
+  // Populate skills
+  aboutContent.skills.forEach(skill => {
+    const skillSpan = document.createElement('span');
+    skillSpan.textContent = skill.name;
+    const skillImage = document.createElement('img');
+    skillImage.src = skill.image;
+    skillImage.alt = skill.alt;
+    skillsExperiencesDiv.appendChild(skillSpan);
+    skillsExperiencesDiv.appendChild(skillImage);
+  });
+
+  // Populate certifications
+  aboutContent.certifications.forEach(cert => {
+    const certDiv = document.createElement('div');
+    const certTitle = document.createElement('h4');
+    certTitle.textContent = cert.title;
+    const certLink = document.createElement('a');
+    certLink.href = cert.link;
+    certLink.target = '_blank';
+    const certImage = document.createElement('img');
+    certImage.src = cert.image;
+    certImage.alt = cert.title;
+    certLink.appendChild(certImage);
+    certDiv.appendChild(certTitle);
+    certDiv.appendChild(certLink);
+    certificationContentDiv.appendChild(certDiv);
   });
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const projects = [
@@ -135,6 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/survey-form/',
       sourceLink: 'https://github.com/Saqibi4213/survey-form.git',
+      screenshots: [
+        "images/cash reg.png",
+        "path/to/screenshot2.jpg"
+      ],
     },
     {
       title: 'Tribute Page',
@@ -212,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Pokemon-search-App',
       description: 'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
       image: 'images/pokemn.png',
-      screenshots: ['path/to/project2-screenshot1.jpg', 'path/to/project2-screenshot2.jpg'],
+      screenshots: ['images/survey-form.png', 'images/cash reg.png'],
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
       sourceLink: 'https://github.com/Saqibi4213/Pokemon-search-App',
@@ -226,6 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const project = projects[index];
     document.getElementById('popup-title').textContent = project.title;
     document.getElementById('popup-description').textContent = project.description;
+      // Highlighted: Dynamically generate and insert images
+      document.getElementById('popup-images').innerHTML = project.screenshots.map(src => 
+        `<img src="${src}" alt="${project.title} Screenshot">`
+      ).join('');
     document.getElementById('popup-image').src = project.image;
     document.getElementById('live-link').href = project.liveLink;
     document.getElementById('source-link').href = project.sourceLink;
@@ -332,17 +347,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.addEventListener('DOMContentLoaded', () => {
     const socialIconsData = [
-      { img: 'images/', name: 'GitHub', url: 'https://github.com' },
+      { img: 'images/GitHub.png', name: 'GitHub', url: 'https://github.com' },
       { img: 'images/fb.png', name: 'Facebook', url: 'https://facebook.com' },
-      { img: 'path/to/linkedin-icon.png', name: 'LinkedIn', url: 'https://linkedin.com' },
-      { img: 'path/to/whatsapp-icon.png', name: 'WhatsApp', url: 'https://whatsapp.com' },
+      { img: 'images/linkedin.png', name: 'LinkedIn', url: 'https://linkedin.com' },
+      { img: 'imagesWhtsApp.ng', name: 'WhatsApp', url: 'https://whatsapp.com' },
     ];
   
     const createSocialIcon = ({ img, name, url }) => {
       const a = document.createElement('a');
       a.href = url;
       a.target = '_blank';
-      a.classList.add('social-icon');
+      a.className = 'social-icon';
   
       const imgElement = document.createElement('img');
       imgElement.src = img;
@@ -357,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return a;
     };
   
-    const socialIconsDesktop = document.getElementById('social-icons-desktop');
+    const socialIconsHomeDesktop = document.getElementById('social-icons-home-desktop');
     const socialIconsMobileAbout = document.getElementById('social-icons-mobile-about');
     const socialIconsMobileProjects = document.getElementById('social-icons-mobile-projects');
     const socialIconsMobileWorks = document.getElementById('social-icons-mobile-works');
@@ -367,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
     socialIconsData.forEach(iconData => {
       const iconElement = createSocialIcon(iconData);
   
-      socialIconsDesktop.appendChild(iconElement.cloneNode(true));
+      socialIconsHomeDesktop.appendChild(iconElement.cloneNode(true));
       socialIconsMobileAbout.appendChild(iconElement.cloneNode(true));
       socialIconsMobileProjects.appendChild(iconElement.cloneNode(true));
       socialIconsMobileWorks.appendChild(iconElement.cloneNode(true));
@@ -375,5 +390,4 @@ document.addEventListener('DOMContentLoaded', () => {
       socialIconsMobileFooter.appendChild(iconElement.cloneNode(true));
     });
   });
-  
 });

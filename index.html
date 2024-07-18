@@ -14,42 +14,87 @@
     </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#about-myself">About</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact Me</a></li>
+      <li><a href="#contact-form">Contact Me</a></li>
     </ul>
   </nav>
+  <section id="home">
   <header class="headline-section">
     <div class="container">
       <h1 id="headline" class="headline"></h1>
       <p id="intro" class="intro"></p>
     </div>
-    <div class="social-icons" id="social-icons-desktop"></div>
+    <div class="social-icons social-icons-desktop">
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/fb.png" alt="Facebook">
+      </a>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/GitHub.png" alt="GitHub">
+      </a>
+      <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/WhatsApp.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>  
   </header>
+</section>
   <section id="about-myself" class="about-myself-section">
     <div class="container">
-      <h2>About Me</h2>
+      <h2>About Me!</h2>
+      <h3>Junior Web Developer</h3>
+      <div id="about-content"></div>
+      <h3>Showcasing my projects and skills.</h3>
       <div id="skills-experiences"></div>
       <div class="certification">
         <h3>Certificates</h3>
-        <div id="certification-content">
-        </div>
+        <div id="certification-content"></div>
       </div>
     </div>
-    <div class="social-icons" id="social-icons-mobile-about"></div>
+  
+  <!-- Social Icons for Mobile -->
+  <div class="social-icons social-icons-mobile">
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/fb.png" alt="Facebook">
+    </a>
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/GitHub.png" alt="GitHub">
+    </a>
+    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/WhatsApp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+  </div>
   </section>
+  
   <section id="projects">
-    <h2>Projects</h2>
-    <!-- Social icons for mobile version (added at the bottom of each section) -->
-    <div class="social-icons" id="social-icons-mobile-projects"></div>
-  </section>
-  <section id="works" class="works-section">
+    <h2>My Projects</h2>
+  <header id="works" class="works-section">
     <div class="container">
         <!-- Projects will be dynamically added here -->
     </div>
-      <!-- Social icons for mobile version (added at the bottom of each section) -->
-      <div class="social-icons" id="social-icons-mobile-works"></div>
-</section>
+ <!-- Social Icons for Mobile -->
+ <div class="social-icons social-icons-mobile">
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+    <img src="images/fb.png" alt="Facebook">
+  </a>
+  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+    <img src="images/GitHub.png" alt="GitHub">
+  </a>
+  <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+    <img src="images/WhatsApp.png" alt="WhatsApp">
+  </a>
+  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+    <img src="images/linkedin.png" alt="LinkedIn">
+  </a>
+</div>
+ 
+
+
 
 <!-- Projects Popup -->
 <div id="project-popup" class="project-popup">
@@ -59,27 +104,31 @@
             <h2 id="popup-title"></h2>
             <div class="popup-description" id="popup-description"></div>
             <img src="" alt="Project Screenshot" id="popup-image">
+              <!-- Highlighted: Added container for multiple images -->
+              <div id="popup-images" class="popup-images"></div>
             <div class="popup-links">
                 <a href="#" id="live-link" target="_blank">Live Demo</a>
                 <a href="#" id="source-link" target="_blank">Source Code</a>
             </div>
         </div>
     </div>
-</div>
+</div> 
+</header>
+</section>
   <section class="contact-form">
     <div class="container">
-      <h2>Contact Me</h2>
+      <h2>Contact Me!</h2>
       <form id="contact-form">
         <div class="form-control">
-          <label for="name">Name:</label>
+          <label for="name"> Full Name:</label>
           <input type="text" id="name" name="name" placeholder="Enter your name (up to 30 characters)" maxlength="30" required>
         </div>
         <div class="form-control">
-          <label for="email">Email:</label>
+          <label for="email">Email Address:</label>
           <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </div>
         <div class="form-control">
-          <label for="message">Message:</label>
+          <label for="message">Your Message:</label>
           <textarea id="message" name="message" rows="5" placeholder="Enter your message (up to 500 characters)" maxlength="500" required></textarea>
         </div>
         <div id="error-message" class="error-message"></div>
@@ -87,15 +136,43 @@
         <div id="success-message" class="success-message"></div>
       </form>
     </div>
-        <!-- Social icons for mobile version (added at the bottom of each section) -->
-        <div class="social-icons" id="social-icons-mobile-contact"></div>
+   <!-- Social Icons for Mobile -->
+   <div class="social-icons social-icons-mobile">
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/fb.png" alt="Facebook">
+    </a>
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/GitHub.png" alt="GitHub">
+    </a>
+    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/WhatsApp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+  </div>
   </section>
   <footer class="footer">
     <div class="container">
-      <p>Built with Luv by Mehria Saqibi</p>
+      <p>Built with ♥ by Mehria Saqibi</p>
         <!-- Social icons for mobile version (added at the bottom of the footer) -->
         <div class="social-icons" id="social-icons-mobile-footer"></div>
     </div>
+     <!-- Social Icons for Mobile -->
+  <div class="social-icons social-icons-mobile">
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/fb.png" alt="Facebook">
+    </a>
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/GitHub.png" alt="GitHub">
+    </a>
+    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/WhatsApp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+  </div>
   </footer>
   <script src="script.js"></script>
 </body>
