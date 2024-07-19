@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
+       // eslint-disable-next-line no-console
       console.error(`Section with ID "${id}" not found.`);
     }
-  };
-  
+  };  
   menuIcon.addEventListener('click', () => {
     if (navLinks.style.display === 'flex') {
       navLinks.style.display = 'none';
@@ -58,11 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
       menuIcon.innerHTML = '&#9776;';
     }
   };
-  
   window.addEventListener('resize', adjustMenuDisplay);
   adjustMenuDisplay(); // Call once on initial load
 });
-
 document.addEventListener('DOMContentLoaded', () => {
   const myName = 'I am Mehria Saqibi';
   const myIntro = `Hello there, <span class="highlight">${myName}</span>, a passionate web development student <span class="highlight">A Junior Web Developer</span> from <span class="highlight">Afghanistan</span>. I <span class="highlight">love</span> learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always <span class="highlight">eager</span> to take on new challenges.`;
@@ -103,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   aboutContentDiv.appendChild(descriptionSpan);
 
   // Populate skills
-  aboutContent.skills.forEach(skill => {
+  aboutContent.skills.forEach((skill) => {
     const skillSpan = document.createElement('span');
     skillSpan.textContent = skill.name;
     const skillImage = document.createElement('img');
