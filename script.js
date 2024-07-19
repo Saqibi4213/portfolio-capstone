@@ -244,10 +244,10 @@ document.addEventListener('DOMContentLoaded', () => {
     projectCard.classList.add('project');
     projectCard.innerHTML = `
     <h3 class="project-title">${project.title}</h3>
-<p class="project-description">${project.description}</p>
-<img src="${project.image}" alt="${project.title}" class="project-image">
-<button class="see-more-btn" data-index="${index}">See More</button>`;
-worksSection.appendChild(projectCard);
+    <p class="project-description">${project.description}</p>
+    <img src="${project.image}" alt="${project.title}" class="project-image">
+    <button class="see-more-btn" data-index="${index}">See More</button>`;
+    worksSection.appendChild(projectCard);
     const seeMoreBtn = projectCard.querySelector('.see-more-btn');
     seeMoreBtn.addEventListener('click', () => openProjectPopup(index));
   });
@@ -342,26 +342,20 @@ document.addEventListener('DOMContentLoaded', () => {
       { img: 'images/linkedin.png', name: 'LinkedIn', url: 'https://linkedin.com' },
       { img: 'imagesWhtsApp.ng', name: 'WhatsApp', url: 'https://whatsapp.com' },
     ];
-  
     const createSocialIcon = ({ img, name, url }) => {
       const a = document.createElement('a');
       a.href = url;
       a.target = '_blank';
       a.className = 'social-icon';
-  
       const imgElement = document.createElement('img');
       imgElement.src = img;
       imgElement.alt = name;
-  
       const span = document.createElement('span');
       span.textContent = name;
-  
       a.appendChild(imgElement);
       a.appendChild(span);
-  
       return a;
     };
-  
     const socialIconsHomeDesktop = document.getElementById('social-icons-home-desktop');
     const socialIconsMobileAbout = document.getElementById('social-icons-mobile-about');
     const socialIconsMobileProjects = document.getElementById('social-icons-mobile-projects');
@@ -369,9 +363,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const socialIconsMobileContact = document.getElementById('social-icons-mobile-contact');
     const socialIconsMobileFooter = document.getElementById('social-icons-mobile-footer');
   
-    socialIconsData.forEach(iconData => {
+    socialIconsData.forEach((iconData) => {
       const iconElement = createSocialIcon(iconData);
-  
       socialIconsHomeDesktop.appendChild(iconElement.cloneNode(true));
       socialIconsMobileAbout.appendChild(iconElement.cloneNode(true));
       socialIconsMobileProjects.appendChild(iconElement.cloneNode(true));
