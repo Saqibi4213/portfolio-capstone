@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
-       // eslint-disable-next-line no-console
+      // eslint-disable-next-line no-console
       console.error(`Section with ID "${id}" not found.`);
     }
-  };  
+  };
   menuIcon.addEventListener('click', () => {
     if (navLinks.style.display === 'flex') {
       navLinks.style.display = 'none';
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Populate certifications
-  aboutContent.certifications.forEach(cert => {
+  aboutContent.certifications.forEach((cert) => {
     const certDiv = document.createElement('div');
     const certTitle = document.createElement('h4');
     certTitle.textContent = cert.title;
@@ -128,8 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
     certificationContentDiv.appendChild(certDiv);
   });
 });
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
