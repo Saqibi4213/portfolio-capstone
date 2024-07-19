@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Portfolio',
       description: 'This is my portfolio using html and css',
       image: 'images/mehr1.png',
-      screenshots: ['images/P1', 'images/P2.png', 'images/P3.png','images/P4.png', 'images/P5.png'],
+      screenshots: ['images/P1', 'images/P2.png', 'images/P3.png', 'images/P4.png', 'images/P5.png'],
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/my-portfolio/',
       sourceLink: 'https://github.com/Saqibi4213/my-portfolio',
@@ -229,10 +229,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const project = projects[index];
     document.getElementById('popup-title').textContent = project.title;
     document.getElementById('popup-description').textContent = project.description;
-      // Highlighted: Dynamically generate and insert images
-      document.getElementById('popup-images').innerHTML = project.screenshots.map(src => 
-        `<img src="${src}" alt="${project.title} Screenshot">`
-      ).join('');
+    // Highlighted: Dynamically generate and insert images
+    document.getElementById('popup-images').innerHTML = project.screenshots.map((src) =>`<img src="${src}" alt="${project.title} Screenshot">`
+    ).join('');
     document.getElementById('popup-image').src = project.image;
     document.getElementById('live-link').href = project.liveLink;
     document.getElementById('source-link').href = project.sourceLink;
