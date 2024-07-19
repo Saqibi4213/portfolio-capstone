@@ -113,8 +113,9 @@ nav {
 
 .social-icons {
   display: flex;
-  justify-content: center; /* Center the icons horizontally */
-  align-items: center; /* Center the icons vertically */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 @media (max-width: 768px) {
@@ -337,13 +338,6 @@ nav {
 
 #submit-btn:hover {
   background-color: #147bcd;
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
 }
 
 .social-icons img {
