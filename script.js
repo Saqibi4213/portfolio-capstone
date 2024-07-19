@@ -230,8 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('popup-title').textContent = project.title;
     document.getElementById('popup-description').textContent = project.description;
     // Highlighted: Dynamically generate and insert images
-    document.getElementById('popup-images').innerHTML = project.screenshots.map((src) =>`<img src="${src}" alt="${project.title} Screenshot">`
-    ).join('');
+    document.getElementById('popup-images').innerHTML = project.screenshots.map((src) => 
+    `<img src="${src}" alt="${project.title} Screenshot",>`).join('');
     document.getElementById('popup-image').src = project.image;
     document.getElementById('live-link').href = project.liveLink;
     document.getElementById('source-link').href = project.sourceLink;
