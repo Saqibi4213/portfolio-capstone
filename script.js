@@ -230,8 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('popup-title').textContent = project.title;
     document.getElementById('popup-description').textContent = project.description;
     // Highlighted: Dynamically generate and insert images
-    document.getElementById('popup-images').innerHTML = project.screenshots.map((src) => 
-    `<img src="${src}" alt="${project.title} Screenshot",>`).join('');
+    document.getElementById('popup-images').innerHTML = project.screenshots.map((src) =>
+      `<img src="${src}" alt="${project.title} Screenshot",>`).join('');
     document.getElementById('popup-image').src = project.image;
     document.getElementById('live-link').href = project.liveLink;
     document.getElementById('source-link').href = project.sourceLink;
@@ -243,12 +243,10 @@ document.addEventListener('DOMContentLoaded', () => {
     projectCard.classList.add('project');
     projectCard.innerHTML = `
     <h3 class="project-title">${project.title}</h3>
-    <p class="project-description">${project.description}</p>
-    <img src="${project.image}" alt="${project.title}" class="project-image">
-    <button class="see-more-btn" data-index="${index}">See More</button>
-    `;
-    worksSection.appendChild(projectCard);
-
+<p class="project-description">${project.description}</p>
+<img src="${project.image}" alt="${project.title}" class="project-image">
+<button class="see-more-btn" data-index="${index}">See More</button>`;
+worksSection.appendChild(projectCard);
     const seeMoreBtn = projectCard.querySelector('.see-more-btn');
     seeMoreBtn.addEventListener('click', () => openProjectPopup(index));
   });
