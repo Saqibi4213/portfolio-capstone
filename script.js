@@ -362,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const socialIconsMobileWorks = document.getElementById('social-icons-mobile-works');
     const socialIconsMobileContact = document.getElementById('social-icons-mobile-contact');
     const socialIconsMobileFooter = document.getElementById('social-icons-mobile-footer');
-  
     socialIconsData.forEach((iconData) => {
       const iconElement = createSocialIcon(iconData);
       socialIconsHomeDesktop.appendChild(iconElement.cloneNode(true));
