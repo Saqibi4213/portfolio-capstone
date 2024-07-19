@@ -138,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS'],
       liveLink: 'https://saqibi4213.github.io/survey-form/',
       sourceLink: 'https://github.com/Saqibi4213/survey-form.git',
-      screenshots: ["images/survey-form.png"],
     },
     {
       title: 'Tribute Page',
