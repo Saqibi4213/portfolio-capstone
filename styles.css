@@ -3,10 +3,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
-/* General Navbar Styles */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -83,7 +84,6 @@ nav {
   }
 }
 
-
 .certification a {
   display: inline-block;
   margin-top: 10px;
@@ -116,7 +116,6 @@ nav {
   justify-content: center; /* Center the icons horizontally */
   align-items: center; /* Center the icons vertically */
 }
-
 
 @media (max-width: 768px) {
   .menu-icon {
@@ -230,7 +229,7 @@ nav {
   border-radius: 5px;
   cursor: pointer;
 }
-/* Popup styling */
+
 .project-popup {
   display: none; /* Hide by default */
   position: fixed;
@@ -267,8 +266,6 @@ nav {
   border-radius: 5px;
 }
 
-
-/* Close button styling */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -279,8 +276,6 @@ nav {
   background: transparent; /* No background */
   border: none; /* No border */
 }
-
-
 
 .contact-form {
   padding: 50px 20px;
@@ -343,6 +338,7 @@ nav {
 #submit-btn:hover {
   background-color: #147bcd;
 }
+
 .social-icons {
   display: flex;
   flex-direction: column;
@@ -355,7 +351,6 @@ nav {
   height: 24px;
   margin-right: 10px;
 }
-
 
 .footer {
   background-color: #333;
