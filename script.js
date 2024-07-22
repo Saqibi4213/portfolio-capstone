@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const navLinks = document.getElementById('nav-links');
   const navLinksItems = navLinks.querySelectorAll('a');
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // eslint-disable-next-line no-console
       console.error(`Section with ID "${id}" not found.`);
     }
   };
+
   menuIcon.addEventListener('click', () => {
     if (navLinks.style.display === 'flex') {
       navLinks.style.display = 'none';
@@ -20,69 +21,48 @@ document.addEventListener('DOMContentLoaded', () => {
       menuIcon.innerHTML = '&times;';
     }
   });
-  navLinksItems.forEach((item) => {
-    item.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A') {
-        event.preventDefault();
-        const targetId = item.getAttribute('href').substring(1);
-        scrollToSection(targetId);
+
+  navLinksItems.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetSectionId = link.getAttribute('href').substring(1);
+      scrollToSection(targetSectionId);
+      if (window.innerWidth <= 768) {
+        navLinks.style.display = 'none';
+        menuIcon.innerHTML = '&#9776;';
       }
-      navLinks.style.display = 'none';
-      menuIcon.innerHTML = '&#9776;';
     });
   });
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-      navLinks.style.display = 'flex';
-      menuIcon.style.display = 'none';
-    } else {
-      navLinks.style.display = 'none';
-      menuIcon.style.display = 'block';
-      menuIcon.innerHTML = '&#9776;';
-    }
-  });
-  if (window.innerWidth > 768) {
-    navLinks.style.display = 'flex';
-    menuIcon.style.display = 'none';
-  } else {
-    navLinks.style.display = 'none';
-    menuIcon.style.display = 'block';
-  }
-  const adjustMenuDisplay = () => {
-    if (window.innerWidth > 768) {
-      navLinks.style.display = 'flex';
-      menuIcon.style.display = 'none';
-    } else {
-      navLinks.style.display = 'none';
-      menuIcon.style.display = 'block';
-      menuIcon.innerHTML = '&#9776;';
-    }
-  };
-  window.addEventListener('resize', adjustMenuDisplay);
-  adjustMenuDisplay(); // Call once on initial load
 });
+
 document.addEventListener('DOMContentLoaded', () => {
-  const myName = 'I am Mehria Saqibi';
-  const myIntro = `Hello there, <span class="highlight">${myName}</span>, a passionate web development student <span class="highlight">A Junior Web Developer</span> from <span class="highlight">Afghanistan</span>. I <span class="highlight">love</span> learning new technologies and enhancing my skills in web development. I am dedicated to continuous improvement and always <span class="highlight">eager</span> to take on new challenges.`;
+  const logoElement = document.getElementById('logo');
+  const logoText = 'MEHR';
+  logoElement.textContent = logoText;
+  const myName = '<h2 class ="hello">Hello there,<span class="highlight">I`m</span></h2>';
+  const myIntro = ` I’m a passionate <span class="highlight">web development</span> student and <span class="highlight">A Junior Web Developer</span> from <span class = "highlight">Afghanistan</span>. My journey in technology began with a Bachelor’s degree in Software Engineering, which provided me with a strong foundation in computer science. I’m constantly 
+  <span class ="highlight">eager</span> to expand my knowledge and skills, which is why I’m also currently enrolled in a Python class to further deepen my programming expertise.
+Beyond coding, I am enthusiastic about collaborating with others and sharing knowledge. I believe in the power of teamwork and am always open to new ideas and perspectives. My goal is to not only build functional and aesthetically pleasing web applications but also to make a positive impact through my work.`;
   const headline = document.getElementById('headline');
   const intro = document.getElementById('intro');
   headline.innerHTML = myName;
   intro.innerHTML = myIntro;
   document.querySelectorAll('.highlight').forEach((element) => {
     element.style.fontWeight = 'bold';
-    element.style.color = 'blue';
+    element.style.color = '#F9A826';
   });
 });
 document.addEventListener('DOMContentLoaded', () => {
   const aboutContent = {
     description: `
-      I'm Mehria Saqibi, a junior web developer with a Computer Science degree. With two years of teaching experience, one year as a consultant in an NGO, and a year as a translator for RUMIE BUILD VOLUNTEER, I bring a diverse skill set including web development, problem-solving, and communication. I thrive on creating elegant web solutions and contributing to meaningful projects.
+  I am Mehria Saqibi, a dedicated and passionate junior web developer with a Bachelor's degree in Computer Science. Over the past few years, I have cultivated a diverse skill set and a deep understanding of various facets of technology through a range of professional experiences.<br>
+  My technical expertise spans across web development,where I specialize in creating elegant and efficient web solutions. I am proficient in HTML, CSS, and JavaScript, and continuously strive to expand my knowledge by learning new technologies and best practices. My projects reflect a commitment to quality and a keen eye for detail, ensuring that every solution I develop is both functional and aesthetically pleasing.
     `,
+    
     skills: [
-      { name: 'HTML', image: 'images/html-5 2.png', alt: 'HTML' },
-      { name: 'CSS', image: 'images/css-3 2.png', alt: 'CSS' },
-      { name: 'JavaScript', image: 'images/java-script 2.png', alt: 'JavaScript' },
-      { name: 'GitHub', image: 'images/GitHub.png', alt: 'GitHub' },
+      {  image: 'images/html-5 2.png', name: 'HTML', alt: 'HTML' },
+      {  image: 'images/css-3 2.png', name: 'Css', alt: 'CSS' },
+      {  image: 'images/java-script 2.png', name: 'JavaScript', alt: 'JavaScript' },
     ],
     certifications: [
       { title: 'Responsive Web Design', image: 'images/responsive.png', link: 'https://link-to-certificate1' },
@@ -91,6 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
   };
 
+  const dynamicHeadlines = [
+    'About Me',
+    'Junior Web Developer'
+  ];
+
+
+  const headlineContainer = document.getElementById('dynamic-headlines');
+  dynamicHeadlines.forEach(headlineText => {
+    const headline = document.createElement('h2');
+    headline.innerHTML = `<span class="highlight"></span>
+    <span class="highlight">${headlineText}</span>`;
+    headlineContainer.appendChild(headline);
+  });
   const aboutContentDiv = document.getElementById('about-content');
   const skillsExperiencesDiv = document.getElementById('skills-experiences');
   const certificationContentDiv = document.getElementById('certification-content');
@@ -126,6 +119,21 @@ document.addEventListener('DOMContentLoaded', () => {
     certDiv.appendChild(certTitle);
     certDiv.appendChild(certLink);
     certificationContentDiv.appendChild(certDiv);
+  });
+  
+  // Add the "My Skills" heading with icon dynamically
+  const skillsHeading = document.createElement('h3');
+  skillsHeading.innerHTML = `My<span class="highlight"> Skills:</span>`;
+  const skillsArrow = document.createElement('i');
+  skillsArrow.className = 'bx bx-chevron-down';
+  skillsArrow.id = 'skills-arrow';
+  
+  skillsHeading.appendChild(skillsArrow);
+  skillsExperiencesDiv.parentElement.insertBefore(skillsHeading, skillsExperiencesDiv);
+   
+  document.querySelectorAll('.highlight').forEach((element) => {
+    element.style.fontWeight = 'bold';
+    element.style.color = '#F9A826';
   });
 });
 document.addEventListener('DOMContentLoaded', () => {
@@ -372,4 +380,25 @@ document.addEventListener('DOMContentLoaded', () => {
       socialIconsMobileFooter.appendChild(iconElement.cloneNode(true));
     });
   });
-});
+   // New certificates section code
+   const certificationContentDiv = document.getElementById('certification-content');
+   const certifications = [
+     // ... list of certifications as in the previous instructions ...
+   ];
+ 
+   certifications.forEach((cert) => {
+     const certDiv = document.createElement('div');
+     const certTitle = document.createElement('h4');
+     certTitle.textContent = cert.title;
+     const certLink = document.createElement('a');
+     certLink.href = cert.link;
+     certLink.target = '_blank';
+     const certImage = document.createElement('img');
+     certImage.src = cert.image;
+     certImage.alt = cert.title;
+     certLink.appendChild(certImage);
+     certDiv.appendChild(certTitle);
+     certDiv.appendChild(certLink);
+     certificationContentDiv.appendChild(certDiv);
+   });
+ });

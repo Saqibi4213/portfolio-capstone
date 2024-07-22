@@ -3,27 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capstone | Portfolio</title>
+  <title>Capstone | Portfolio |Mehria</title>
   <link rel="stylesheet" href="styles.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
 </head>
 <body>
   <nav>
+    <div class="logo" id="logo">MEHR</div>
     <div class="menu-icon" id="menu-icon">
       &#9776;
     </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about-myself">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact-form">Contact Me</a></li>
+      <li><a href="#project">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact-form">Contact</a></li>
     </ul>
   </nav>
   <section id="home">
-  <header class="headline-section">
+  <div class="headline-section" >
     <div class="container">
       <h1 id="headline" class="headline"></h1>
+      <h2 class="headline-h2"> Mehria Saqibi!</h2>
       <p id="intro" class="intro"></p>
+    </div>
+    <div class="image-content">
+      <img src="images/Ellipse 45.png" alt="Your Image" class="home-image">
+      <img src="images/Employee.png" alt="Your Image1" class="home-image1">
     </div>
     <div class="social-icons social-icons-desktop">
       <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
@@ -39,64 +46,23 @@
         <img src="images/linkedin.png" alt="LinkedIn">
       </a>
     </div>  
-  </header>
+  </div>
 </section>
   <section id="about-myself" class="about-myself-section">
-    <div class="container">
-      <h2>About Me!</h2>
-      <h3>Junior Web Developer</h3>
-      <div id="about-content"></div>
-      <h3>Showcasing my projects and skills.</h3>
+    <div class="container"><img src="images/undraw_portfolio_update_re_jqnp 1.png" class="about-img">
+      <div id="dynamic-headlines"></div>
+      <div id="about-content">
+      <h3><span class="highlight"></span>
+      </h3></div>
       <div id="skills-experiences"></div>
-      <div class="certification">
-        <h3>Certificates</h3>
-        <div id="certification-content"></div>
-      </div>
-    </div>
-  
-  <!-- Social Icons for Mobile -->
-  <div class="social-icons social-icons-mobile">
-    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/fb.png" alt="Facebook">
-    </a>
-    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/GitHub.png" alt="GitHub">
-    </a>
-    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/WhatsApp.png" alt="WhatsApp">
-    </a>
-    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/linkedin.png" alt="LinkedIn">
-    </a>
+      <div>
   </div>
+</div>
   </section>
-  
-  <section id="projects">
-    <h2>My Projects</h2>
+  <section id="project">
+    <h1>Projects</h1>
   <header id="works" class="works-section">
     <div class="container">
-        <!-- Projects will be dynamically added here -->
-    </div>
- <!-- Social Icons for Mobile -->
- <div class="social-icons social-icons-mobile">
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-    <img src="images/fb.png" alt="Facebook">
-  </a>
-  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-    <img src="images/GitHub.png" alt="GitHub">
-  </a>
-  <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
-    <img src="images/WhatsApp.png" alt="WhatsApp">
-  </a>
-  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-    <img src="images/linkedin.png" alt="LinkedIn">
-  </a>
-</div>
- 
-
-
-
-<!-- Projects Popup -->
 <div id="project-popup" class="project-popup">
     <div class="popup-content">
         <span class="close-btn" id="close-btn">&times;</span>
@@ -114,6 +80,14 @@
     </div>
 </div> 
 </header>
+</section>
+<section id="certificates">
+  <h2>My Certifications</h2><img src="images/undraw_project_complete_lwss 1.png" class="about-img">
+  <p id="certificates-description">
+    Here you can find a list of certifications that I have earned. These certifications showcase my skills and knowledge in various areas of web development and programming. Each certification has a link to the respective certificate, where you can verify and view the details.
+  </p>
+  
+  <div id="certification-content"></div>
 </section>
   <section class="contact-form">
     <div class="container">
@@ -136,43 +110,11 @@
         <div id="success-message" class="success-message"></div>
       </form>
     </div>
-   <!-- Social Icons for Mobile -->
-   <div class="social-icons social-icons-mobile">
-    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/fb.png" alt="Facebook">
-    </a>
-    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/GitHub.png" alt="GitHub">
-    </a>
-    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/WhatsApp.png" alt="WhatsApp">
-    </a>
-    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/linkedin.png" alt="LinkedIn">
-    </a>
-  </div>
   </section>
   <footer class="footer">
     <div class="container">
       <p>Built with ♥ by Mehria Saqibi</p>
-        <!-- Social icons for mobile version (added at the bottom of the footer) -->
-        <div class="social-icons" id="social-icons-mobile-footer"></div>
     </div>
-     <!-- Social Icons for Mobile -->
-  <div class="social-icons social-icons-mobile">
-    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/fb.png" alt="Facebook">
-    </a>
-    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/GitHub.png" alt="GitHub">
-    </a>
-    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/WhatsApp.png" alt="WhatsApp">
-    </a>
-    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-      <img src="images/linkedin.png" alt="LinkedIn">
-    </a>
-  </div>
   </footer>
   <script src="script.js"></script>
 </body>
