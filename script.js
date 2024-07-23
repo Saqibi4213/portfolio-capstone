@@ -37,21 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const logoElement = document.getElementById('logo');
-  const logoText = 'MEHR';
+  const logoText = '♥MEHR♥';
   logoElement.textContent = logoText;
-  const myName = '<h2 class ="hello">Hello there,<span class="highlight">I`m</span></h2>';
-  const myIntro = ` I’m a passionate <span class="highlight">web development</span> student and <span class="highlight">A Junior Web Developer</span> from <span class = "highlight">Afghanistan</span>. My journey in technology began with a Bachelor’s degree in Software Engineering, which provided me with a strong foundation in computer science. I’m constantly 
-  <span class ="highlight">eager</span> to expand my knowledge and skills, which is why I’m also currently enrolled in a Python class to further deepen my programming expertise.
-Beyond coding, I am enthusiastic about collaborating with others and sharing knowledge. I believe in the power of teamwork and am always open to new ideas and perspectives. My goal is to not only build functional and aesthetically pleasing web applications but also to make a positive impact through my work.`;
+  const myName = '<h2 class ="hello">Hello there,<span class="highlight"> I`m </span></h2>';
+  const myIntro = ` I’m a passionate <span class="highlight">web development</span> student. 
+  and <span class="highlight">A Junior Web Developer</span> from <span class = "highlight">Afghanistan</span> Over the past few years, I have cultivated a diverse skill set and a deep understanding of various facets of technology through a range of professional experiences. i <span class="highlight">love</span> to learn new things and love my job .`;
   const headline = document.getElementById('headline');
   const intro = document.getElementById('intro');
   headline.innerHTML = myName;
   intro.innerHTML = myIntro;
   document.querySelectorAll('.highlight').forEach((element) => {
     element.style.fontWeight = 'bold';
-    element.style.color = '#F9A826';
+    element.style.color = '#ED9D02';
   });
 });
+//about//
 document.addEventListener('DOMContentLoaded', () => {
   const aboutContent = {
     description: `
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add more certifications as needed
     ],
   };
-
+// about
   const dynamicHeadlines = [
     'About Me',
     'Junior Web Developer'
