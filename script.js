@@ -66,16 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     certifications: [
       { title: 'Responsive Web Design', image: 'images/responsive.png', link: 'https://link-to-certificate1' },
-      { title: 'Java Script', image: 'images/js.png', link: 'https://link-to-certificate2' },
-      // Add more certifications as needed
+      { title: 'Java Script', image: 'images/js.png', link:'https://link-to-certificate2' },
     ],
   };
 // about
   const dynamicHeadlines = [
-    'About Me',
-    'Junior Web Developer'
-  ];
 
+    'About Me! <br> Junior Web Developer'
+  ];
 
   const headlineContainer = document.getElementById('dynamic-headlines');
   dynamicHeadlines.forEach(headlineText => {
@@ -86,14 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   const aboutContentDiv = document.getElementById('about-content');
   const skillsExperiencesDiv = document.getElementById('skills-experiences');
-  const certificationContentDiv = document.getElementById('certification-content');
 
-  // Populate description
   const descriptionSpan = document.createElement('span');
   descriptionSpan.innerHTML = aboutContent.description;
   aboutContentDiv.appendChild(descriptionSpan);
 
-  // Populate skills
   aboutContent.skills.forEach((skill) => {
     const skillSpan = document.createElement('span');
     skillSpan.textContent = skill.name;
@@ -104,26 +99,55 @@ document.addEventListener('DOMContentLoaded', () => {
     skillsExperiencesDiv.appendChild(skillImage);
   });
 
-  // Populate certifications
-  aboutContent.certifications.forEach((cert) => {
+  aboutContent.certifications.forEach((cert, index) => {
     const certDiv = document.createElement('div');
+    certDiv.classList.add(`cert${index + 1}`);
+    certDiv.style.width = '28.13rem';
+    certDiv.style.height = '20rem';
+    certDiv.style.top = '14.14rem';
+    certDiv.style.left = '54.54rem';
+    certDiv.style.gap = '0rem'; /* Converted from 0px to rem */
+    certDiv.style.border = '0.313rem 0rem 0rem 0rem';
+    certDiv.style.opacity = '1rem';
     const certTitle = document.createElement('h4');
     certTitle.textContent = cert.title;
+    certTitle.style.fontFamily = 'Acme, sans-serif';
+    certTitle.style.fontSize = '20px';
+    certTitle.style.fontWeight = '400';
+    certTitle.style.lineHeight = '35.51px';
+    certTitle.style.textAlign = 'left';
+    certTitle.style.color = '#F9A826';
+    certTitle.style.textAlign = 'center';
     const certLink = document.createElement('a');
     certLink.href = cert.link;
     certLink.target = '_blank';
     const certImage = document.createElement('img');
     certImage.src = cert.image;
     certImage.alt = cert.title;
+    certImage.style.maxWidth = '28.125rem';
+    certImage.style.Top = '36.408rem';
+    certImage.style.bottom = '55.40rem';
+    certImage.style.left = '54.543rem';
+    certImage.style.marginRight = '900rem';
+    certImage.style.border = '0.313rem';
+    certTitle.textContent = cert.title;
+    certImage.style.border = '0.313rem solid #F9A826'; 
+    certImage.style.fontFamily = 'Acme, sans-serif';
+    certImage.style.fontSize = '1.25rem'; 
+    certImage.style.fontWeight = '400';
+    certImage.style.lineHeight = '1.8rem'; 
+    certImage.style.textAlign = 'left';
     certLink.appendChild(certImage);
     certDiv.appendChild(certTitle);
     certDiv.appendChild(certLink);
-    certificationContentDiv.appendChild(certDiv);
+    document.getElementById('certification-content').appendChild(certDiv);
   });
+  
+
   
   // Add the "My Skills" heading with icon dynamically
   const skillsHeading = document.createElement('h3');
-  skillsHeading.innerHTML = `My<span class="highlight"> Skills:</span>`;
+  skillsHeading.innerHTML = `<h5 class="skills">My<span class="highlight"> Skills:</span></h5>`;
   const skillsArrow = document.createElement('i');
   skillsArrow.className = 'bx bx-chevron-down';
   skillsArrow.id = 'skills-arrow';
@@ -139,8 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
-      title: 'Survey Form',
-      description: 'This is simple survey form project my first work as junior developer using html css',
+      title: '1: Survey Form:',
+      description: `The Survey Form project is a pivotal milestone in my journey as a junior web developer, showcasing my foundational skills in HTML and CSS. This project represents more than just a form; it's a testament to my understanding of web development principles and my ability to create user-centric interfaces.`,
+      longDescription: `This is simple survey form project my first work as junior developer using html css `,
       image: 'images/survey-form.png',
       screenshots: ['images/survey-form.png'],
       technologies: ['HTML', 'CSS'],
@@ -148,8 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/survey-form.git',
     },
     {
-      title: 'Tribute Page',
-      description: 'This is simple project using html and css and project is about Ahmad shah baba',
+      title: '2: Tribute Page:',
+      description: `The Tribute Page project is an homage to Ahmad Shah Baba, a revered historical figure known for his significant contributions and leadership in Afghanistan's history. Through this project, I aimed to create a visually compelling and informative web page that celebrates his life and achievements.`,
+      longDescription: 'This is simple project using html and css and project is about Ahmad shah baba ',
       image: 'images/atribute-page.png',
       screenshots: ['images/T1.png', 'images/T2.png', 'images/T3.png'],
       technologies: ['HTML', 'CSS'],
@@ -157,8 +183,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/tribute-page.git',
     },
     {
-      title: 'Product Landing page',
-      description: 'This is product landing page using html css and the project is about Skin Care',
+      title: '3: Product Landing page:',
+       description:`The Product Landing Page project is a dedicated platform showcasing a range of skin care products. Designed with HTML and CSS, this project aims to captivate visitors with its aesthetic appeal and functional layout.`,
+      longDescription:'This is product landing page using html css and the project is about Skin Care',
       image: 'images/skin-care.png',
       screenshots: ['images/S1.png', 'images/S2.png', 'images/S3.png'],
       technologies: ['HTML', 'CSS'],
@@ -166,8 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/skin-care.git',
     },
     {
-      title: 'Coffee shop',
-      description: 'This is Coffee shop website using html and css',
+      title: '4: Coffee shop:',
+      description: `The Coffee Shop Website project showcases a virtual cafe experience built with HTML and CSS. It features an inviting design that highlights coffee varieties, menu options, and an easy-to-navigate layout.`,
+      longDescription:'This is Coffee shop website using html and css',
       image: 'images/project-landing.png',
       screenshots: ['images/'],
       technologies: ['HTML', 'CSS'],
@@ -175,8 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/product-landing-page.git',
     },
     {
-      title: 'Portfolio',
-      description: 'This is my portfolio using html and css',
+      title: '5: Portfolio:',
+      description: `My portfolio showcases my projects and skills using a clean and professional design. Built entirely with HTML and CSS, it highlights my work and provides a platform to showcase my capabilities as a web developer.`,
+      longDescription: 'This is my portfolio using html and css',
       image: 'images/mehr1.png',
       screenshots: ['images/P1', 'images/P2.png', 'images/P3.png', 'images/P4.png', 'images/P5.png'],
       technologies: ['HTML', 'CSS'],
@@ -184,8 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/my-portfolio',
     },
     {
-      title: 'Roman Numeral Converter',
-      description: 'Using this project user can convert number to roman',
+      title: '6: Roman Numeral Converter:',
+      description: 'The Roman Numeral Converter project allows users to convert Arabic numerals into Roman numerals and vice versa. Built with HTML, CSS, and JavaScript, it provides a simple and intuitive interface for converting between the two numeral systems.',
+      longDescription: 'Using this project user can convert number to roman',
       image: 'images/roman.png',
       screenshots: ['images/R1.png'],
       technologies: ['HTML', 'CSS', 'JS'],
@@ -193,8 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/Roman-numeral-converter',
     },
     {
-      title: 'palindrome-checker',
-      description: 'palindrome-checker is for the help of user to search word palindrome',
+      title: '7: palindrome-checker:',
+      description: `The Palindrome Checker project is a helpful tool that allows users to determine whether a given word or phrase is a palindrome. Implemented using HTML, CSS, and JavaScript, it provides a straightforward interface where users can input text and instantly check if it reads the same backward and forward.`,
+      longDescription: 'palindrome-checker is for the help of user to search word palindrome',
       image: 'images/palindrome.png',
       screenshots: ['images/PA1.png'],
       technologies: ['HTML', 'CSS', 'JS'],
@@ -202,8 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/palindrome-checker',
     },
     {
-      title: 'Telephone-Number-Validator',
-      description: 'The Telephone Number Validator is  designed to validate telephone numbers using HTML, CSS, and JavaScript. This   application ensures users enter valid telephone numbers in the correct format.',
+      title: '8: Phone Number Validator:',
+      description:  `The Telephone Number Validator project is a web application built with HTML, CSS, and JavaScript. It validates and ensures that users enter telephone numbers in the correct format, providing instant feedback on validity.`,
+      longDescription: `The Telephone Number Validator is designed to validate telephone numbers using HTML, CSS, and JavaScript. This application ensures users enter valid telephone numbers in the correct format.`,
       image: 'images/phone-validator.png',
       screenshots: ['images/N1.png', 'images/N2.png'],
       technologies: ['HTML', 'CSS', 'JS'],
@@ -211,8 +243,9 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/Telephone-Number-Validator',
     },
     {
-      title: 'Cash-register',
-      description: 'This project is a simple Cash Register application built with HTML, CSS, and JavaScript. ',
+      title: '9: Cash-register:',
+      description: `The Cash Register project is a web application developed using HTML, CSS, and JavaScript. It simulates a basic cash register interface, allowing users to calculate totals, manage transactions, and generate receipts. It's designed for simplicity and practical use in learning basic arithmetic operations and handling transactions.`,
+      longDescription: `This project is a simple Cash Register application built with HTML, CSS, and JavaScript.`,
       image: 'images/cash reg.png',
       screenshots: ['images/C1.png', 'images/C2.png'],
       technologies: ['HTML', 'CSS', 'JS'],
@@ -220,15 +253,18 @@ document.addEventListener('DOMContentLoaded', () => {
       sourceLink: 'https://github.com/Saqibi4213/Cash-register',
     },
     {
-      title: 'Pokemon-search-App',
-      description: 'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
+      title: '10: Pokemon-search-App:',
+      description: `The Pokemon Search App is a web-based application designed for users to explore and learn about different Pokemon creatures. It offers a comprehensive search feature where users can find detailed information and statistics of their favorite Pokemon.`,
+      longDescription: 'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
       image: 'images/pokemn.png',
       screenshots: ['images/PO1.png', 'images/PO2.png'],
       technologies: ['HTML', 'CSS', 'JS'],
       liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
       sourceLink: 'https://github.com/Saqibi4213/Pokemon-search-App',
     },
+    
   ];
+
   const worksSection = document.getElementById('works');
   const projectPopup = document.getElementById('project-popup');
   const closeBtn = document.getElementById('close-btn');
@@ -236,10 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const openProjectPopup = (index) => {
     const project = projects[index];
     document.getElementById('popup-title').textContent = project.title;
-    document.getElementById('popup-description').textContent = project.description;
-    // Highlighted: Dynamically generate and insert images
+    document.getElementById('popup-description').textContent = project.longDescription; // Display long description in popup
     document.getElementById('popup-images').innerHTML = project.screenshots.map((src) => (
-      `<img src="${src}" alt="${project.title} Screenshot",>`
+      `<img src="${src}" alt="${project.title} Screenshot">`
     )).join('');
     document.getElementById('popup-image').src = project.image;
     document.getElementById('live-link').href = project.liveLink;
@@ -251,14 +286,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectCard = document.createElement('div');
     projectCard.classList.add('project');
     projectCard.innerHTML = `
-    <h3 class="project-title">${project.title}</h3>
-    <p class="project-description">${project.description}</p>
-    <img src="${project.image}" alt="${project.title}" class="project-image">
-    <button class="see-more-btn" data-index="${index}">See More</button>`;
+      <h3 class="project-title">${project.title}</h3>
+      <p class="project-description">${project.description}</p>
+      <img src="${project.image}" alt="${project.title}" class="project-image">
+      <button class="see-more-btn" data-index="${index}">See More</button>`;
     worksSection.appendChild(projectCard);
+
     const seeMoreBtn = projectCard.querySelector('.see-more-btn');
     seeMoreBtn.addEventListener('click', () => openProjectPopup(index));
   });
+
   closeBtn.addEventListener('click', () => {
     projectPopup.style.display = 'none';
   });
@@ -269,6 +306,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
@@ -343,43 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
   });
-  document.addEventListener('DOMContentLoaded', () => {
-    const socialIconsData = [
-      { img: 'images/GitHub.png', name: 'GitHub', url: 'https://github.com' },
-      { img: 'images/fb.png', name: 'Facebook', url: 'https://facebook.com' },
-      { img: 'images/linkedin.png', name: 'LinkedIn', url: 'https://linkedin.com' },
-      { img: 'imagesWhtsApp.ng', name: 'WhatsApp', url: 'https://whatsapp.com' },
-    ];
-    const createSocialIcon = ({ img, name, url }) => {
-      const a = document.createElement('a');
-      a.href = url;
-      a.target = '_blank';
-      a.className = 'social-icon';
-      const imgElement = document.createElement('img');
-      imgElement.src = img;
-      imgElement.alt = name;
-      const span = document.createElement('span');
-      span.textContent = name;
-      a.appendChild(imgElement);
-      a.appendChild(span);
-      return a;
-    };
-    const socialIconsHomeDesktop = document.getElementById('social-icons-home-desktop');
-    const socialIconsMobileAbout = document.getElementById('social-icons-mobile-about');
-    const socialIconsMobileProjects = document.getElementById('social-icons-mobile-projects');
-    const socialIconsMobileWorks = document.getElementById('social-icons-mobile-works');
-    const socialIconsMobileContact = document.getElementById('social-icons-mobile-contact');
-    const socialIconsMobileFooter = document.getElementById('social-icons-mobile-footer');
-    socialIconsData.forEach((iconData) => {
-      const iconElement = createSocialIcon(iconData);
-      socialIconsHomeDesktop.appendChild(iconElement.cloneNode(true));
-      socialIconsMobileAbout.appendChild(iconElement.cloneNode(true));
-      socialIconsMobileProjects.appendChild(iconElement.cloneNode(true));
-      socialIconsMobileWorks.appendChild(iconElement.cloneNode(true));
-      socialIconsMobileContact.appendChild(iconElement.cloneNode(true));
-      socialIconsMobileFooter.appendChild(iconElement.cloneNode(true));
-    });
-  });
+ 
    // New certificates section code
    const certificationContentDiv = document.getElementById('certification-content');
    const certifications = [
