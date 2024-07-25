@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '3: Product Landing page:',
-      description:'The Product Landing Page project is a dedicated platform showcasing a range of skin care products. Designed with HTML and CSS, this project aims to captivate visitors with its aesthetic appeal and functional layout.',
+      description: 'The Product Landing Page project is a dedicated platform showcasing a range of skin care products. Designed with HTML and CSS, this project aims to captivate visitors with its aesthetic appeal and functional layout.',
       longDescription: 'This is product landing page using html css and the project is about Skin Care',
       image: 'images/skin-care.png',
       screenshots: ['images/S1.png', 'images/S2.png', 'images/S3.png'],
@@ -364,23 +364,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-   const certificationContentDiv = document.getElementById('certification-content');
-   const certifications = [
-   ];
- 
-   certifications.forEach((cert) => {
-     const certDiv = document.createElement('div');
-     const certTitle = document.createElement('h4');
-     certTitle.textContent = cert.title;
-     const certLink = document.createElement('a');
-     certLink.href = cert.link;
-     certLink.target = '_blank';
-     const certImage = document.createElement('img');
-     certImage.src = cert.image;
-     certImage.alt = cert.title;
-     certLink.appendChild(certImage);
-     certDiv.appendChild(certTitle);
-     certDiv.appendChild(certLink);
-     certificationContentDiv.appendChild(certDiv);
-   });
- });
+  const certificationContentDiv = document.getElementById('certification-content');
+  const certifications = [
+  ];
+
+  certifications.forEach((cert) => {
+    const certDiv = document.createElement('div');
+    const certTitle = document.createElement('h4');
+    certTitle.textContent = cert.title;
+    const certLink = document.createElement('a');
+    certLink.href = cert.link;
+    certLink.target = '_blank';
+    const certImage = document.createElement('img');
+    certImage.src = cert.image;
+    certImage.alt = cert.title;
+    certLink.appendChild(certImage);
+    certDiv.appendChild(certTitle);
+    certDiv.appendChild(certLink);
+    certificationContentDiv.appendChild(certDiv);
+  });
+});
