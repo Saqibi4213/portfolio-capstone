@@ -169,8 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '3: Product Landing page:',
-       description:'The Product Landing Page project is a dedicated platform showcasing a range of skin care products. Designed with HTML and CSS, this project aims to captivate visitors with its aesthetic appeal and functional layout.',
-      longDescription:'This is product landing page using html css and the project is about Skin Care',
+      description:'The Product Landing Page project is a dedicated platform showcasing a range of skin care products. Designed with HTML and CSS, this project aims to captivate visitors with its aesthetic appeal and functional layout.',
+      longDescription: 'This is product landing page using html css and the project is about Skin Care',
       image: 'images/skin-care.png',
       screenshots: ['images/S1.png', 'images/S2.png', 'images/S3.png'],
       technologies: ['HTML', 'CSS'],
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: '4: Coffee shop:',
       description: 'The Coffee Shop Website project showcases a virtual cafe experience built with HTML and CSS. It features an inviting design that highlights coffee varieties, menu options, and an easy-to-navigate layout.',
-      longDescription:'This is Coffee shop website using html and css',
+      longDescription: 'This is Coffee shop website using html and css',
       image: 'images/project-landing.png',
       screenshots: ['images/'],
       technologies: ['HTML', 'CSS'],
@@ -219,8 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '8: Phone Number Validator:',
-      description:  'The Telephone Number Validator project is a web application built with HTML, CSS, and JavaScript. It validates and ensures that users enter telephone numbers in the correct format, providing instant feedback on validity.',
-      longDescription: `The Telephone Number Validator is designed to validate telephone numbers using HTML, CSS, and JavaScript. This application ensures users enter valid telephone numbers in the correct format.`,
+      description: 'The Telephone Number Validator project is a web application built with HTML, CSS, and JavaScript. It validates and ensures that users enter telephone numbers in the correct format, providing instant feedback on validity.',
+      longDescription: 'The Telephone Number Validator is designed to validate telephone numbers using HTML, CSS, and JavaScript. This application ensures users enter valid telephone numbers in the correct format.',
       image: 'images/phone-validator.png',
       screenshots: ['images/N1.png', 'images/N2.png'],
       technologies: ['HTML', 'CSS', 'JS'],
@@ -247,7 +247,6 @@ document.addEventListener('DOMContentLoaded', () => {
       liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
       sourceLink: 'https://github.com/Saqibi4213/Pokemon-search-App',
     },
- 
   ];
 
   const worksSection = document.getElementById('works');
@@ -266,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('source-link').href = project.sourceLink;
     projectPopup.style.display = 'block';
   };
-
   projects.forEach((project, index) => {
     const projectCard = document.createElement('div');
     projectCard.classList.add('project');
@@ -365,11 +363,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
   });
- 
-   // New certificates section code
+
    const certificationContentDiv = document.getElementById('certification-content');
    const certifications = [
-     // ... list of certifications as in the previous instructions ...
    ];
  
    certifications.forEach((cert) => {
