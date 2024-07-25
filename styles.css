@@ -31,24 +31,23 @@ nav {
 }
 
 .logo {
-  font-size: 1.8rem; 
-  color: #F9A826;
+  font-size: 1.8rem;
+  color: #f9a826;
   font-weight: 400;
   cursor: default;
-  width: 5.5625rem; 
-  height: 2rem; 
+  width: 5.5625rem;
+  height: 2rem;
   line-height: 1.89875rem;
   transform: rotate(0.12deg);
 }
 
-.nav-links  {
+.nav-links {
   display: flex;
   gap: 1rem;
   list-style: none;
   justify-content: center;
   flex-grow: 2;
   margin: 10px 20px;
- 
 }
 
 .nav-links a {
@@ -58,7 +57,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #F9A826;
+  color: #f9a826;
 }
 
 .menu-icon {
@@ -76,7 +75,7 @@ nav {
 @media (max-width: 768px) {
   nav {
     padding: 0.5rem 4.75%;
-     height: auto;
+    height: auto;
     top: 0;
     left: 0;
   }
@@ -91,6 +90,7 @@ nav {
     left: 2.375rem; /* 38px to rem */
     transform: rotate(0.12deg);
   }
+
   .menu-icon {
     display: block;
     position: relative;
@@ -98,7 +98,7 @@ nav {
     height: 3.375rem; /* 54px to rem */
     top: 0.6875rem; /* 11px to rem */
     left: 22.25rem; /* 356px to rem */
-    opacity: 1; 
+    opacity: 1;
     padding-left: 90px;
   }
 
@@ -148,13 +148,12 @@ nav {
   top: 15.8125rem;
   left: 7.25rem;
   opacity: 1;
-  font-family: 'Acme';
+  font-family: 'Acme' sans-serif;
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 5.063rem;
   text-align: left;
   justify-content: flex-start;
-  text-align: left;
   color: #fff;
 }
 
@@ -196,12 +195,12 @@ nav {
 }
 
 @media (max-width: 768px) {
-  .headline-h2 {
-  width: 11.68rem;
-  font-family: 'Acme', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.58rem;
+    .headline-h2 {
+    width: 11.68rem;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.58rem;
     text-align: left;
     position: relative;
     top: 36.56rem;
@@ -216,7 +215,7 @@ nav {
   top: 27.9375rem;
   left: 7.25rem;
   opacity: 1;
-  font-family: 'Actor';
+  font-family: 'Actor' sans-serif;
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.40625rem;
@@ -288,10 +287,10 @@ nav {
   display: flex;
   gap: 1rem;
   justify-content: flex-start;
-  position: absolute; 
- top: 41.3125rem;
-  left: 8.03125rem; 
-  opacity: 1; 
+  position: absolute;
+  top: 41.3125rem;
+  left: 8.03125rem;
+  opacity: 1;
 }
 
 .social-icons img {
