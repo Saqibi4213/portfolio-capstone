@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // eslint-disable-next-line no-console-error
+      // eslint-disable-next-line-no-console-error
       console.error(`Section with ID "${id}" not found.`);
     }
   };
@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
   <span class="dark">I am </span>Mehria Saqibi, a dedicated and passionate junior web developer with a Bachelor's degree in Computer Science. Over the past few years, I have cultivated a diverse skill set and a deep understanding of various facets of technology through a range of professional experiences.<br>
   My technical expertise spans across web development,where I specialize in creating elegant and efficient web solutions. I am proficient in HTML, CSS, and JavaScript, and continuously strive to expand my knowledge by learning new technologies and best practices. My projects reflect a commitment to quality and a keen eye for detail, ensuring that every solution I develop is both functional and aesthetically pleasing.`,
     skills: [
-    {  image: 'images/html-5 2.png', name: 'HTML', alt: 'HTML' },
-    {  image: 'images/css-3 2.png', name: 'Css', alt: 'CSS' },
-    {  image: 'images/java-script 2.png', name: 'JavaScript', alt: 'JavaScript' },
+      { image: 'images/html-5 2.png', name: 'HTML', alt: 'HTML' },
+      { image: 'images/css-3 2.png', name: 'Css', alt: 'CSS' },
+      { image: 'images/java-script 2.png', name: 'JavaScript', alt: 'JavaScript' },
   ],
     certifications: [
-    { title: 'Responsive Web Design', image: 'images/responsive.png', link: 'https://link-to-certificate1' },
-    { title: 'Java Script', image: 'images/js.png', link:'https://link-to-certificate2' },
+      { title: 'Responsive Web Design', image: 'images/responsive.png', link: 'https://link-to-certificate1' },
+      { title: 'Java Script', image: 'images/js.png', link:'https://link-to-certificate2' },
   ],
 };
 // about
