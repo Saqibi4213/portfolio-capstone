@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // eslint-disable-next-line-no-console-error
+      // eslint-disable-next-line no-console
       console.error(`Section with ID "${id}" not found.`);
     }
   };
