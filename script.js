@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
+      // eslint-disable-next-line no-console-error
       console.error(`Section with ID "${id}" not found.`);
     }
   };
@@ -51,30 +52,26 @@ document.addEventListener('DOMContentLoaded', () => {
     element.style.color = '#ED9D02';
   });
 });
-//about//
+
 document.addEventListener('DOMContentLoaded', () => {
   const aboutContent = {
     description: `
-  I am Mehria Saqibi, a dedicated and passionate junior web developer with a Bachelor's degree in Computer Science. Over the past few years, I have cultivated a diverse skill set and a deep understanding of various facets of technology through a range of professional experiences.<br>
-  My technical expertise spans across web development,where I specialize in creating elegant and efficient web solutions. I am proficient in HTML, CSS, and JavaScript, and continuously strive to expand my knowledge by learning new technologies and best practices. My projects reflect a commitment to quality and a keen eye for detail, ensuring that every solution I develop is both functional and aesthetically pleasing.
-    `,
-    
+  <span class="dark">I am </span>Mehria Saqibi, a dedicated and passionate junior web developer with a Bachelor's degree in Computer Science. Over the past few years, I have cultivated a diverse skill set and a deep understanding of various facets of technology through a range of professional experiences.<br>
+  My technical expertise spans across web development,where I specialize in creating elegant and efficient web solutions. I am proficient in HTML, CSS, and JavaScript, and continuously strive to expand my knowledge by learning new technologies and best practices. My projects reflect a commitment to quality and a keen eye for detail, ensuring that every solution I develop is both functional and aesthetically pleasing.`,
     skills: [
-      {  image: 'images/html-5 2.png', name: 'HTML', alt: 'HTML' },
-      {  image: 'images/css-3 2.png', name: 'Css', alt: 'CSS' },
-      {  image: 'images/java-script 2.png', name: 'JavaScript', alt: 'JavaScript' },
-    ],
+    {  image: 'images/html-5 2.png', name: 'HTML', alt: 'HTML' },
+    {  image: 'images/css-3 2.png', name: 'Css', alt: 'CSS' },
+    {  image: 'images/java-script 2.png', name: 'JavaScript', alt: 'JavaScript' },
+  ],
     certifications: [
-      { title: 'Responsive Web Design', image: 'images/responsive.png', link: 'https://link-to-certificate1' },
-      { title: 'Java Script', image: 'images/js.png', link:'https://link-to-certificate2' },
-    ],
-  };
+    { title: 'Responsive Web Design', image: 'images/responsive.png', link: 'https://link-to-certificate1' },
+    { title: 'Java Script', image: 'images/js.png', link:'https://link-to-certificate2' },
+  ],
+};
 // about
-  const dynamicHeadlines = [
-
-    'About Me! <br> Junior Web Developer'
-  ];
-
+const dynamicHeadlines = [
+  '<span class="white">About</span> Me!<br>Junior Web Developer',
+];
   const headlineContainer = document.getElementById('dynamic-headlines');
   dynamicHeadlines.forEach(headlineText => {
     const headline = document.createElement('h2');
@@ -106,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     certDiv.style.height = '20rem';
     certDiv.style.top = '14.14rem';
     certDiv.style.left = '54.54rem';
-    certDiv.style.gap = '0rem'; /* Converted from 0px to rem */
+    certDiv.style.gap = '0rem';
     certDiv.style.border = '0.313rem 0rem 0rem 0rem';
     certDiv.style.opacity = '1rem';
     const certTitle = document.createElement('h4');
@@ -142,20 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
     certDiv.appendChild(certLink);
     document.getElementById('certification-content').appendChild(certDiv);
   });
-  
-
-  
-  // Add the "My Skills" heading with icon dynamically
-  const skillsHeading = document.createElement('h3');
-  skillsHeading.innerHTML = `<h5 class="skills">My<span class="highlight"> Skills:</span></h5>`;
-  const skillsArrow = document.createElement('i');
-  skillsArrow.className = 'bx bx-chevron-down';
-  skillsArrow.id = 'skills-arrow';
-  
-  skillsHeading.appendChild(skillsArrow);
-  skillsExperiencesDiv.parentElement.insertBefore(skillsHeading, skillsExperiencesDiv);
    
-  document.querySelectorAll('.highlight').forEach((element) => {
+document.querySelectorAll('.highlight').forEach((element) => {
     element.style.fontWeight = 'bold';
     element.style.color = '#F9A826';
   });
