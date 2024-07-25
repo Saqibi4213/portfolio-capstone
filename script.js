@@ -62,18 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
       { image: 'images/html-5 2.png', name: 'HTML', alt: 'HTML' },
       { image: 'images/css-3 2.png', name: 'Css', alt: 'CSS' },
       { image: 'images/java-script 2.png', name: 'JavaScript', alt: 'JavaScript' },
-  ],
+    ],
     certifications: [
       { title: 'Responsive Web Design', image: 'images/responsive.png', link: 'https://link-to-certificate1' },
-      { title: 'Java Script', image: 'images/js.png', link:'https://link-to-certificate2' },
-  ],
-};
-// about
-const dynamicHeadlines = [
-  '<span class="white">About</span> Me!<br>Junior Web Developer',
-];
+      { title: 'Java Script', image: 'images/js.png', link: 'https://link-to-certificate2' },
+    ],
+  };
+  // about
+  const dynamicHeadlines = [
+    '<span class="white">About</span> Me!<br>Junior Web Developer',
+  ];
   const headlineContainer = document.getElementById('dynamic-headlines');
-  dynamicHeadlines.forEach(headlineText => {
+  dynamicHeadlines.forEach((headlineText) => {
     const headline = document.createElement('h2');
     headline.innerHTML = `<span class="highlight"></span>
     <span class="highlight">${headlineText}</span>`;
@@ -128,19 +128,19 @@ const dynamicHeadlines = [
     certImage.style.marginRight = '900rem';
     certImage.style.border = '0.313rem';
     certTitle.textContent = cert.title;
-    certImage.style.border = '0.313rem solid #F9A826'; 
+    certImage.style.border = '0.313rem solid #F9A826';
     certImage.style.fontFamily = 'Acme, sans-serif';
-    certImage.style.fontSize = '1.25rem'; 
+    certImage.style.fontSize = '1.25rem';
     certImage.style.fontWeight = '400';
-    certImage.style.lineHeight = '1.8rem'; 
+    certImage.style.lineHeight = '1.8rem';
     certImage.style.textAlign = 'left';
     certLink.appendChild(certImage);
     certDiv.appendChild(certTitle);
     certDiv.appendChild(certLink);
     document.getElementById('certification-content').appendChild(certDiv);
   });
-   
-document.querySelectorAll('.highlight').forEach((element) => {
+
+  document.querySelectorAll('.highlight').forEach((element) => {
     element.style.fontWeight = 'bold';
     element.style.color = '#F9A826';
   });
@@ -149,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = [
     {
       title: '1: Survey Form:',
-      description: `The Survey Form project is a pivotal milestone in my journey as a junior web developer, showcasing my foundational skills in HTML and CSS. This project represents more than just a form; it's a testament to my understanding of web development principles and my ability to create user-centric interfaces.`,
-      longDescription: `This is simple survey form project my first work as junior developer using html css `,
+      description: 'The Survey Form project is a pivotal milestone in my journey as a junior web developer, showcasing my foundational skills in HTML and CSS. This project represents more than just a form; its a testament to my understanding of web development principles and my ability to create user-centric interfaces',
+      longDescription: 'This is simple survey form project my first work as junior developer using html css ',
       image: 'images/survey-form.png',
       screenshots: ['images/survey-form.png'],
       technologies: ['HTML', 'CSS'],
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '2: Tribute Page:',
-      description: `The Tribute Page project is an homage to Ahmad Shah Baba, a revered historical figure known for his significant contributions and leadership in Afghanistan's history. Through this project, I aimed to create a visually compelling and informative web page that celebrates his life and achievements.`,
+      description: 'The Tribute Page project is an homage to Ahmad Shah Baba, a revered historical figure known for his significant contributions and leadership in Afghanistans history. Through this project, I aimed to create a visually compelling and informative web page that celebrates his life and achievements.',
       longDescription: 'This is simple project using html and css and project is about Ahmad shah baba ',
       image: 'images/atribute-page.png',
       screenshots: ['images/T1.png', 'images/T2.png', 'images/T3.png'],
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '3: Product Landing page:',
-       description:`The Product Landing Page project is a dedicated platform showcasing a range of skin care products. Designed with HTML and CSS, this project aims to captivate visitors with its aesthetic appeal and functional layout.`,
+       description:'The Product Landing Page project is a dedicated platform showcasing a range of skin care products. Designed with HTML and CSS, this project aims to captivate visitors with its aesthetic appeal and functional layout.',
       longDescription:'This is product landing page using html css and the project is about Skin Care',
       image: 'images/skin-care.png',
       screenshots: ['images/S1.png', 'images/S2.png', 'images/S3.png'],
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '4: Coffee shop:',
-      description: `The Coffee Shop Website project showcases a virtual cafe experience built with HTML and CSS. It features an inviting design that highlights coffee varieties, menu options, and an easy-to-navigate layout.`,
+      description: 'The Coffee Shop Website project showcases a virtual cafe experience built with HTML and CSS. It features an inviting design that highlights coffee varieties, menu options, and an easy-to-navigate layout.',
       longDescription:'This is Coffee shop website using html and css',
       image: 'images/project-landing.png',
       screenshots: ['images/'],
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '5: Portfolio:',
-      description: `My portfolio showcases my projects and skills using a clean and professional design. Built entirely with HTML and CSS, it highlights my work and provides a platform to showcase my capabilities as a web developer.`,
+      description: 'My portfolio showcases my projects and skills using a clean and professional design. Built entirely with HTML and CSS, it highlights my work and provides a platform to showcase my capabilities as a web developer.',
       longDescription: 'This is my portfolio using html and css',
       image: 'images/mehr1.png',
       screenshots: ['images/P1', 'images/P2.png', 'images/P3.png', 'images/P4.png', 'images/P5.png'],
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '7: palindrome-checker:',
-      description: `The Palindrome Checker project is a helpful tool that allows users to determine whether a given word or phrase is a palindrome. Implemented using HTML, CSS, and JavaScript, it provides a straightforward interface where users can input text and instantly check if it reads the same backward and forward.`,
+      description: 'The Palindrome Checker project is a helpful tool that allows users to determine whether a given word or phrase is a palindrome. Implemented using HTML, CSS, and JavaScript, it provides a straightforward interface where users can input text and instantly check if it reads the same backward and forward.',
       longDescription: 'palindrome-checker is for the help of user to search word palindrome',
       image: 'images/palindrome.png',
       screenshots: ['images/PA1.png'],
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '8: Phone Number Validator:',
-      description:  `The Telephone Number Validator project is a web application built with HTML, CSS, and JavaScript. It validates and ensures that users enter telephone numbers in the correct format, providing instant feedback on validity.`,
+      description:  'The Telephone Number Validator project is a web application built with HTML, CSS, and JavaScript. It validates and ensures that users enter telephone numbers in the correct format, providing instant feedback on validity.',
       longDescription: `The Telephone Number Validator is designed to validate telephone numbers using HTML, CSS, and JavaScript. This application ensures users enter valid telephone numbers in the correct format.`,
       image: 'images/phone-validator.png',
       screenshots: ['images/N1.png', 'images/N2.png'],
@@ -229,8 +229,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '9: Cash-register:',
-      description: `The Cash Register project is a web application developed using HTML, CSS, and JavaScript. It simulates a basic cash register interface, allowing users to calculate totals, manage transactions, and generate receipts. It's designed for simplicity and practical use in learning basic arithmetic operations and handling transactions.`,
-      longDescription: `This project is a simple Cash Register application built with HTML, CSS, and JavaScript.`,
+      description: 'The Cash Register project is a web application developed using HTML, CSS, and JavaScript. It simulates a basic cash register interface, allowing users to calculate totals, manage transactions, and generate receipts. Its designed for simplicity and practical use in learning basic arithmetic operations and handling transactions.',
+      longDescription: 'This project is a simple Cash Register application built with HTML, CSS, and JavaScript.',
       image: 'images/cash reg.png',
       screenshots: ['images/C1.png', 'images/C2.png'],
       technologies: ['HTML', 'CSS', 'JS'],
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       title: '10: Pokemon-search-App:',
-      description: `The Pokemon Search App is a web-based application designed for users to explore and learn about different Pokemon creatures. It offers a comprehensive search feature where users can find detailed information and statistics of their favorite Pokemon.`,
+      description: 'The Pokemon Search App is a web-based application designed for users to explore and learn about different Pokemon creatures. It offers a comprehensive search feature where users can find detailed information and statistics of their favorite Pokemon.',
       longDescription: 'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
       image: 'images/pokemn.png',
       screenshots: ['images/PO1.png', 'images/PO2.png'],
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
       sourceLink: 'https://github.com/Saqibi4213/Pokemon-search-App',
     },
-    
+ 
   ];
 
   const worksSection = document.getElementById('works');
@@ -291,8 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
