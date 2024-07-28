@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('close-btn');
 
   const openProjectPopup = (index) => {
+    currentIndex = index;
     const project = projects[index];
     document.getElementById('popup-title').textContent = project.title;
     document.getElementById('popup-description').textContent = project.longDescription; // Display long description in popup
