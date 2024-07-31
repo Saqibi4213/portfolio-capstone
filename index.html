@@ -3,136 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capstone | Portfolio |Mehria</title>
+  <title>Mehria | Capstone | portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
   <nav>
-    <div class="logo" id="logo">MEHR</div>
-    <div class="menu-icon" id="menu-icon">
-      &#9776;
-    </div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about-myself">About</a></li>
-      <li><a href="#project">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#contact-form">Contact</a></li>
+    <div class="logo">Mehr</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Certificates</a></li>
+      <li><a href="#">Contacts</a></li>
     </ul>
+    <div class="hamburger">&#9776;</div>
   </nav>
-  <section id="home">
-  <div class="headline-section" >
-    <div class="container">
-      <h1 id="headline" class="headline"></h1>
-      <h2 class="headline-h2">Mehria!</h2>
-      <p id="intro" class="intro"></p>
-    </div>
-    <div class="image-content">
-      <img src="images/Ellipse 45.png" alt="Your Image" class="home-image">
-      <img src="images/Employee.png" alt="Your Image1" class="home-image1">
-    </div>
-    <div class="social-icons social-icons-desktop">
-      <a href="https://www.facebook.com/mehria.1377?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
-        <img src="images/fb.png" alt="Facebook">
-      </a>
-      <a href="https://github.com/Saqibi4213" target="_blank" rel="noopener noreferrer">
-        <img src="images/GitHub.png" alt="GitHub">
-      </a>
-      <a href="https://www.linkedin.com/in/mehria-saqibi-a386a41a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-        <img src="images/WhatsApp.png" alt="WhatsApp">
-      </a>
-      <a href="https://www.linkedin.com/in/mehria-saqibi-a386a41a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
-        <img src="images/linkedin.png" alt="LinkedIn">
-      </a>
-    </div>  
+  <div class="container">
+    <!-- Home Section -->
+    <section class="home-section">
+      <div class="home-image">
+        <img id="home-image" src="images/Ellipse 45.png" alt="Profile Picture">
+        <img id="home-image1" src="images/Employee.png" alt="Profile Picture">
+      </div>
+      <div class="home-content">
+        <h1 id="home-title"></h1>
+        <p id="home-name"></p>
+        <p id="home-role"></p>
+        <p id="home-description"></p>
+        <ul class="social-icons">
+          <li><a href="https://www.linkedin.com/in/mehria-saqibi-a386a41a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><img id="social-icon1" src="" alt="LinkedIn"></a></li>
+          <li> <a href="https://github.com/Saqibi4213" target="_blank" rel="noopener noreferrer"><img id="social-icon2" src="" alt="GitHub"> <a href="https://github.com/Saqibi4213" target="_blank" rel="noopener noreferrer"></a></li>
+          <li> <a href="https://www.facebook.com/mehria.1377?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"><img id="social-icon3" src="" alt="Facebook"></a></li>
+          <li> <a href="https://www.facebook.com/mehria.1377?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"><img id="social-icon3" src="" alt="Facebook"></a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="about-section">
+      <div class="profile-pic">
+        <img id="about-image" src="images/undraw_portfolio_update_re_jqnp 1.png" alt="Profile Picture">
+      </div>
+      <div class="about-info">
+        <h2 id="about-title"></h2>
+        <p id="about-role"></p>
+        <p id="about-description"></p>
+        <h3>My skills:</h3><i class="bx bx-chevron-down" id="skills-arrow"></i>
+        <ul class="about-skills">
+          <li>Html<img id="skill-icon1" src="" alt="HTML"></li>
+          <li>CSS<img id="skill-icon2" src="" alt="CSS"></li>
+          <li>Javascript<img id="skill-icon3" src="" alt="JavaScript"></li>
+        </ul>
+      </div>
+    </section>
   </div>
-</section>
-  <section id="about-myself" class="about-myself-section">
-    <div class="container1">
-      <div id="dynamic-headlines"></div>
-      <div id="about-content">
-      <h3><span class="highlight"></span>
-      </h3>
-      <img src="images/undraw_portfolio_update_re_jqnp 1.png" class="about-img"></div>
-      <div id="skills-experiences">
-      <h5 class="skills">
-          My <span class="highlight">Skills:</span>
-          <i class="bx bx-chevron-down" id="skills-arrow"></i>
-        </h5>
-  </div>
-</div>
-  </section>
-  <section id="project">
-    <div class="container2">
-    <h1>My <span class="highlight">Projects!</span></h1>
-    <div>
-    <img src="images/undraw_project_complete_lwss 1.png" class="project-img">
+  <div class="project-container">
+    <h1>My Projects</h1>
+    <div id="projects">
+      <div class="profile-pic">
+        <img id="project-me" src="images/undraw_project_complete_lwss 1.png" alt="Profile Picture">
+      </div>
     </div>
-  <div id="works" class="works-section">
-<div id="project-popup" class="project-popup">
+  </div>
+
+  <div class="project-popup">
     <div class="popup-content">
-        <span class="close-btn" id="close-btn">&times;</span>
-        <div class="popup-details">
-            <h2 id="popup-title"></h2>
-            <div class="popup-description" id="popup-description"></div>
-            <img src="" alt="Project Screenshot" id="popup-image">
-              <div id="popup-images" class="popup-images">
-              </div>
-            <div class="popup-links">
-                <a href="#" id="live-link" target="_blank">Live Demo</a>
-                <a href="#" id="source-link" target="_blank">Source Code</a>
-            </div>
-        </div>
+      <span class="close-button">&times;</span>
+      <div class="screenshot-slider"></div>
     </div>
-</div> 
-</div>
-</div>
-</section>
-<section id="certificates">
-  <div class="left-content">
-  <h2 class="certi">Certificates</h2>
-  <p id="certificates-description">
-    Here you can find a list of certifications that I have earned. These certifications showcase my skills and knowledge in various areas of web development and programming. Each certification has a link to the respective certificate, where you can verify and view the details.
-  </p>
-  <div>
-  <img src="images/undraw_project_complete_lwss 1.png" class="cert-img">
   </div>
-</div>
-<div class="right-content">
-  <div id="certification-content">
-   <a href ="https://link-to-certificate1"><img src="" class="cert1"></a>
-    <a href="https://link-to-certificate2"><img  src="" class="cert2"></a>
-  </div>
-</div>
-</section>
-  <section class="contact-form">
-    <div class="container3">
-      <h2>Contact <span class="highlight"> Me!</span></h2>
-      <form id="contact-form">
-        <div class="form-control">
-          <input type="text" id="name" name="name" placeholder="Enter your name" maxlength="30" required>
+  <section class="certificates">
+    <h1>Certificates</h1>
+    <div class="certificate-description"></div>
+    <div class="profile-pic">
+      <img id="certificate-me" src="images/undraw_project_complete_lwss 1.png" alt="Profile Picture">
+    </div>
+    <div class="certificate-grid"></div>
+  </section>
+  <section class="contact-section">
+    <h1>Contact Me</h1>
+    <div class="contact-container">
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
         </div>
-        <div class="form-control">
-        <input type="number" id="number" name="number" placeholder="Enter your Phone Number" required>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
         </div>
-        <div class="form-control">
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <div class="email-message"></div>
         </div>
-        <div class="form-control">
-          <textarea id="message" name="message" rows="5" placeholder="Enter your message" maxlength="500" required></textarea>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
         </div>
-        <div id="error-message" class="error-message"></div>
-        <button type="submit" id="submit-btn">Send Message</button>
-        <div id="success-message" class="success-message"></div>
+        <button type="submit" class="submit-button">Send</button>
       </form>
-    </div><img src="images/undraw_devices_re_dxae 2.png" class="contact-img">
+      <div class="contact-image">
+        <img src="images/undraw_devices_re_dxae 2.png" alt="Contact Image">
+      </div>
+    </div>
   </section>
   <footer class="footer">
-    <div class="container-footer">
-      <p>Built | with ♥ | by Mehria Saqibi</p>
-    </div>
+    <p>&copy; 2024 Made with ❤ by Mehria Saqibi</p>
   </footer>
   <script src="script.js"></script>
 </body>
+
 </html>
