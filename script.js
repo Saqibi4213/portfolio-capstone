@@ -1,138 +1,104 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const closeBtn = document.querySelector('.nav-links .close-btn');
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('show');
+  closeBtn.style.display = navLinks.classList.contains('show') ? 'block' : 'none';
+});
+closeBtn.addEventListener('click', () => {
+  navLinks.classList.remove('show');
+  closeBtn.style.display = 'none';
 });
   const userData = {
-    homeImage: 'images/Employee.png',
-    homeImage: 'images/Ellipse 45.png',
-    homeTitle: 'Hello there, I`m',
+    homeImage: 'images/employe1.png',
+    homeTitle: 'Hello there, <span class="color">I`m</span>',
     homeName: 'Mehria Saqibi',
-    homeRole: 'I`m a Junior web developer',
+    homeRole: 'I`m a <span class="color">Junior web developer</span>',
     homeDescription: 'I`m Mehria Saqibi, a passionate junior web developer with a computer science degree. I thrive on turning complex problems into elegant web solutions.',
     aboutImage: 'images/undraw_portfolio_update_re_jqnp 1.png',
-    aboutTitle: 'About Me',
-    aboutRole: 'Junior Developer',
+    aboutTitle: 'About <span class="color">Me</span>',
+    aboutRole: '<span class="color">Junior Developer</span>',
     aboutDescription: "I'm Mehria Saqibi, a junior web developer with a Computer Science degree. With two years of teaching experience, one year as a consultant in an NGO, and a year as a translator for RumieBuilD VOLUNTEER, I bring a diverse skill set including web development, problem-solving, and communication. I thrive on creating elegant web solutions and contributing to meaningful projects.",
     socialIcons: ['images/linkedin.png', 'images/GitHub.png', 'images/fb.png', 'images/WhatsApp.png'],
     skillIcons: ['images/html-5 2.png', 'images/css-3 2.png', 'images/java-script 2.png']
   };
-  document.getElementById("home-image").src = userData.homeImage;
-  document.getElementById("home-title").textContent = userData.homeTitle;
-  document.getElementById("home-name").textContent = userData.homeName;
-  document.getElementById("home-role").textContent = userData.homeRole;
-  document.getElementById("home-description").textContent = userData.homeDescription;
-  document.getElementById("about-image").src = userData.aboutImage;
-  document.getElementById("about-title").textContent = userData.aboutTitle;
-  document.getElementById("about-role").textContent = userData.aboutRole;
-  document.getElementById("about-description").textContent = userData.aboutDescription;
-  const socialIcons = document.querySelectorAll(".social-icons img");
-  socialIcons.forEach((icon, index) => {
-    icon.src = `${userData.socialIcons[index]}`;
-  });
-  const skillIcons = document.querySelectorAll(".about-skills li img");
-  skillIcons.forEach((icon, index) => {
-    icon.src = `${userData.skillIcons[index]}`;
-  });
+const homeSection = document.getElementById("home");
+const aboutSection = document.getElementById("about");
+homeSection.querySelector("#home-image").src = userData.homeImage;
+homeSection.querySelector("#home-title").innerHTML = userData.homeTitle;
+homeSection.querySelector("#home-name").textContent = userData.homeName;
+homeSection.querySelector("#home-role").innerHTML = userData.homeRole;
+homeSection.querySelector("#home-description").textContent = userData.homeDescription;
+
+aboutSection.querySelector("#about-image").src = userData.aboutImage;
+aboutSection.querySelector("#about-title").innerHTML = userData.aboutTitle;
+aboutSection.querySelector("#about-role").innerHTML = userData.aboutRole;
+aboutSection.querySelector("#about-description").textContent = userData.aboutDescription;
+
+const socialIcons = homeSection.querySelectorAll(".social-icons img");
+socialIcons.forEach((icon, index) => {
+  icon.src = `${userData.socialIcons[index]}`;
+});
+
+const skillIcons = aboutSection.querySelectorAll(".about-skills li img");
+skillIcons.forEach((icon, index) => {
+  icon.src = `${userData.skillIcons[index]}`;
+});
+
+const skillNames = aboutSection.querySelectorAll(".about-skills li span.yellow-text");
+skillNames.forEach((skill, index) => {
+  skill.textContent = userData.skillNames[index];
+  skill.style.color = '#ffcc00';
+});
+
+const coloredElements = document.querySelectorAll('.color');
+coloredElements.forEach(element => {
+  element.style.color = '#ffcc00';
+});
  const projects = [
   {
-    title: '1: Survey Form:',
-    description: 'This is simple survey form project my first work as junior developer using html css ',
-    images:['images/survey-form.png', 'images/survey-form.png'],
-    longDescription: 'The Survey Form project is a pivotal milestone in my journey as a junior web developer, showcasing my foundational skills in HTML and CSS. This project represents more than just a form; its a testament to my understanding of web development principles and my ability to create user-centric interfaces',
-    technologies: ['HTML', 'CSS'],
-    liveLink: 'https://saqibi4213.github.io/survey-form/',
-    sourceLink: 'https://github.com/Saqibi4213/survey-form.git',
-  },
-  {
-    title: '2: Tribute Page:',
-    description:'This is simple project using html and css and project is about Ahmad shah baba ',
-    images: ['images/atribute-page.png',
-    'images/T1.png', 'images/T2.png', 'images/T3.png'],
-    longDescription: 'The Tribute Page project is an homage to Ahmad Shah Baba, a revered historical figure known for his significant contributions and leadership in Afghanistans history. Through this project, I aimed to create a visually compelling and informative web page that celebrates his life and achievements.',
-    technologies: ['HTML', 'CSS'],
-      liveLink: 'https://saqibi4213.github.io/tribute-page',
-      sourceLink: 'https://github.com/Saqibi4213/tribute-page.git',
-  },
-  {
-    title: '3: Product Landing page:',
-    description:  'This is product landing page using html css and the project is about Skin Care',
-    images: ['images/skin-care.png', 'images/S1.png', 'images/S2.png', 'images/S3.png'],
-    longDescription: 'The Product Landing Page project is a dedicated platform showcasing a range of skin care products. Designed with HTML and CSS, this project aims to captivate visitors with its aesthetic appeal and functional layout.',
-    technologies: ['HTML', 'CSS'],
-      liveLink: 'https://saqibi4213.github.io/skin-care/',
-      sourceLink: 'https://github.com/Saqibi4213/skin-care.git',
-  },
-  {
-    title: '4: Coffee shop:',
-    description: 'This is Coffee shop website using html and css',
+    title: '1: Coffee shop:',
+    description: 'The Coffee Shop Website project is a virtual café built with HTML and CSS. It features a stylish design highlighting coffee varieties and menu options.',
     images: ['images/CO1.png', 'images/CO2.png', 'images/CO3.png', 'images/CO4.png'],
-    longDescription:  'The Coffee Shop Website project showcases a virtual cafe experience built with HTML and CSS. It features an inviting design that highlights coffee varieties, menu options, and an easy-to-navigate layout.',
+    longDescription:  'The Coffee Shop Website project creates a virtual café experience with HTML and CSS, showcasing coffee varieties and menu options.',
     technologies: ['HTML', 'CSS'],
     liveLink: 'https://saqibi4213.github.io/product-landing-page/',
     sourceLink: 'https://github.com/Saqibi4213/product-landing-page.git',
   },
   {
-    title: '5: Portfolio:',
-    description: 'This is my portfolio using html and css',
+    title: '2: Portfolio:',
+    description: 'This portfolio, built with HTML and CSS, showcases my projects and skills. It features a clean and professional design to highlight my work.',
     images: ['images/mehr1.png', 'images/P1.png','images/P2.png', 'images/P3.png', 'images/P4.png',],
-    longDescription:'My portfolio showcases my projects and skills using a clean and professional design. Built entirely with HTML and CSS, it highlights my work and provides a platform to showcase my capabilities as a web developer.',
+    longDescription:'My portfolio highlights my projects and skills with a clean, professional HTML and CSS design.',
     technologies: ['HTML', 'CSS'],
     liveLink: 'https://saqibi4213.github.io/my-portfolio/',
     sourceLink: 'https://github.com/Saqibi4213/my-portfolio',
   },
   {
-    title: '6: Roman Numeral Converter:',
-    description:  'Using this project user can convert number to roman',
-    images: ['images/roman.png', 'images/R1.png'],
-    longDescription: 'The Roman Numeral Converter project allows users to convert Arabic numerals into Roman numerals and vice versa. Built with HTML, CSS, and JavaScript, it provides a simple and intuitive interface for converting between the two numeral systems.',
-    technologies: ['HTML', 'CSS', 'JS'],
-    liveLink: 'https://saqibi4213.github.io/Roman-numeral-converter/',
-    sourceLink: 'https://github.com/Saqibi4213/Roman-numeral-converter',
-  },
-  {
-    title: '7: palindrome-checker:',
-    description:  'palindrome-checker is for the help of user to search word palindrome',
-    images: ['images/palindrome.png', 'images/PA1.png'],
-    longDescription:  'The Palindrome Checker project is a helpful tool that allows users to determine whether a given word or phrase is a palindrome. Implemented using HTML, CSS, and JavaScript, it provides a straightforward interface where users can input text and instantly check if it reads the same backward and forward.',
-    technologies: ['HTML', 'CSS', 'JS'],
-    liveLink: 'https://saqibi4213.github.io/palindrome-checker/',
-    sourceLink: 'https://github.com/Saqibi4213/palindrome-checker',
-  },
-  {
-    title: '8: Phone Number Validator:',
-    description:  'The Telephone Number Validator is designed to validate telephone numbers using HTML, CSS, and JavaScript. This application ensures users enter valid telephone numbers in the correct format.',
-    images: ['images/phone-validator.png', 'images/N1.png', 'images/N2.png'],
-    longDescription:'The Telephone Number Validator project is a web application built with HTML, CSS, and JavaScript. It validates and ensures that users enter telephone numbers in the correct format, providing instant feedback on validity.',
-    technologies: ['HTML', 'CSS', 'JS'],
-    liveLink: 'https://saqibi4213.github.io/Telephone-Number-Validator/',
-    sourceLink: 'https://github.com/Saqibi4213/Telephone-Number-Validator',
-  },
-  {
-    title:'9: Cash-register:',
-    description: 'This project is a simple Cash Register application built with HTML, CSS, and JavaScript.',
+    title:'3: Cash-register:',
+    description: 'This project is a basic Cash Register application created with HTML, CSS, and JavaScript. It allows users to manage transactions and generate receipts.',
     images: [ 'images/cash reg.png', 'images/C1.png', 'images/C2.png'],
-    longDescription: 'The Cash Register project is a web application developed using HTML, CSS, and JavaScript. It simulates a basic cash register interface, allowing users to calculate totals, manage transactions, and generate receipts. Its designed for simplicity and practical use in learning basic arithmetic operations and handling transactions.',
+    longDescription: 'The Cash Register project is a web app that simulates a basic cash register, letting users calculate totals, manage transactions, and generate receipts.',
     technologies: ['HTML', 'CSS', 'JS'],
     liveLink: 'https://saqibi4213.github.io/Cash-register/',
     sourceLink: 'https://github.com/Saqibi4213/Cash-register',
   },
   {
-    title: '10: Pokemon-search-App:',
+    title: '4: Pokemon-search-App:',
     description:   'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
     images: ['images/pokemn.png', 'images/PO1.png', 'images/PO2.png'],
-    longDescription:'The Pokemon Search App is a web-based application designed for users to explore and learn about different Pokemon creatures. It offers a comprehensive search feature where users can find detailed information and statistics of their favorite Pokemon.',
+    longDescription:'The Pokémon Search App lets users explore and learn about various Pokémon creatures.',
     technologies: ['HTML', 'CSS', 'JS'],
     liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
     sourceLink: 'https://github.com/Saqibi4213/Pokemon-search-App',
   },
 ];
-
 const projectsContainer = document.getElementById("projects");
 projects.forEach((project) => {
   const projectElement = document.createElement("div");
   projectElement.classList.add("project");
   const titleElement = document.createElement("h2");
+  titleElement.classList.add("color");
   titleElement.textContent = project.title;
   const descriptionElement = document.createElement("div");
   descriptionElement.classList.add("description");
@@ -143,9 +109,9 @@ projects.forEach((project) => {
   image.src = project.images[0];
   const viewScreenshotsButton = document.createElement("button");
   viewScreenshotsButton.classList.add("view-screenshots");
-  viewScreenshotsButton.textContent = "View Screenshots";
+  viewScreenshotsButton.textContent = "See More";
   viewScreenshotsButton.addEventListener("click", () => {
-    showProjectPopup(project.images, project.longDescription);
+    showProjectPopup(project.images, project.longDescription, project.technologies, project.liveLink, project.sourceLink);
   });
   imageContainer.appendChild(image);
   imageContainer.appendChild(viewScreenshotsButton);
@@ -158,7 +124,7 @@ projects.forEach((project) => {
 const projectPopup = document.querySelector(".project-popup");
 const closeButton = document.querySelector(".project-popup .close-button");
 const screenshotSlider = document.querySelector(".project-popup .screenshot-slider");
-function showProjectPopup(screenshots, longDescription) {
+function showProjectPopup(screenshots, longDescription, technologies, liveLink, sourceLink) {
   projectPopup.style.display = "flex";
   screenshotSlider.innerHTML = "";
   screenshots.forEach((screenshot) => {
@@ -166,15 +132,41 @@ function showProjectPopup(screenshots, longDescription) {
     screenshotElement.src = screenshot;
     screenshotSlider.appendChild(screenshotElement);
   });
-
   const longDescriptionElement = document.createElement("p");
   longDescriptionElement.textContent = longDescription;
   screenshotSlider.appendChild(longDescriptionElement);
+  const technologiesElement = document.createElement("div");
+  technologiesElement.classList.add("technologies");
+  technologies.forEach((tech) => {
+    const techElement = document.createElement("span");
+    techElement.textContent = tech;
+    technologiesElement.appendChild(techElement);
+  });
+  screenshotSlider.appendChild(technologiesElement);
+  const liveLink2 = document.createElement("a");
+  liveLink2.classList.add("live-link");
+  liveLink2.href = liveLink;
+  liveLink2.target = "_blank";
+  const liveLinkIcon = document.createElement("i");
+  liveLinkIcon.classList.add("fas", "fa-external-link-alt");
+  liveLink2.appendChild(liveLinkIcon);
+  liveLink2.appendChild(document.createTextNode(""));
+  screenshotSlider.appendChild(liveLink2);
+  const sourceLink2 = document.createElement("a");
+  sourceLink2.classList.add("source-link");
+  sourceLink2.href = sourceLink;
+  sourceLink2.target = "_blank";
+  const sourceLinkIcon = document.createElement("i");
+  sourceLinkIcon.classList.add("fab", "fa-github");
+  sourceLink2.appendChild(sourceLinkIcon);
+  sourceLink2.appendChild(document.createTextNode(""));
+  screenshotSlider.appendChild(sourceLink2);
 }
 
 closeButton.addEventListener("click", () => {
   projectPopup.style.display = "none";
 });
+
 const certificateData = [
   {
     title: "Responsive Web Design",
@@ -183,7 +175,7 @@ const certificateData = [
   },
   {
     title: "JavaScript Algorithms and Data Structures",
-    url: 'https://link-to-certificate2',
+    ur: 'https://link-to-certificate2',
     imageSrc: 'images/js.png'
   }
 ];
@@ -213,22 +205,50 @@ generateCertificateItems();
 
 const form = document.querySelector('.contact-form');
 const emailMessage = document.querySelector('.email-message');
+const formspreeUrl = 'https://formspree.io/f/xrbzqrra';
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const name = document.getElementById('name').value;
   const phone = document.getElementById('phone').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
+
   if (email !== email.toLowerCase()) {
     emailMessage.textContent = 'Email must be in lowercase';
     emailMessage.classList.add('error');
     emailMessage.classList.remove('success');
   } else {
-    emailMessage.textContent = 'Message sent successfully';
-    emailMessage.classList.add('success');
-    emailMessage.classList.remove('error');
-    console.log(`Name: ${name}, Phone: ${phone}, Email: ${email}, Message: ${message}`);
-    alert('Message sent successfully!');
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('phone', phone);
+    formData.append('email', email);
+    formData.append('message', message);
+
+    fetch(formspreeUrl, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        emailMessage.textContent = 'Message sent successfully';
+        emailMessage.classList.add('success');
+        emailMessage.classList.remove('error');
+        console.log(`Name: ${name}, Phone: ${phone}, Email: ${email}, Message: ${message}`);
+        alert('Message sent successfully!');
+      } else {
+        emailMessage.textContent = 'Message sent successfully.';
+        emailMessage.classList.add('error');
+        emailMessage.classList.remove('success');
+      }
+    })
+    .catch(error => {
+      emailMessage.textContent = 'Message sent successfully.';
+      emailMessage.classList.add('sent');
+      emailMessage.classList.remove('success');
+      console.error('Error:', error);
+    });
   }
+
   form.reset();
 });
