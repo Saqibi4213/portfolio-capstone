@@ -59,7 +59,7 @@ coloredElements.forEach(element => {
   {
     title: '1: Coffee shop:',
     description: 'The Coffee Shop Website project is a virtual café built with HTML and CSS. It features a stylish design highlighting coffee varieties and menu options.',
-    images: ['images/CO1.png', 'images/CO2.png', 'images/CO3.png', 'images/CO4.png'],
+    images: ['images/CO1.png'],
     longDescription:  'The Coffee Shop Website project creates a virtual café experience with HTML and CSS, showcasing coffee varieties and menu options.',
     technologies: ['HTML', 'CSS'],
     liveLink: 'https://saqibi4213.github.io/product-landing-page/',
@@ -68,7 +68,7 @@ coloredElements.forEach(element => {
   {
     title: '2: Portfolio:',
     description: 'This portfolio, built with HTML and CSS, showcases my projects and skills. It features a clean and professional design to highlight my work.',
-    images: ['images/mehr1.png', 'images/P1.png','images/P2.png', 'images/P3.png', 'images/P4.png',],
+    images: ['images/mehr1.png'],
     longDescription:'My portfolio highlights my projects and skills with a clean, professional HTML and CSS design.',
     technologies: ['HTML', 'CSS'],
     liveLink: 'https://saqibi4213.github.io/my-portfolio/',
@@ -77,7 +77,7 @@ coloredElements.forEach(element => {
   {
     title:'3: Cash-register:',
     description: 'This project is a basic Cash Register application created with HTML, CSS, and JavaScript. It allows users to manage transactions and generate receipts.',
-    images: [ 'images/cash reg.png', 'images/C1.png', 'images/C2.png'],
+    images: [ 'images/cash reg.png'],
     longDescription: 'The Cash Register project is a web app that simulates a basic cash register, letting users calculate totals, manage transactions, and generate receipts.',
     technologies: ['HTML', 'CSS', 'JS'],
     liveLink: 'https://saqibi4213.github.io/Cash-register/',
@@ -86,7 +86,7 @@ coloredElements.forEach(element => {
   {
     title: '4: Pokemon-search-App:',
     description:   'The Pokemon Search App is a web application that allows users to search for and view detailed information about various Pokemon. Built with HTML, CSS, and JavaScript.',
-    images: ['images/pokemn.png', 'images/PO1.png', 'images/PO2.png'],
+    images: ['images/pokemn.png'],
     longDescription:'The Pokémon Search App lets users explore and learn about various Pokémon creatures.',
     technologies: ['HTML', 'CSS', 'JS'],
     liveLink: 'https://saqibi4213.github.io/Pokemon-search-App/',
@@ -174,7 +174,7 @@ const certificateData = [
     imageSrc:'images/responsive.png'
   },
   {
-    title: "JavaScript Algorithms and Data Structures",
+    title: "JavaScript Algorithms",
     ur: 'https://link-to-certificate2',
     imageSrc: 'images/js.png'
   }
@@ -232,7 +232,7 @@ form.addEventListener('submit', (event) => {
     .then(response => {
       if (response.ok) {
         emailMessage.textContent = 'Message sent successfully';
-        emailMessage.classList.add('success');
+        emailMessage.classList.add('sent');
         emailMessage.classList.remove('error');
         console.log(`Name: ${name}, Phone: ${phone}, Email: ${email}, Message: ${message}`);
         alert('Message sent successfully!');
