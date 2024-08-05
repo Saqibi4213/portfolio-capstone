@@ -9,6 +9,8 @@ body {
   font-family: 'acme', sans-serif;
   background-color: #222;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 /* mobile */
@@ -31,7 +33,6 @@ nav {
   position: absolute;
   top: 0rem;
   right: 0.1rem;
-  padding: 1rem;
   flex-direction: column;
   z-index: 1;
   display: none;
@@ -56,10 +57,10 @@ nav {
   background-color: #fda00b36;
   backdrop-filter: blur(1rem);
   border-top: 1px solid #000000;
-  transform: translate(87%, 1%);
+  transform: translate(75%, 6%);
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  justify-content: left;
 }
 
 .nav-links.show li {
@@ -81,28 +82,37 @@ nav {
   display: block;
 }
 
+
+.nav-links li :hover {
+  transform: scale(1.3);
+  color: #ED9D02;
+  box-shadow: 0 0.10rem 1rem rgba(253, 230, 22, 0.308);
+}
+
 .hamburger {
   display: block;
   width: 4rem;
   position: absolute;
   top: 0.68rem;
   left: 9.25rem;
-  transform: translate(-50%, -100%);
-  padding-left: 0rem;
-  animation: hamburger-shine 2s ease-in-out infinite;
-  cursor: pointer;
+  transform: translate(-100%, -100%);
+  animation: humberger-shine 2s ease-in-out infinite;
+  border-radius: 100%;
+  background-color: #f9a82600;
+  backdrop-filter: blur(10px);
 }
 
-
-@keyframes hamburger-shine {
+@keyframes humberger-shine {
   0% {
-    filter: brightness(1);
+    text-shadow: none;
   }
+
   50% {
-    filter: brightness(1.2);
+    box-shadow: 0 0 0.5rem #ED9D02, 0 0 1rem #f3e2e2;
   }
+
   100% {
-    filter: brightness(1);
+    box-shadow: none;
   }
 }
 
@@ -117,7 +127,6 @@ nav {
   top: 1.88rem;
   left: 2.375rem;
   color: #F9A826;
-  transform: translate(-600%, -200%);
   transform: translate(-600%, -200%);
   animation: logo-shine 2s ease-in-out infinite;
 }
@@ -165,7 +174,7 @@ nav {
 .logo:hover::after {
   width: 100%;
 }
-
+ 
 .home-section {
   display: flex;
   flex-direction: column;
@@ -180,12 +189,11 @@ nav {
   left: 3.125rem;
   display: flex;
   align-items: center;
-  transform: translate(50%, 20%);
+  transform: translate(30%, 20%);
   justify-content: center;
 }
 
 .home-content {
-  text-align: left;
   margin-bottom: 800px;
 }
 
@@ -673,10 +681,12 @@ nav {
   gap: 0rem;
   border: 0.3125rem solid #F9A826;
   transform: translate(30.9%, -320%);
+  margin-bottom: 2rem;
 }
 
 .certificate-item h3 {
-  opacity: 0;
+  opacity: 1;
+  transform: translate(15%, -3200%);
 }
 
 #contact {
@@ -685,6 +695,11 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.contact-section {
+  padding: 0;
+  margin: 0;
 }
 
 .contact-section h1 {
@@ -698,9 +713,7 @@ nav {
   font-weight: 400;
   line-height: 3.7981rem;
   text-align: left;
-  transform: translate(-8%, -70%);
-  display: flex;
-  flex-direction: row;
+  transform: translate(-20%, -60%);
 }
 
 #name,
@@ -716,7 +729,7 @@ nav {
   border: 0.1875rem solid #F9A826;
   background-color: #78787852;
   color: #fff;
-  transform: translate(25%, -200%);
+  transform: translate(10%, -250%);
   padding-left: 2rem;
   display: flex;
   justify-content: center;
@@ -734,7 +747,7 @@ nav {
   background-color: #78787852;
   padding-left: 2rem;
   padding-top: 2rem;
-  transform: translate(25%, -50%);
+  transform: translate(10%, -60%);
 }
 
 .submit-button {
@@ -747,49 +760,49 @@ nav {
   border: 0.1875rem solid #F9A826;
   background-color: #F9A826;
   color: #fff;
-  transform: translate(110%, -60%);
+  transform: translate(80%, -60%);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  overflow-x: hidden;
 }
 
+
 .error {
-  color: rgb(230, 4, 4);
-  width: 20rem;
+  color: red;
+  width: 12rem;
   font-size: 1rem;
   font-weight: 400;
   font-family: 'actor';
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(30%,  800%);
+  transform: translate(60%,  700%);
 }
 
 .sent {
+  width: 12rem;
   color: green;
-  width: 20rem;
   font-size: 1rem;
   font-weight: 400;
   font-family: 'actor';
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(30%,  800%);
+  transform: translate(60%,  700%);
 }
 
 .contact-image {
   opacity: 0;
+  margin: 0;
 }
 
 .footer {
-  width: 23rem;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  width: 20rem;
   top: 10rem;
   padding: 2rem;
-  transform: translate(55%);
+  transform: translate(45%);
   font-size: 1rem;
   font-weight: 300;
   display: flex;
@@ -799,9 +812,18 @@ nav {
   text-align: center;
 }
 
+.profile-pic {
+  padding: 0;
+  margin: 0;
+}
+
+.form-group {
+  padding: 0;
+  margin: 0;
+}
 /* desktop */ 
 
-@media (max-width: 1440px) and (min-width: 770px) {
+@media (max-width: 1440px) and (min-width: 780px) {
   .hamburger {
     display: none;
   }
@@ -834,6 +856,10 @@ nav {
     display: none;
   }
 
+  .nav-links.show {
+    display: none;
+  }
+
   .logo {
     width: 5.56rem;
   top: 5.44rem;
@@ -854,7 +880,7 @@ nav {
     align-items: center;
     justify-content: right;
     flex-wrap: wrap;
-    transform: translate(150%);
+    transform: translate(170%);
   }
 
   #home-title,
@@ -925,6 +951,30 @@ nav {
     justify-content: space-between;
     padding-right: 40rem;
     transform: translate(-40%, 1900%);
+  }
+
+  .social-icons li a:hover {
+    transform: scale(1.2);
+    background-color: #ed9f0273;
+    box-shadow: 10px 0.10px 10px rgba(231, 198, 8, 0.295);
+  }
+  
+  .social-icons::before {
+    content: "Follow Us";
+    position: absolute;
+    top: -2rem;
+    left: 20%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: 'actor';
+  }
+  
+  .social-icons:hover::before {
+    opacity: 1;
   }
 
   #about-image {
@@ -1121,6 +1171,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transform: translate(-100%, -100%);
   }
   
   .close-button {
@@ -1251,7 +1302,8 @@ nav {
   }
   
   .certificate-item h3 {
-    opacity: 0;
+    opacity: 1;
+    transform: translate(68%, -3800%);
   }
 
   #contact {
@@ -1336,14 +1388,14 @@ nav {
     font-family: 'actor';
     transform: translate(-40%,  900%);
   }
-  
+
   .sent {
-    color: #008000;
+    color: green;
     width: 20rem;
     font-size: 1rem;
     font-weight: 400;
     font-family: 'actor';
-    transform: translate(-40%,  900%);
+    transform: translate(-30%,  900%);
   }
   
   .contact-image {
@@ -1358,7 +1410,7 @@ nav {
     justify-content: right;
     transform: translate(80%,  -200%);
   }
-  
+
   .footer {
     width: 35rem;
     text-align: center;
@@ -1382,8 +1434,284 @@ nav {
   .error {
     color: rgb(212, 6, 6);
   }
+}
 
-  .sent {
-    color: #008000;
+@media (min-width: 300px) and (max-width: 400px) {
+  #home-title {
+    width: 20rem;
+    transform: translate(30%, 1800%);
+  }
+
+  #home-name {
+    width: 20rem;
+    transform: translate(31%, 1930%);
+  }
+
+  #home-role {
+    width: 20rem;
+    transform: translate(31%, 2320%);
+  }
+
+  #home-description {
+    width: 20rem;
+    transform: translate(31%, 480%);
+  }
+
+  .social-icons {
+    width: 20rem;
+    transform: translate(10%, 2320%);
+  }
+
+  #about-image {
+    width: 20rem;
+    transform: translate(31%, -30%);
+  }
+
+  #about-title {
+    width: 20rem;
+    transform: translate(31%, -20%);
+  }
+
+  #about-role {
+    width: 20rem;
+    transform: translate(51%, -20%);
+  }
+
+  #about-description {
+    width: 30rem;
+    transform: translate(35%, 2%);
+  }
+
+  .skills {
+    width: 20rem;
+    transform: translate(52%, -400%);
+  }
+
+  #skill1,
+  #skill2,
+  #skill3 {
+    width: 20rem;
+    transform: translate(77%, -120%);
+  }
+
+  .contact-section h1 {
+    width: 80%;
+    transform: translate(31%, -100%);
+  }
+
+  #name,
+  #phone,
+  #email {
+    width: 20rem;
+    transform: translate(51%, -300%);
+  }
+
+  #message {
+    width: 20rem;
+    transform: translate(51%, -80%);
+  }
+
+  .email-message {
+    width: 20rem;
+    transform: translate(51%, 500%);
+  }
+
+  .submit-button {
+    width: 10rem;
+    transform: translate(151%, -170%);
+  }
+
+  .certificate-item h3 {
+    opacity: 1;
+    transform: translate(25%, -3200%);
+  }
+}
+
+@media (min-width: 401px) and (max-width: 687px) {
+  #home-title {
+    width: 30rem;
+    transform: translate(20%, 1800%);
+  }
+
+  #home-name {
+    width: 20rem;
+    transform: translate(31%, 1930%);
+  }
+
+  #home-role {
+    width: 20rem;
+    transform: translate(31%, 2320%);
+  }
+
+  #home-description {
+    width: 20rem;
+    transform: translate(31%, 480%);
+  }
+
+  .social-icons {
+    width: 20rem;
+    transform: translate(10%, 2320%);
+  }
+
+  #about-image {
+    width: 20rem;
+    transform: translate(31%, -30%);
+  }
+
+  #about-title {
+    width: 40rem;
+    transform: translate(-10%, -20%);
+  }
+
+  #about-role {
+    width: 20rem;
+    transform: translate(51%, -20%);
+  }
+
+  #about-description {
+    width: 30rem;
+    transform: translate(35%, 2%);
+  }
+
+  .skills {
+    width: 20rem;
+    transform: translate(52%, -400%);
+  }
+
+  #skill1,
+  #skill2,
+  #skill3 {
+    width: 20rem;
+    transform: translate(77%, -120%);
+  }
+
+  .contact-section h1 {
+    width: 80%;
+    transform: translate(31%, -100%);
+  }
+
+  #name,
+  #phone,
+  #email {
+    width: 20rem;
+    transform: translate(51%, -300%);
+  }
+
+  .certificate-item h3 {
+    opacity: 1;
+    transform: translate(15%, -3200%);
+  }
+
+  #message {
+    width: 20rem;
+    transform: translate(51%, -80%);
+  }
+
+  .email-message {
+    width: 20rem;
+    transform: translate(51%, 500%);
+  }
+
+  .submit-button {
+    width: 10rem;
+    transform: translate(151%, -170%);
+  }
+}
+
+@media (min-width: 779px) and (max-width: 900px) {
+  #home-title {
+    width: 30rem;
+    transform: translate(3%, 900%);
+  }
+
+  #home-name {
+    width: 20rem;
+    transform: translate(4%, 830%);
+  }
+
+  #home-role {
+    width: 20rem;
+    transform: translate(4%, 1300%);
+  }
+
+  #home-description {
+    width: 40rem;
+    transform: translate(2%, 290%);
+  }
+
+  #home-image  {
+    transform: translate(150%, 5%);
+  }
+
+  .social-icons {
+    width: 20rem;
+    transform: translate(2%, 2020%);
+  }
+
+  #about-image {
+    width: 30rem;
+    transform: translate(120%, -10%);
+  }
+
+  #about-title {
+    width: 20rem;
+    transform: translate(-31%, -600%);
+  }
+
+  #about-role {
+    width: 20rem;
+    transform: translate(-12%, -820%);
+  }
+
+  #about-description {
+    width: 35rem;
+    transform: translate(-8%, -89%);
+  }
+
+  .skills {
+    width: 20rem;
+    transform: translate(-12%, -1500%);
+  }
+
+  #skill1,
+  #skill2,
+  #skill3 {
+    width: 20rem;
+    transform: translate(11%, -500%);
+  }
+
+  .certificate-grid img {
+    transform: translate(170%, -250%);
+  }
+
+  .contact-section h1 {
+    width: 80%;
+    transform: translate(34%, -100%);
+  }
+
+  #name,
+  #phone,
+  #email {
+    width: 20rem;
+    transform: translate(40%, -300%);
+  }
+
+  #message {
+    width: 20rem;
+    transform: translate(40%, -70%);
+  }
+
+  .email-message {
+    width: 20rem;
+    transform: translate(40%, 500%);
+  }
+
+  .submit-button {
+    width: 10rem;
+    transform: translate(130%, -170%);
+  }
+
+  .contact-image {
+    transform: translate(120%, -180%);
   }
 }
