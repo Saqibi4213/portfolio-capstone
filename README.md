@@ -11,8 +11,9 @@ This capstone portfolio project represents the culmination of my skills in front
 ![Demo](images/demo.png)
 <br>
  [Live-link]( )
-## Technologies Used 🛠️
 
+
+## Technologies Used 🛠️
 
 - HTML
 - CSS
@@ -60,8 +61,8 @@ you can access to my project through git clone
 - Email: [email]( s.frahmand2003@gmail.com)
 <br>
 - Name: Maryam Tarakhail
-- LinkedIn: [Sumaya farahmand]()
-- Email: [email](Maryamtarakhail2021@gmail.com)
+- LinkedIn: [Maryam Trakhail](https://www.linkedin.com/in/maryam-tarakhail-098a992a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+- Email: [email]( Maryamtarakhail2021@gmail.com)
 <br>
 - Name: 
 - LinkedIn: [Sumaya farahmand]()
