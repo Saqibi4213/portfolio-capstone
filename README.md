@@ -10,7 +10,7 @@ This capstone portfolio project represents the culmination of my skills in front
 
 ![Demo](images/demo.png)
 <br>
- [Live-link](  https://saqibi4213.github.io/portfolio-capstone/)
+ [Live-link](https://saqibi4213.github.io/portfolio-capstone/)
 
 
 ## Technologies Used 🛠️
@@ -51,7 +51,7 @@ you can access to my project through git clone
 - Contact Information: Includes ways to reach out to me for collaborations, inquiries, or networking opportunities.
 
 ## Author 👩‍💻
-- Website: [website.com]( )
+- Website: [website.com]( https://saqibi4213.github.io/portfolio-capstone/)
 - LinkedIn: [Mehria saqibi](https://www.linkedin.com/in/mehria-saqibi-a386a41a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - Email: [email](mosawermh@gmail.com)
 
@@ -64,9 +64,8 @@ you can access to my project through git clone
 - LinkedIn: [Maryam Trakhail](https://www.linkedin.com/in/maryam-tarakhail-098a992a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - Email: [email]( Maryamtarakhail2021@gmail.com)
 <br>
-- Name: 
-- LinkedIn: [Sumaya farahmand]()
-- Email: [email]()
+- Name: Aminah Safi
+- Email: [email](Emaansailab@gmail.com)
 
 
 ## Contributing 🤝
