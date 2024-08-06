@@ -100,18 +100,17 @@ const screenshotSlider = document.querySelector('.project-popup .screenshot-slid
 function showProjectPopup(screenshots, longDescription, technologies, liveLink, sourceLink) {
   projectPopup.style.display = 'flex';
   screenshotSlider.innerHTML = '';
-  
   screenshots.forEach((screenshot) => {
     const screenshotElement = document.createElement('img');
     screenshotElement.src = screenshot;
     screenshotSlider.appendChild(screenshotElement);
   });
 
-const longDescriptionElement = document.createElement('p');
+  const longDescriptionElement = document.createElement('p');
   longDescriptionElement.textContent = longDescription;
   screenshotSlider.appendChild(longDescriptionElement);
 
-const technologiesElement = document.createElement('div');
+  const technologiesElement = document.createElement('div');
   technologiesElement.classList.add('technologies');
   technologies.forEach((tech) => {
     const techElement = document.createElement('span');
@@ -120,7 +119,7 @@ const technologiesElement = document.createElement('div');
   });
   screenshotSlider.appendChild(technologiesElement);
 
-const liveLink2 = document.createElement('a');
+  const liveLink2 = document.createElement('a');
   liveLink2.classList.add('live-link');
   liveLink2.href = liveLink;
   liveLink2.target = '_blank';
@@ -130,7 +129,7 @@ const liveLink2 = document.createElement('a');
   liveLink2.appendChild(document.createTextNode(''));
   screenshotSlider.appendChild(liveLink2);
 
-const sourceLink2 = document.createElement('a');
+  const sourceLink2 = document.createElement('a');
   sourceLink2.classList.add('source-link');
   sourceLink2.href = sourceLink;
   sourceLink2.target = '_blank';
@@ -141,26 +140,26 @@ const sourceLink2 = document.createElement('a');
   screenshotSlider.appendChild(sourceLink2);
 }
 
-const projectsContainer = document.getElementById('projects');
+  const projectsContainer = document.getElementById('projects');
 projects.forEach((project) => {
    // eslint-disable-next-line prefer-destructuring
-const projectElement = document.createElement('div');
+  const projectElement = document.createElement('div');
   projectElement.classList.add('project');
-  
-const titleElement = document.createElement('h2');
+
+  const titleElement = document.createElement('h2');
   titleElement.classList.add('color');
   titleElement.textContent = project.title;
-  
-const descriptionElement = document.createElement('div');
+
+  const descriptionElement = document.createElement('div');
   descriptionElement.classList.add('description');
   descriptionElement.textContent = project.description;
-  
-const imageContainer = document.createElement('div');
+
+  const imageContainer = document.createElement('div');
   imageContainer.classList.add('image-container');
   const image = document.createElement('img');
   image.src = project.images[0];
-  
-const viewScreenshotsButton = document.createElement('button');
+
+  const viewScreenshotsButton = document.createElement('button');
   viewScreenshotsButton.classList.add('view-screenshots');
   viewScreenshotsButton.textContent = 'See More';
   viewScreenshotsButton.addEventListener('click', () => {
@@ -224,7 +223,6 @@ function generateCertificateItems() {
 }
 
 generateCertificateItems();
-
 const form = document.querySelector('.contact-form');
 const emailMessage = document.querySelector('.email-message');
 const formspreeUrl = 'https://formspree.io/f/xrbzqrra';
@@ -257,7 +255,7 @@ form.addEventListener('submit', (event) => {
       method: 'POST',
       body: formData,
     })
-      .then(response = () => {
+      .then(response => {
         if (response.ok) {
           emailMessage.textContent = 'Message sent successfully';
           emailMessage.classList.add('sent');
@@ -267,17 +265,18 @@ form.addEventListener('submit', (event) => {
           // eslint-disable-next-line no-alert
           alert('Message sent successfully!');
         } else {
-          emailMessage.textContent = 'Message sent successfully.';
+          emailMessage.textContent = 'Failed to send message';
           emailMessage.classList.add('error');
           emailMessage.classList.remove('sent');
         }
       })
-      .catch(error = () => {
-        emailMessage.textContent = 'Message sent successfully.';
-        emailMessage.classList.add('sent');
-        emailMessage.classList.remove('error');
+      .catch(error => {
+        emailMessage.textContent = 'Error sending message';
+        emailMessage.classList.add('error');
+        emailMessage.classList.remove('sent');
         // eslint-disable-next-line no-console
         console.error('Error:', error);
       });
   }
 });
+

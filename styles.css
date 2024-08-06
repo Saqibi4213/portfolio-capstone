@@ -213,11 +213,12 @@ nav {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient( circle,
+  background: 
+  radial-gradient(circle,
   rgba(255, 255, 255, 0.2)
   0%,
-  rgba(255, 255, 255, 0) 
-  70%);
+  rgba(255, 255, 255, 0) 70%
+  );
   opacity: 0;
   animation: pulse 6s ease-in-out infinite;
 }
@@ -643,7 +644,8 @@ nav {
   margin: 2px;
 }
 
-.live-link, .source-link {
+.live-link,
+.source-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -652,11 +654,13 @@ nav {
   font-size: 14px;
   margin: 10px;
   width: 12rem;
-  transition: color 0.3s ease, 
-  transform 0.3s ease;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.live-link:hover, .source-link:hover {
+.live-link:hover,
+.source-link:hover {
   color: #ffb400;
   transform: scale(1.05);
 }
@@ -669,7 +673,7 @@ nav {
   height: 3.8125rem;
   top: 5.5306rem;
   left: 3.6006rem;
-  gap: 0rem;
+  gap: 0;
   font-family: 'Acme', sans-serif;
   font-size: 3rem;
   font-weight: 400;
@@ -685,7 +689,7 @@ nav {
   width: 25.6236rem;
   top: 10.8125rem;
   left: 3.1344rem;
-  gap: 0rem;
+  gap: 0;
   font-family: 'Acme', sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -697,7 +701,7 @@ nav {
 
 .certificate-item h3 {
   opacity: 1;
-  transform: translate(45%, -2290% );
+  transform: translate(45%, -2290%);
   display: flex;
   flex-direction: row;
   margin-inline-start: 10%;
@@ -798,7 +802,8 @@ nav {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
+  background: 
+    linear-gradient(
     45deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 0.4) 50%,
@@ -820,14 +825,16 @@ nav {
 
 .submit-button:hover {
   background-color: #fbb241;
-  box-shadow: 0 0.4rem 0.8rem rgba(249, 168, 38, 0.5),
-  0 0.2rem 0.4rem rgba(249, 168, 38, 0.4);
+  box-shadow: 
+    0 0.4rem 0.8rem rgba(249, 168, 38, 0.5),
+    0 0.2rem 0.4rem rgba(249, 168, 38, 0.4);
 }
 
 .submit-button:active {
   transform: translate(80%, -58%);
-  box-shadow: 0 0.2rem 0.4rem rgba(249, 168, 38, 0.4),
-  0 0.1rem 0.2rem rgba(249, 168, 38, 0.3);
+  box-shadow: 
+    0 0.2rem 0.4rem rgba(249, 168, 38, 0.4),
+    0 0.1rem 0.2rem rgba(249, 168, 38, 0.3);
 }
 
 .error {
@@ -835,11 +842,11 @@ nav {
   width: 12rem;
   font-size: 1rem;
   font-weight: 400;
-  font-family: 'actor';
+  font-family: 'actor', sans-serif;
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(60%,  700%);
+  transform: translate(60%, 700%);
 }
 
 .sent {
@@ -847,11 +854,11 @@ nav {
   color: green;
   font-size: 1rem;
   font-weight: 400;
-  font-family: 'actor';
+  font-family: 'actor', sans-serif;
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(60%,  700%);
+  transform: translate(60%, 700%);
   position: relative;
   gap: 1rem;
   padding-right: 0.3rem;
@@ -915,8 +922,8 @@ nav {
     width: 38.25rem;
     top: 6.50rem;
     left: 33.09rem;
-    gap: 0rem;
-    font-size: 2.00rem;
+    gap: 0;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 2.53rem;
     text-align: left;
@@ -946,10 +953,10 @@ nav {
 
   #home-image {
     width: 27.75rem;
-    height: 28.00rem;
+    height: 28rem;
     top: 13.94rem;
     left: 24.88rem;
-    gap: 0rem;
+    gap: 0;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -1003,12 +1010,12 @@ nav {
     transform: translate(-56%, 1500%);
   }
 
-  #home-description  {
+  #home-description {
     width: 43.5rem;
     top: 27.94rem;
     left: 7.25rem;
-    gap: 0rem;
-    font-family: 'Actor';
+    gap: 0;
+    font-family: 'Actor', sans-serif;
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.41rem;
@@ -1030,9 +1037,9 @@ nav {
   .social-icons li a:hover {
     transform: scale(1.2);
     background-color: #ed9f0273;
-    box-shadow: 10px 0.10px 10px rgba(231, 198, 8, 0.295);
+    box-shadow: 10px 0 10px rgba(231, 198, 8, 0.295);
   }
-  
+
   .social-icons::before {
     content: "Follow Us";
     position: absolute;
@@ -1044,9 +1051,9 @@ nav {
     font-size: 0.8rem;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-family: 'actor';
+    font-family: 'actor', sans-serif;
   }
-  
+
   .social-icons:hover::before {
     opacity: 1;
   }
@@ -1054,13 +1061,13 @@ nav {
   #about-image {
     width: 28.1875rem;
     border: none;
-    border-radius: 0px;
+    border-radius: 0;
     top: 19.75rem;
     left: 54.5rem;
-    gap: 0px; 
+    gap: 0;
     display: flex;
     justify-content: right;
-    align-items: right;
+    align-items: center;
     flex-wrap: wrap;
     transform: translate(60%);
   }
@@ -1070,14 +1077,13 @@ nav {
     top: 13.181875rem;
     left: 7.25125rem;
     gap: 0.4rem;
-    font-family: 'Acme';
+    font-family: 'Acme', sans-serif;
     font-size: 3rem;
     font-weight: 400;
     line-height: 3.798125rem;
     text-align: left;
     display: flex;
     justify-content: center;
-    text-align: left;
     transform: translate(-180%, -700%);
   }
 
@@ -1085,8 +1091,8 @@ nav {
     width: 26.3125rem;
     top: 18.375rem;
     left: 7.25rem;
-    gap: 0px;
-    font-family: 'Acme';
+    gap: 0;
+    font-family: 'Acme', sans-serif;
     font-size: 2.5rem;
     font-weight: 400;
     line-height: 3.164rem;
@@ -1114,7 +1120,7 @@ nav {
     top: 48.1875rem;
     left: 7.25rem;
     gap: 0;
-    font-family: Acme;
+    font-family: 'Acme', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.89875rem;
@@ -1127,14 +1133,13 @@ nav {
     top: 22.830625rem;
     left: 7.25rem;
     gap: 0;
-    font-family: 'Acme';
+    font-family: 'Acme', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.89875rem;
     text-align: left;
     display: flex;
     justify-items: center;
-    text-align: left;
     transform: translate(-60%, -110%);
   }
 
@@ -1148,7 +1153,7 @@ nav {
     top: 9.52375rem;
     left: 33.963125rem;
     gap: 0.3rem;
-    font-family: 'Acme';
+    font-family: 'Acme', sans-serif;
     font-size: 3rem;
     font-weight: 400;
     line-height: 3.798125rem;
@@ -1160,7 +1165,7 @@ nav {
     width: 23.6875rem;
     top: 23.393125rem;
     left: 59.0625rem;
-    gap: 0; 
+    gap: 0;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -1171,15 +1176,14 @@ nav {
     width: 19.25rem;
     top: 15.6925rem;
     left: 8.14875rem;
-    font-family: Acme;
+    font-family: 'Acme', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.89875rem;
-    text-align: left;
     display: flex;
     flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: left;
     transform: translate(30%, -1500%);
   }
 
@@ -1187,7 +1191,7 @@ nav {
     width: 23.24875rem;
     top: 18.24875rem;
     left: 7.245rem;
-    font-family: 'Acme';
+    font-family: 'Acme', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.89875rem;
@@ -1203,7 +1207,7 @@ nav {
     top: 26.159rem;
     left: 7.1075rem;
     gap: 0;
-    border: 2px 0 0 0;
+    border: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1233,21 +1237,21 @@ nav {
     align-items: center;
     z-index: 999;
   }
-  
+
   .project-popup .popup-content {
     background-color: #e7b30515;
     backdrop-filter: blur(10px);
     width: 30rem;
     height: 20rem;
     position: relative;
-    border: 0.125rem solid #F9A826;
+    border: 0.125rem solid #f9a826;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     z-index: 999;
   }
-  
+
   .close-button {
     position: absolute;
     top: 2px;
@@ -1256,8 +1260,8 @@ nav {
     color: #fff;
     cursor: pointer;
   }
-  
-  .screenshot-slider p  {
+
+  .screenshot-slider p {
     padding: 13px;
     text-align: center;
     color: #fff;
@@ -1266,7 +1270,7 @@ nav {
     line-height: 1.5;
     order: -1;
   }
-  
+
   .screenshot-slider {
     display: flex;
     flex-direction: column;
@@ -1276,27 +1280,26 @@ nav {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
   }
-  
+
   .screenshot-slider img {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 15rem;
     height: auto;
-    border: 1px solid #ED9D02;
+    border: 1px solid #ed9d02;
     border-radius: 1rem;
-    display: flex;
     transform: translate(-1%, 10%);
     margin-bottom: 7px;
   }
-  
+
   .technologies {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px;
   }
-  
+
   .technologies span {
     background-color: #00000081;
     backdrop-filter: blur(10px);
@@ -1306,7 +1309,7 @@ nav {
     font-size: 13px;
     margin: 2px;
   }
-  
+
   .live-link,
   .source-link {
     display: flex;
@@ -1314,11 +1317,11 @@ nav {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #ED9D02;
+    color: #ed9d02;
     font-size: 15px;
     margin: 10px;
   }
-  
+
   .live-link i,
   .source-link i {
     margin-right: 5px;
@@ -1329,14 +1332,14 @@ nav {
     top: 12.015rem;
     left: 7.886rem;
     gap: 0;
-    font-family: 'Acme';
+    font-family: 'Acme', sans-serif;
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.531875rem;
     text-align: left;
     transform: translate(85%, -90%);
   }
-  
+
   #certificate-me {
     opacity: 1;
     width: 23.5625rem;
@@ -1349,20 +1352,20 @@ nav {
     align-items: center;
     transform: translate(25%, -10%);
   }
-  
+
   .certificate-description {
     width: 36.456875rem;
     height: 18.2025rem;
     top: 16.745625rem;
     left: 7.88625rem;
     gap: 0;
-    font-family: 'Acme';
+    font-family: 'Acme', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.89875rem;
     text-align: left;
   }
-  
+
   .certificate-grid img {
     width: 28.125rem;
     height: 20rem;
@@ -1370,11 +1373,10 @@ nav {
     left: 54.544rem;
     gap: 0;
     margin-bottom: 4rem;
-    border: 0.3125rem solid #F9A826;
-    transform: translate(170%, -250%);
-    
+    border: 0.3125rem solid #f9a826;
+    transform: translate(170%, -250%); 
   }
-  
+
   .certificate-item h3 {
     opacity: 1;
     transform: translate(230%, -3800%);
@@ -1393,7 +1395,7 @@ nav {
     justify-content: center;
     align-items: center;
   }
-  
+
   .contact-section h1 {
     width: 19.741rem;
     top: 11.375rem;
@@ -1408,7 +1410,7 @@ nav {
     display: flex;
     flex-direction: row;
   }
-  
+
   #name,
   #phone,
   #email {
@@ -1418,7 +1420,7 @@ nav {
     gap: 0;
     margin-bottom: 2rem;
     border-radius: 10rem;
-    border: 0.1875rem solid #F9A826;
+    border: 0.1875rem solid #f9a826;
     background-color: #78787852;
     color: #fff;
     transform: translate(-40%, -200%);
@@ -1427,7 +1429,7 @@ nav {
     justify-content: center;
     align-items: center;
   }
-  
+
   #message {
     width: 28rem;
     height: 14rem;
@@ -1435,13 +1437,13 @@ nav {
     left: 16.625rem;
     gap: 0;
     border-radius: 2.7rem;
-    border: 0.1875rem solid #F9A826;
+    border: 0.1875rem solid #f9a826;
     background-color: #78787852;
     padding-left: 2rem;
     padding-top: 2rem;
     transform: translate(-40%, -50%);
   }
-  
+
   .submit-button {
     width: 12rem;
     height: 2.683rem;
@@ -1449,8 +1451,8 @@ nav {
     left: 23.577rem;
     gap: 0;
     border-radius: 2rem;
-    border: 0.1875rem solid #F9A826;
-    background-color: #F9A826;
+    border: 0.1875rem solid #f9a826;
+    background-color: #f9a826;
     color: #fff;
     font-size: 0.813rem;
     transform: translate(-30%, -80%);
@@ -1459,14 +1461,14 @@ nav {
     justify-content: center;
     cursor: pointer;
   }
-  
+
   .error {
     color: rgb(212, 6, 6);
     width: 20rem;
     font-size: 1rem;
     font-weight: 400;
-    font-family: 'actor';
-    transform: translate(-40%,  900%);
+    font-family: 'actor', sans-serif;
+    transform: translate(-40%, 900%);
   }
 
   .sent {
@@ -1474,10 +1476,10 @@ nav {
     width: 20rem;
     font-size: 1rem;
     font-weight: 400;
-    font-family: 'actor';
+    font-family: 'actor', Arial, sans-serif;
     transform: translate(-30%, 900%);
   }
-  
+
   .contact-image {
     opacity: 1;
     width: 30.461rem;
@@ -1503,9 +1505,6 @@ nav {
     font-weight: 400;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 }
 
@@ -1518,7 +1517,7 @@ nav {
 @media (min-width: 300px) and (max-width: 400px) {
   .nav-links.show {
     width: 12rem;
-    align-items: right;
+    align-items: center;
     display: flex;
     justify-content: right;
     transform: translate(19%);
@@ -1533,9 +1532,9 @@ nav {
     display: flex;
     text-align: center;
     justify-content: center;
-    border-radius: 200px ;
+    border-radius: 200px;
     margin: 0;
-    border-width: 2%;
+    border-width: 2rem;
   }
 
   .logo {
@@ -1742,7 +1741,7 @@ nav {
     transform: translate(2%, 290%);
   }
 
-  #home-image  {
+  #home-image {
     transform: translate(150%, 5%);
   }
 
