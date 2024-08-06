@@ -188,12 +188,12 @@ closeButton.addEventListener('click', () => {
 const certificateData = [
   {
     title: 'Responsive Web Design',
-    url: 'https://link-to-certificate1',
+    url: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/responsive-web-design',
     imageSrc: 'images/responsive.png',
   },
   {
     title: 'JavaScript Algorithms',
-    url: 'https://link-to-certificate2',
+    url: 'https://www.freecodecamp.org/certification/Mehria-Saqibi/javascript-algorithms-and-data-structures-v8',
     imageSrc: 'images/js.png',
   },
 ];
