@@ -216,9 +216,9 @@ nav {
   background:
     radial-gradient(
       circle,
-    rgba(255, 255, 255, 0.2)
+      rgba(255, 255, 255, 0.2)
       0%,
-    rgba(255, 255, 255, 0) 70%
+      rgba(255, 255, 255, 0) 70%
     );
   opacity: 0;
   animation: pulse 6s ease-in-out infinite;
