@@ -376,7 +376,7 @@ nav {
   top: 13.8444rem;
   left: 15.4944rem;
   gap: 0;
-  border: 1rem solid #ed9d02;
+  border: 0.23rem solid #ed9d02;
   transform: translate(250%, -440%);
   right: 1rem;
   display: flex;
@@ -1208,7 +1208,6 @@ nav {
     top: 26.159rem;
     left: 7.1075rem;
     gap: 0;
-    border: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
