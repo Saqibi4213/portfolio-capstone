@@ -10,7 +10,7 @@ This capstone portfolio project represents the culmination of my skills in front
 
 ![Demo](images/demo.png)
 <br>
- [Live-link]( )
+ [Live-link](  https://saqibi4213.github.io/portfolio-capstone/)
 
 
 ## Technologies Used 🛠️
