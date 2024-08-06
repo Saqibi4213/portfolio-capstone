@@ -8,7 +8,7 @@ This capstone portfolio project represents the culmination of my skills in front
 ## Demo 📸
 
 
-![Demo]()
+![Demo](images/demo.png)
 <br>
  [Live-link]( )
 ## Technologies Used 🛠️
@@ -55,14 +55,19 @@ you can access to my project through git clone
 - Email: [email](mosawermh@gmail.com)
 
 ### UI/UX Author 👩‍💻 
-- Website: [website.com]( )
-- LinkedIn: []()
+- Name: Sumaya Farahmand
+- LinkedIn: [Sumaya farahmand](https://www.linkedin.com/in/maryam-tarakhail-098a992a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+- Email: [email]( s.frahmand2003@gmail.com)
+<br>
+- Name: Maryam Tarakhail
+- LinkedIn: [Sumaya farahmand]()
+- Email: [email](Maryamtarakhail2021@gmail.com)
+<br>
+- Name: 
+- LinkedIn: [Sumaya farahmand]()
 - Email: [email]()
 
 
 ## Contributing 🤝
 
 Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request. Ensure that your code follows the project's coding standards and guidelines.
-
-
-
