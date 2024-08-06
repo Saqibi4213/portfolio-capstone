@@ -172,7 +172,7 @@ const viewScreenshotsButton = document.createElement('button');
       project.sourceLink
     );
   });
-  
+
   imageContainer.appendChild(image);
   imageContainer.appendChild(viewScreenshotsButton);
   projectElement.appendChild(titleElement);
@@ -185,25 +185,26 @@ closeButton.addEventListener('click', () => {
   projectPopup.style.display = 'none';
 });
 
-
 const certificateData = [
   {
     title: 'Responsive Web Design',
     url: 'https://link-to-certificate1',
-    imageSrc:'images/responsive.png'
+    imageSrc: 'images/responsive.png',
   },
   {
     title: 'JavaScript Algorithms',
     url: 'https://link-to-certificate2',
-    imageSrc: 'images/js.png'
-  }
+    imageSrc: 'images/js.png',
+  },
 ];
 
 function generateCertificateItems() {
   const certificateDescriptionElement = document.querySelector('.certificate-description');
   const certificateGridElement = document.querySelector('.certificate-grid');
-  certificateDescriptionElement.textContent = "I'm mehria asaibi, a junior web developer with a computer science degree with two years of teaching experience, one year as a consultant in an NGO, and 6 months as a volunteer for BUILD VOLUNTEER. I bring a diverse skill set including web development, problem-solving, and communication. I thrive on creating elegant web solutions and contributing to meaningful projects.";
-  certificateData.forEach(certificate => {
+
+  certificateDescriptionElement.textContent = "I'm Mehria Saqibi, a junior web developer with a computer science degree and two years of teaching experience, one year as a consultant in an NGO, and 6 months as a volunteer for BUILD VOLUNTEER. I bring a diverse skill set including web development, problem-solving, and communication. I thrive on creating elegant web solutions and contributing to meaningful projects.";
+
+  certificateData.forEach((certificate) => {
     const certificateItem = document.createElement('a');
     certificateItem.href = certificate.url;
     certificateItem.target = '_blank';
@@ -221,6 +222,7 @@ function generateCertificateItems() {
     certificateGridElement.appendChild(certificateItem);
   });
 }
+
 generateCertificateItems();
 
 const form = document.querySelector('.contact-form');
@@ -253,26 +255,29 @@ form.addEventListener('submit', (event) => {
 
     fetch(formspreeUrl, {
       method: 'POST',
-      body: formData
+      body: formData,
     })
-    .then(response => {
-      if (response.ok) {
-        emailMessage.textContent = 'Message sent successfully';
+      .then(response = () => {
+        if (response.ok) {
+          emailMessage.textContent = 'Message sent successfully';
+          emailMessage.classList.add('sent');
+          emailMessage.classList.remove('error');
+          // eslint-disable-next-line no-console
+          console.log(`Name: ${name}, Phone: ${phone}, Email: ${email}, Message: ${message}`);
+          // eslint-disable-next-line no-alert
+          alert('Message sent successfully!');
+        } else {
+          emailMessage.textContent = 'Message sent successfully.';
+          emailMessage.classList.add('error');
+          emailMessage.classList.remove('sent');
+        }
+      })
+      .catch(error = () => {
+        emailMessage.textContent = 'Message sent successfully.';
         emailMessage.classList.add('sent');
         emailMessage.classList.remove('error');
-        console.log(`Name: ${name}, Phone: ${phone}, Email: ${email}, Message: ${message}`);
-        alert('Message sent successfully!');
-      } else {
-        emailMessage.textContent = 'Message sent successfully.';
-        emailMessage.classList.add('error');
-        emailMessage.classList.remove('sent');
-      }
-    })
-    .catch(error => {
-      emailMessage.textContent = 'Message sent successfully.';
-      emailMessage.classList.add('sent');
-      emailMessage.classList.remove('error');
-      console.error('Error:', error);
-    });
+        // eslint-disable-next-line no-console
+        console.error('Error:', error);
+      });
   }
 });
