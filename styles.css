@@ -1527,7 +1527,7 @@ nav {
   }
 
   .hamburger {
-    width: 9rem;
+    width: 7rem;
     padding: 0;
     align-items: center;
     display: flex;
@@ -1572,39 +1572,52 @@ nav {
   }
 
   #about-image {
-    width: 20rem;
+    width: 15rem;
     transform: translate(31%, -30%);
   }
 
   #about-title {
-    width: 20rem;
-    transform: translate(31%, -20%);
+    width: 13rem;
+    transform: translate(31%, -24%);
   }
 
   #about-role {
-    width: 20rem;
-    transform: translate(51%, -20%);
+    width: 16rem;
+    transform: translate(30%, -20%);
   }
 
   #about-description {
-    width: 30rem;
-    transform: translate(35%, 2%);
+    width: 20rem;
+    transform: translate(25%, 2%);
   }
 
   .skills {
     width: 20rem;
-    transform: translate(52%, -400%);
+    transform: translate(24%, 70%);
   }
 
   #skill1,
   #skill2,
   #skill3 {
     width: 20rem;
-    transform: translate(77%, -120%);
+    transform: translate(50%, 100%);
+  }
+
+  .image-container img {
+    width: 8rem;
+  }
+
+  .view-screenshots {
+    width: 4.4rem;
+  }
+
+  .certificate-description {
+    width: 22rem;
   }
 
   .contact-section h1 {
     width: 80%;
+    margin-top: 2rem;
     transform: translate(31%, -100%);
   }
 
@@ -1632,6 +1645,13 @@ nav {
 
   .error {
     color: red;
+  }
+
+  .footer {
+    width: 20rem;
+    display: flex;
+    text-align: center;
+    transform: translate(40%);
   }
 }
 
