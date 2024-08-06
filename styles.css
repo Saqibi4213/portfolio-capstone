@@ -52,7 +52,7 @@ nav {
   background-color: #fda00b36;
   backdrop-filter: blur(1rem);
   border-top: 1px solid #000;
-  transform: translate(105%, 6%);
+  transform: translate(30%, 5%);
   justify-content: left;
 }
 
@@ -91,7 +91,7 @@ nav {
   position: absolute;
   top: 0;
   left: 9.25rem;
-  transform: translate(-10%, -100%);
+  transform: translate(-250%, -90%);
   animation: humberger-shine 2s ease-in-out infinite;
   border-radius: 100%;
   background-color: #f9a82600;
