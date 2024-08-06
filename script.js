@@ -140,9 +140,9 @@ function showProjectPopup(screenshots, longDescription, technologies, liveLink, 
   screenshotSlider.appendChild(sourceLink2);
 }
 
-  const projectsContainer = document.getElementById('projects');
+const projectsContainer = document.getElementById('projects');
 projects.forEach((project) => {
-   // eslint-disable-next-line prefer-destructuring
+  // eslint-disable-next-line prefer-destructuring
   const projectElement = document.createElement('div');
   projectElement.classList.add('project');
 
@@ -157,6 +157,7 @@ projects.forEach((project) => {
   const imageContainer = document.createElement('div');
   imageContainer.classList.add('image-container');
   const image = document.createElement('img');
+  // eslint-disable-next-line prefer-destructuring
   image.src = project.images[0];
 
   const viewScreenshotsButton = document.createElement('button');
@@ -168,7 +169,7 @@ projects.forEach((project) => {
       project.longDescription,
       project.technologies,
       project.liveLink,
-      project.sourceLink
+      project.sourceLink,
     );
   });
 
@@ -255,7 +256,7 @@ form.addEventListener('submit', (event) => {
       method: 'POST',
       body: formData,
     })
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           emailMessage.textContent = 'Message sent successfully';
           emailMessage.classList.add('sent');
@@ -270,7 +271,7 @@ form.addEventListener('submit', (event) => {
           emailMessage.classList.remove('sent');
         }
       })
-      .catch(error => {
+      .catch((error) => {
         emailMessage.textContent = 'Error sending message';
         emailMessage.classList.add('error');
         emailMessage.classList.remove('sent');
@@ -279,4 +280,3 @@ form.addEventListener('submit', (event) => {
       });
   }
 });
-
