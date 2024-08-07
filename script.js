@@ -227,6 +227,8 @@ generateCertificateItems();
 const form = document.querySelector('.contact-form');
 const emailMessage = document.querySelector('.email-message');
 const formspreeUrl = 'https://formspree.io/f/xrbzqrra';
+
+// Add CSS styles for messages
 const style = document.createElement('style');
 style.textContent = `
   .sent { color: green; }
@@ -234,7 +236,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const name = document.getElementById('name').value;
   const phone = document.getElementById('phone').value;
@@ -252,31 +254,31 @@ form.addEventListener('submit', (event) => {
     formData.append('email', email);
     formData.append('message', message);
 
-    fetch(formspreeUrl, {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => {
-        if (response.ok) {
-          emailMessage.textContent = 'Message sent successfully';
-          emailMessage.classList.add('sent');
-          emailMessage.classList.remove('error');
-          // eslint-disable-next-line no-console
-          console.log(`Name: ${name}, Phone: ${phone}, Email: ${email}, Message: ${message}`);
-          // eslint-disable-next-line no-alert
-          alert('Message sent successfully!');
-        } else {
-          emailMessage.textContent = 'Failed to send message';
-          emailMessage.classList.add('error');
-          emailMessage.classList.remove('sent');
-        }
-      })
-      .catch((error) => {
-        emailMessage.textContent = 'Error sending message';
+    try {
+      const response = await fetch(formspreeUrl, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        emailMessage.textContent = 'Message sent successfully';
+        emailMessage.classList.add('sent');
+        emailMessage.classList.remove('error');
+        form.reset(); // Reset the form on success
+      } else {
+        emailMessage.textContent = 'Failed to send message';
         emailMessage.classList.add('error');
         emailMessage.classList.remove('sent');
-        // eslint-disable-next-line no-console
-        console.error('Error:', error);
-      });
+      }
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('Fetch error:', error);
+      emailMessage.textContent = 'Error sending message';
+      emailMessage.classList.add('error');
+      emailMessage.classList.remove('sent');
+    }
   }
 });
