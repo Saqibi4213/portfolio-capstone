@@ -970,11 +970,6 @@ nav {
   pointer-events: none;
 }
 
-.footer .color1 {
-  position: relative;
-  z-index: 2;
-}
-
 .profile-pic {
   padding: 0;
   margin: 0;
