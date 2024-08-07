@@ -1515,11 +1515,11 @@ nav {
 
 @media (min-width: 300px) and (max-width: 400px) {
   .nav-links.show {
-    width: 12rem;
+    width: 10rem;
     align-items: center;
     display: flex;
     justify-content: right;
-    transform: translate(69%);
+    transform: translate(10%, 10%);
     top: 1rem;
     font-size: 24px;
   }
@@ -1534,6 +1534,8 @@ nav {
     border-radius: 200px;
     margin: 0;
     border-width: 2rem;
+    right: 8rem;
+    transform: translate(-90%, -30%);
   }
 
   .logo {
