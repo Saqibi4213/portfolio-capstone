@@ -408,6 +408,40 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(241, 224, 224, 0.3), 0 6px 20px rgba(241, 229, 229, 0.2);
+}
+
+#about-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+  background-size: 200% 100%;
+  opacity: 0.6;
+  animation: shine 2s infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#about-image img {
+  border-radius: 0.5rem;
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 #about-title {
@@ -809,7 +843,7 @@ nav {
       rgba(255, 255, 255, 0.4) 50%,
       rgba(255, 255, 255, 0) 100%
     );
-  transform: rotate(30deg);
+  transform: rotate(20deg);
   animation: shine 3s infinite;
 }
 
@@ -831,7 +865,7 @@ nav {
 }
 
 .submit-button:active {
-  transform: translate(80%, -58%);
+  transform: translate(5%, -38%);
   box-shadow:
     0 0.2rem 0.4rem rgba(249, 168, 38, 0.4),
     0 0.1rem 0.2rem rgba(249, 168, 38, 0.3);
@@ -858,21 +892,42 @@ nav {
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(60%, 700%);
+  transform: translate(50%, 700%);
   position: relative;
   gap: 1rem;
   padding-right: 0.3rem;
+  overflow: hidden;
 }
 
 .sent::after {
   content: '✔';
   color: green;
   font-size: 1.2rem;
-  margin-left: 0.5rem;
+  margin-left: 0.4rem;
   position: absolute;
-  right: 0;
+  right: 3rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
+  opacity: 0;
+  animation: slideAndShine 1.5s ease-in-out forwards;
+}
+
+@keyframes slideAndShine {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(20px) rotate(20deg);
+    text-shadow: 0 0 0 rgba(0, 255, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+    text-shadow: 0 0 5px rgba(2, 194, 2, 0.774);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0) rotate(0deg);
+    text-shadow: 0 0 10px rgba(4, 199, 4, 0.801), 0 0 15px rgba(1, 151, 1, 0.5);
+  }
 }
 
 .contact-image {
@@ -892,6 +947,51 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+.footer .color1 {
+  font-size: 1.4rem;
+  color: #750000;
+  position: relative;
+  display: inline-block;
+  animation: sparkle 1s infinite;
+}
+
+.footer .color1::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(199, 37, 37, 0.8), rgba(230, 85, 85, 0) 70%);
+  opacity: 0.5;
+  transform: rotate(-30deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.footer .color1 {
+  box-shadow: 0 4px 8px rgba(85, 75, 75, 0.3), 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer .color1 {
+  position: relative;
+  z-index: 2;
 }
 
 .profile-pic {
