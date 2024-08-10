@@ -1556,6 +1556,19 @@ nav {
     transform: translate(-63%, 1000%);
   }
 
+  .sent::after {
+    content: '✔';
+    color: green;
+    font-size: 1.2rem;
+    margin-left: 0.4rem;
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-60%);
+    opacity: 0;
+    animation: slideAndShine 1.5s ease-in-out forwards;
+  }
+
   .contact-image {
     opacity: 1;
     width: 30.461rem;
