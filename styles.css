@@ -1554,6 +1554,7 @@ nav {
     font-weight: 400;
     font-family: 'actor', Arial, sans-serif;
     transform: translate(-63%, 1000%);
+    overflow: hidden;
   }
 
   .sent::after {
@@ -1565,7 +1566,7 @@ nav {
     right: 3rem;
     top: 50%;
     transform: translateY(-60%);
-    opacity: 0;
+    opacity: 1;
     animation: slideAndShine 1.5s ease-in-out forwards;
   }
 
