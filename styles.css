@@ -91,7 +91,7 @@ nav {
   position: absolute;
   top: 0;
   left: 1.25rem;
-  transform: translate(-10%, -80%);
+  transform: translate(-5%, -80%);
   animation: humberger-shine 2s ease-in-out infinite;
   border-radius: 100%;
   background-color: #f9a82600;
@@ -1037,7 +1037,7 @@ nav {
     align-items: center;
     justify-content: right;
     flex-wrap: wrap;
-    transform: translate(160%);
+    transform: translate(155%);
   }
 
   #home-title,
@@ -1232,7 +1232,7 @@ nav {
     font-size: 3rem;
     font-weight: 400;
     line-height: 3.798125rem;
-    transform: translate(250%);
+    transform: translate(235%);
   }
 
   #project-me {
@@ -1244,7 +1244,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: right;
-    transform: translate(240%);
+    transform: translate(225%);
   }
 
   #projects h2 {
@@ -1259,7 +1259,7 @@ nav {
     flex-direction: row;
     align-items: center;
     text-align: left;
-    transform: translate(30%, -1500%);
+    transform: translate(14%, -1500%);
   }
 
   .description {
@@ -1273,7 +1273,7 @@ nav {
     text-align: left;
     display: flex;
     justify-content: left;
-    transform: translate(29%, -300%);
+    transform: translate(10%, -300%);
   }
 
   .image-container img {
@@ -1286,7 +1286,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translate(160%, -180%);
+    transform: translate(140%, -180%);
     border: 0.23rem solid #ed9d02;
   }
 
@@ -1297,7 +1297,7 @@ nav {
     flex-wrap: wrap;
     width: 6rem;
     text-align: center;
-    transform: translate(690%, -1700%);
+    transform: translate(620%, -1800%);
   }
 
   .project-popup {
@@ -1412,7 +1412,7 @@ nav {
     font-weight: 400;
     line-height: 2.531875rem;
     text-align: left;
-    transform: translate(85%, -90%);
+    transform: translate(35%, -90%);
   }
 
   #certificate-me {
@@ -1425,7 +1425,7 @@ nav {
     flex-direction: column;
     justify-content: left;
     align-items: center;
-    transform: translate(25%, -10%);
+    transform: translate(15%, -10%);
   }
 
   .certificate-description {
@@ -1439,6 +1439,7 @@ nav {
     font-weight: 400;
     line-height: 1.89875rem;
     text-align: left;
+    transform: translate(9%, -10%);
   }
 
   .certificate-grid img {
@@ -1449,12 +1450,12 @@ nav {
     gap: 0;
     margin-bottom: 4rem;
     border: 0.3125rem solid #f9a826;
-    transform: translate(170%, -250%);
+    transform: translate(160%, -250%);
   }
 
   .certificate-item h3 {
     opacity: 1;
-    transform: translate(230%, -3800%);
+    transform: translate(210%, -3800%);
     width: 20rem;
     flex-direction: column;
     justify-content: right;
@@ -1481,7 +1482,7 @@ nav {
     font-weight: 400;
     line-height: 3.7981rem;
     text-align: left;
-    transform: translate(-70%, -70%);
+    transform: translate(-100%, -70%);
     display: flex;
     flex-direction: row;
   }
@@ -1498,7 +1499,7 @@ nav {
     border: 0.1875rem solid #f9a826;
     background-color: #78787852;
     color: #fff;
-    transform: translate(-40%, -200%);
+    transform: translate(-60%, -200%);
     padding-left: 2rem;
     display: flex;
     justify-content: center;
@@ -1516,7 +1517,7 @@ nav {
     background-color: #78787852;
     padding-left: 2rem;
     padding-top: 2rem;
-    transform: translate(-40%, -50%);
+    transform: translate(-60%, -40%);
   }
 
   .submit-button {
@@ -1530,7 +1531,7 @@ nav {
     background-color: #f9a826;
     color: #fff;
     font-size: 0.813rem;
-    transform: translate(-30%, -80%);
+    transform: translate(-75%, -80%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1543,7 +1544,7 @@ nav {
     font-size: 1rem;
     font-weight: 400;
     font-family: 'actor', sans-serif;
-    transform: translate(-40%, 900%);
+    transform: translate(-63%, 1000%);
   }
 
   .sent {
@@ -1552,7 +1553,7 @@ nav {
     font-size: 1rem;
     font-weight: 400;
     font-family: 'actor', Arial, sans-serif;
-    transform: translate(-30%, 900%);
+    transform: translate(-63%, 1000%);
   }
 
   .contact-image {
@@ -1565,7 +1566,7 @@ nav {
     display: flex;
     align-items: flex-end;
     justify-content: right;
-    transform: translate(80%, -200%);
+    transform: translate(42%, -200%);
   }
 
   .footer {
@@ -1595,13 +1596,13 @@ nav {
     align-items: center;
     display: flex;
     justify-content: right;
-    transform: translate(10%, 10%);
+    transform: translate(-50%, 2%);
     top: 1rem;
     font-size: 24px;
   }
 
   .hamburger {
-    width: 7rem;
+    width: 5rem;
     padding: 0;
     align-items: center;
     display: flex;
@@ -1611,7 +1612,7 @@ nav {
     margin: 0;
     border-width: 2rem;
     right: 8rem;
-    transform: translate(-90%, -30%);
+    transform: translate(-210%, -70%);
   }
 
   .logo {
@@ -1619,64 +1620,74 @@ nav {
     justify-content: left;
     align-items: center;
     text-align: left;
-    margin-left: 2rem;
+    margin-left: 1rem;
+  }
+
+  .home-image {
+    width: 14rem;
   }
 
   #home-title {
     width: 20rem;
-    transform: translate(30%, 1800%);
+    transform: translate(10%, 1800%);
   }
 
   #home-name {
     width: 20rem;
-    transform: translate(31%, 1930%);
+    transform: translate(10%, 1930%);
   }
 
   #home-role {
     width: 20rem;
-    transform: translate(31%, 2320%);
+    transform: translate(10%, 2330%);
   }
 
   #home-description {
     width: 20rem;
-    transform: translate(31%, 480%);
+    transform: translate(10%, 480%);
   }
 
   .social-icons {
     width: 20rem;
-    transform: translate(10%, 2320%);
+    transform: translate(-10%, 2320%);
   }
 
   #about-image {
-    width: 15rem;
-    transform: translate(31%, -30%);
+    width: 17rem;
+    transform: translate(15%, -30%);
+    border-radius: 1px;
   }
 
   #about-title {
     width: 13rem;
-    transform: translate(31%, -24%);
+    transform: translate(10%, -24%);
   }
 
   #about-role {
     width: 16rem;
-    transform: translate(30%, -20%);
+    transform: translate(9%, -20%);
   }
 
   #about-description {
     width: 20rem;
-    transform: translate(25%, 2%);
+    transform: translate(10%, 2%);
   }
 
   .skills {
     width: 20rem;
-    transform: translate(24%, 70%);
+    transform: translate(10%, 90%);
   }
 
   #skill1,
   #skill2,
   #skill3 {
     width: 20rem;
-    transform: translate(50%, 100%);
+    transform: translate(35%, 120%);
+  }
+
+  .project-container h1 {
+    text-align: center;
+    width: 32rem;
   }
 
   .image-container img {
