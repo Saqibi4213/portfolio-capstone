@@ -885,7 +885,7 @@ nav {
 }
 
 .sent {
-  width: 12rem;
+  width: 19rem;
   color: green;
   font-size: 1rem;
   font-weight: 400;
@@ -893,7 +893,7 @@ nav {
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(50%, 700%);
+  transform: translate(20%, 730%);
   position: relative;
   gap: 1rem;
   padding-right: 0.3rem;
@@ -906,10 +906,10 @@ nav {
   font-size: 1.2rem;
   margin-left: 0.4rem;
   position: absolute;
-  right: 3rem;
+  right: 2.4rem;
   top: 50%;
-  transform: translateY(-60%);
-  opacity: 0;
+  transform: translateY(-70%);
+  opacity: 1;
   animation: slideAndShine 1.5s ease-in-out forwards;
 }
 
@@ -1610,7 +1610,7 @@ nav {
     align-items: center;
     display: flex;
     justify-content: right;
-    transform: translate(-50%, 2%);
+    transform: translate(-2%, 2%);
     top: 1rem;
     font-size: 24px;
   }
@@ -1625,8 +1625,8 @@ nav {
     border-radius: 200px;
     margin: 0;
     border-width: 2rem;
-    right: 8rem;
-    transform: translate(-210%, -70%);
+    right: 2rem;
+    transform: translate(-110%, -70%);
   }
 
   .logo {
