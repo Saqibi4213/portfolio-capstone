@@ -874,14 +874,14 @@ nav {
 
 .error {
   color: red;
-  width: 12rem;
+  width: 13rem;
   font-size: 1rem;
   font-weight: 400;
   font-family: 'actor', sans-serif;
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(60%, 700%);
+  transform: translate(50%, 700%);
 }
 
 .sent {
