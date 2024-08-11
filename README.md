@@ -54,8 +54,9 @@ you can access to my project through git clone
 - Website: [website.com]( https://saqibi4213.github.io/portfolio-capstone/)
 - LinkedIn: [Mehria saqibi](https://www.linkedin.com/in/mehria-saqibi-a386a41a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - Email: [email](mosawermh@gmail.com)
-
+- Link of Figma Design : [figma.com](https://www.figma.com/design/2PC6cwlFBShjhWQXpIELws/portfolio?node-id=0-1&t=ksoKdfqJXqTlihD7-0)
 ### UI/UX Author 👩‍💻 
+- Design That UI/UX provided : [figma.com](https://www.figma.com/design/2PC6cwlFBShjhWQXpIELws/portfolio?node-id=0-1&t=ksoKdfqJXqTlihD7-0)
 - Name: Sumaya Farahmand
 - LinkedIn: [Sumaya farahmand](https://www.linkedin.com/in/maryam-tarakhail-098a992a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - Email: [email]( s.frahmand2003@gmail.com)
