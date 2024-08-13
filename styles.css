@@ -1612,7 +1612,7 @@ nav {
     align-items: center;
     display: flex;
     justify-content: right;
-    transform: translate(-2%, 2%);
+    transform: translate(26%, -2%);
     top: 1rem;
     font-size: 24px;
   }
@@ -1628,7 +1628,7 @@ nav {
     margin: 0;
     border-width: 2rem;
     right: 2rem;
-    transform: translate(-110%, -70%);
+    transform: translate(550%, 10%);
   }
 
   .logo {
@@ -1711,7 +1711,7 @@ nav {
   }
 
   .view-screenshots {
-    width: 4.4rem;
+    width: 6.3rem;
   }
 
   .certificate-description {
