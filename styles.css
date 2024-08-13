@@ -1728,26 +1728,35 @@ nav {
   #phone,
   #email {
     width: 20rem;
-    transform: translate(51%, -300%);
+    font-size: 1.4rem;
+    transform: translate(55%, -300%);
   }
 
   #message {
     width: 20rem;
-    transform: translate(51%, -80%);
+    font-size: 1.6em;
+    transform: translate(55%, -80%);
   }
 
   .email-message {
     width: 20rem;
     transform: translate(51%, 500%);
+    font-size: 1.4rem;
   }
 
   .submit-button {
     width: 10rem;
+    font-size: 1.4rem;
     transform: translate(151%, -170%);
   }
 
   .error {
     color: red;
+    transform: translate(58%, 340%);
+  }
+
+  .sent {
+    transform: translate(58%, 340%);
   }
 
   .footer {
