@@ -1139,6 +1139,12 @@ nav {
     opacity: 1;
   }
 
+  .social-icons li img {
+    width: 3.55rem;
+    height: 2.51rem;
+    transform: translate(-10%, -400%);
+  }
+
   #about-image {
     width: 28.1875rem;
     border: none;
