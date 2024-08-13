@@ -19,7 +19,7 @@ header {
 
 nav {
   display: flex;
-  position: fixed;
+  position: absolute;
   top: 4.5rem;
   left: 33.094rem;
 }
@@ -32,7 +32,6 @@ nav {
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  position: absolute;
   top: 0;
   right: 0.1rem;
   z-index: 1000;
@@ -1139,6 +1138,43 @@ nav {
     opacity: 1;
   }
 
+  .image-container img {
+    width: 21.333125rem;
+    height: 13.3475rem;
+    top: 26.159rem;
+    left: 7.1075rem;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(140%, -180%);
+    border: 0.23rem solid #ed9d02;
+  }
+
+  .screenshot-slider img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 15rem;
+    height: auto;
+    border: 1px solid #ed9d02;
+    border-radius: 1rem;
+    transform: translate(-1%, 10%);
+    margin-bottom: 7px;
+  }
+
+  .certificate-grid img {
+    width: 28.125rem;
+    height: 20rem;
+    top: 13.821rem;
+    left: 54.544rem;
+    gap: 0;
+    margin-bottom: 4rem;
+    border: 0.3125rem solid #f9a826;
+    transform: translate(160%, -250%);
+  }
+
   .social-icons li img {
     width: 3.55rem;
     height: 2.51rem;
@@ -1289,20 +1325,6 @@ nav {
     transform: translate(10%, -200%);
   }
 
-  .image-container img {
-    width: 21.333125rem;
-    height: 13.3475rem;
-    top: 26.159rem;
-    left: 7.1075rem;
-    gap: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translate(140%, -180%);
-    border: 0.23rem solid #ed9d02;
-  }
-
   .view-screenshots {
     align-items: center;
     display: flex;
@@ -1368,18 +1390,6 @@ nav {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-  }
-
-  .screenshot-slider img {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 15rem;
-    height: auto;
-    border: 1px solid #ed9d02;
-    border-radius: 1rem;
-    transform: translate(-1%, 10%);
-    margin-bottom: 7px;
   }
 
   .technologies {
@@ -1454,17 +1464,6 @@ nav {
     line-height: 1.89875rem;
     text-align: left;
     transform: translate(9%, -10%);
-  }
-
-  .certificate-grid img {
-    width: 28.125rem;
-    height: 20rem;
-    top: 13.821rem;
-    left: 54.544rem;
-    gap: 0;
-    margin-bottom: 4rem;
-    border: 0.3125rem solid #f9a826;
-    transform: translate(160%, -250%);
   }
 
   .certificate-item h3 {
