@@ -13,6 +13,10 @@ body {
   padding: 0;
 }
 
+header {
+  position: fixed;
+}
+
 nav {
   display: flex;
   position: fixed;
@@ -31,7 +35,7 @@ nav {
   position: absolute;
   top: 0;
   right: 0.1rem;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .nav-links a {
@@ -1261,7 +1265,8 @@ nav {
     flex-direction: row;
     align-items: center;
     text-align: left;
-    transform: translate(14%, -1500%);
+    transform: translate(14%, -1000%);
+    padding-bottom: 1rem;
   }
 
   .description {
@@ -1275,7 +1280,7 @@ nav {
     text-align: left;
     display: flex;
     justify-content: left;
-    transform: translate(10%, -300%);
+    transform: translate(10%, -200%);
   }
 
   .image-container img {
@@ -1313,6 +1318,7 @@ nav {
     justify-content: center;
     align-items: center;
     z-index: 999;
+    transform: translate(-4%);
   }
 
   .project-popup .popup-content {
