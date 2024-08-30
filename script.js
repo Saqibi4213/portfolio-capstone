@@ -48,12 +48,12 @@ skillIcons.forEach((icon, index) => {
 const skillNames = aboutSection.querySelectorAll('.about-skills li span.yellow-text');
 skillNames.forEach((skill, index) => {
   skill.textContent = userData.skillNames[index];
-  skill.style.color = '#ffcc00';
+  skill.style.color = '#ED9D02';
 });
 
 const coloredElements = document.querySelectorAll('.color');
 coloredElements.forEach((element) => {
-  element.style.color = '#ffcc00';
+  element.style.color = '#ED9D02';
 });
 const projects = [
   {

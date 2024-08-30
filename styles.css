@@ -7,7 +7,7 @@
 
 body {
   font-family: 'acme', sans-serif;
-  background-color: #222;
+  background-color: #0a0a0a;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -387,7 +387,7 @@ nav {
 }
 
 .social-icons li img {
-  width: 2.55rem;
+  width: 3.5rem;
   height: 1.51rem;
 }
 
@@ -406,13 +406,11 @@ nav {
   left: 3.08rem;
   gap: 0;
   border-radius: 10rem;
-  border: 0 solid #ed9d02;
   transform: translate(-30%, -20%);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(241, 224, 224, 0.3), 0 6px 20px rgba(241, 229, 229, 0.2);
 }
 
 #about-image::before {
@@ -565,7 +563,7 @@ nav {
   font-weight: 400;
   line-height: 1.2663rem;
   text-align: left;
-  color: #f9a826;
+  color: #ED9D02;
   transform: translate(20%, -1700%);
   display: flex;
   align-items: center;
@@ -807,6 +805,7 @@ nav {
   border-radius: 2.7rem;
   border: 0.1875rem solid #f9a826;
   background-color: #78787852;
+  color: #fff;
   padding-left: 2rem;
   padding-top: 2rem;
   transform: translate(10%, -60%);
@@ -1009,6 +1008,14 @@ nav {
     text-align: left;
   }
 
+  body {
+    font-family: 'acme', sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
   .nav-links li {
     margin: 0 20px;
   }
@@ -1033,7 +1040,7 @@ nav {
   }
 
   #home-image {
-    width: 29.76rem;
+    width: 27.76rem;
     height: 28rem;
     top: 13.94rem;
     left: 24.88rem;
@@ -1053,8 +1060,12 @@ nav {
     text-align: left;
   }
 
+  span .color {
+    color: #ED9D02;
+  }
+
   #home-title {
-    width: 30.5rem;
+    width: 27.3rem;
     top: 1.81rem;
     left: 7.25rem;
     gap: 1rem;
@@ -1063,7 +1074,7 @@ nav {
     font-weight: 400;
     line-height: 5.06rem;
     text-align: left;
-    transform: translate(-58%, 900%);
+    transform: translate(-64%, 900%);
   }
 
   #home-name {
@@ -1105,7 +1116,8 @@ nav {
   }
 
   .social-icons {
-    width: 3.5rem;
+    width: 4.5rem;
+    height: auto;
     top: 14.3125rem;
     left: 10.03125rem;
     gap: 1rem;
@@ -1114,17 +1126,11 @@ nav {
     transform: translate(-40%, 1900%);
   }
 
-  .social-icons li a:hover {
-    transform: scale(1.2);
-    background-color: #ed9f0273;
-    box-shadow: 10px 0 10px rgba(231, 198, 8, 0.295);
-  }
-
   .social-icons::before {
     content: "Follow Us";
     position: absolute;
-    top: -2rem;
-    left: 20%;
+    top: -13rem;
+    left: 22%;
     transform: translateX(-50%);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -1192,7 +1198,7 @@ nav {
     justify-content: right;
     align-items: center;
     flex-wrap: wrap;
-    transform: translate(60%);
+    transform: translate(55%);
   }
 
   #about-title {
@@ -1249,6 +1255,12 @@ nav {
     line-height: 1.89875rem;
     text-align: left;
     transform: translate(-240%, -550%);
+  }
+
+  #skill-icon1,
+  #skill-icon2,
+  #skill-icon3 {
+    margin-left: 20px;
   }
 
   #about-description {
@@ -1331,8 +1343,9 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     width: 6rem;
+    padding: 7px;
     text-align: center;
-    transform: translate(620%, -1800%);
+    transform: translate(610%, -1100%);
   }
 
   .project-popup {
@@ -1623,23 +1636,21 @@ nav {
     align-items: center;
     display: flex;
     justify-content: right;
-    transform: translate(26%, -2%);
+    transform: translate(9%, 2%);
     top: 1rem;
-    font-size: 24px;
   }
 
   .hamburger {
-    width: 5rem;
-    padding: 0;
+    width: 4rem;
+    padding: 2px;
     align-items: center;
     display: flex;
-    text-align: center;
     justify-content: center;
     border-radius: 200px;
     margin: 0;
     border-width: 2rem;
     right: 2rem;
-    transform: translate(550%, 10%);
+    transform: translate(630%, 20%);
   }
 
   .logo {
