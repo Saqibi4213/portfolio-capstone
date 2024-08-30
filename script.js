@@ -228,31 +228,44 @@ const form = document.querySelector('.contact-form');
 const emailMessage = document.querySelector('.email-message');
 const formspreeUrl = 'https://formspree.io/f/xrbzqrra';
 
-// Add CSS styles for messages
-const style = document.createElement('style');
-style.textContent = `
-  .sent { color: green; }
-  .error { color: red; }
-`;
-document.head.appendChild(style);
-
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
+// Function to save form data to local storage
+function saveFormData() {
   const name = document.getElementById('name').value;
   const phone = document.getElementById('phone').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
+
+  const formData = { name, phone, email, message };
+  localStorage.setItem('contactFormData', JSON.stringify(formData));
+}
+
+// Function to populate form fields with data from local storage
+function populateFormData() {
+  const savedData = localStorage.getItem('contactFormData');
+  if (savedData) {
+    const formData = JSON.parse(savedData);
+    document.getElementById('name').value = formData.name;
+    document.getElementById('phone').value = formData.phone;
+    document.getElementById('email').value = formData.email;
+    document.getElementById('message').value = formData.message;
+  }
+}
+
+// Populate form fields when the page loads
+populateFormData();
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const email = document.getElementById('email').value;
 
   if (email !== email.toLowerCase()) {
     emailMessage.textContent = 'Email must be in lowercase';
     emailMessage.classList.add('error');
     emailMessage.classList.remove('sent');
   } else {
-    const formData = new FormData();
-    formData.append('name', name);
-    formData.append('phone', phone);
-    formData.append('email', email);
-    formData.append('message', message);
+    saveFormData(); // Save form data to local storage
+
+    const formData = new FormData(form);
 
     try {
       const response = await fetch(formspreeUrl, {
@@ -268,13 +281,13 @@ form.addEventListener('submit', async (event) => {
         emailMessage.classList.add('sent');
         emailMessage.classList.remove('error');
         form.reset(); // Reset the form on success
+        localStorage.removeItem('contactFormData'); // Clear local storage on successful submission
       } else {
         emailMessage.textContent = 'Failed to send message';
         emailMessage.classList.add('error');
         emailMessage.classList.remove('sent');
       }
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error('Fetch error:', error);
       emailMessage.textContent = 'Error sending message';
       emailMessage.classList.add('error');
