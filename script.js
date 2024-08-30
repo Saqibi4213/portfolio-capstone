@@ -123,21 +123,26 @@ function showProjectPopup(screenshots, longDescription, technologies, liveLink, 
   liveLink2.classList.add('live-link');
   liveLink2.href = liveLink;
   liveLink2.target = '_blank';
-  const liveLinkIcon = document.createElement('i');
-  liveLinkIcon.classList.add('fas', 'fa-external-link-alt');
-  liveLink2.appendChild(liveLinkIcon);
-  liveLink2.appendChild(document.createTextNode(''));
-  screenshotSlider.appendChild(liveLink2);
+  liveLink2.innerHTML = `<i class="fas fa-external-link-alt"></i> Live Link`;
+  // Reset styles for liveLink2
+  liveLink2.style.borderBottom = 'none';
+  liveLink2.style.textDecoration = 'none';
 
   const sourceLink2 = document.createElement('a');
   sourceLink2.classList.add('source-link');
   sourceLink2.href = sourceLink;
   sourceLink2.target = '_blank';
-  const sourceLinkIcon = document.createElement('i');
-  sourceLinkIcon.classList.add('fab', 'fa-github');
-  sourceLink2.appendChild(sourceLinkIcon);
-  sourceLink2.appendChild(document.createTextNode(''));
-  screenshotSlider.appendChild(sourceLink2);
+  sourceLink2.innerHTML = `<i class="fab fa-github"></i> Source Code`;
+  // Reset styles for sourceLink2
+  sourceLink2.style.borderBottom = 'none';
+  sourceLink2.style.textDecoration = 'none';
+
+  const linkContainer = document.createElement('div');
+  linkContainer.classList.add('link-container');
+  linkContainer.style.border = 'none'; // Ensure no border on the container
+  linkContainer.appendChild(liveLink2);
+  linkContainer.appendChild(sourceLink2);
+  screenshotSlider.appendChild(linkContainer);
 }
 
 const projectsContainer = document.getElementById('projects');

@@ -1363,12 +1363,12 @@ nav {
   }
 
   .project-popup .popup-content {
-    background-color: #e7b30515;
+    background-color: #ed9f0210;
     backdrop-filter: blur(10px);
-    width: 30rem;
+    width: 35rem;
     height: 23rem;
     position: relative;
-    border: 0.125rem solid #f9a826;
+    border: 0.125rem solid #ED9D02;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -1389,8 +1389,9 @@ nav {
     padding: 13px;
     text-align: center;
     color: #fff;
-    font-size: 1rem;
-    padding-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-top: 2.4rem;
     line-height: 1.5;
     order: -1;
   }
@@ -1413,7 +1414,7 @@ nav {
   }
 
   .technologies span {
-    background-color: #00000081;
+    background-color: #ed9f0252;
     backdrop-filter: blur(10px);
     color: #fff;
     padding: 5px 10px;
@@ -1422,21 +1423,33 @@ nav {
     margin: 2px;
   }
 
+  .link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-top: 10px;
+  }
+
   .live-link,
   .source-link {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #ed9d02;
+    color: #fff;
     font-size: 15px;
-    margin: 10px;
+    margin: 1px;
+    border-bottom: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
   }
 
   .live-link i,
   .source-link i {
     margin-right: 5px;
+    gap: 2px;
   }
 
   .certificates h1 {
