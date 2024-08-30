@@ -1033,7 +1033,7 @@ nav {
   }
 
   #home-image {
-    width: 27.75rem;
+    width: 29.76rem;
     height: 28rem;
     top: 13.94rem;
     left: 24.88rem;
@@ -1042,7 +1042,7 @@ nav {
     align-items: center;
     justify-content: right;
     flex-wrap: wrap;
-    transform: translate(155%);
+    transform: translate(156%);
   }
 
   #home-title,
