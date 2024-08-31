@@ -1499,15 +1499,15 @@ nav {
 
   .contact-section h1 {
     width: 19.741rem;
-    top: 11.375rem;
+    top: 21.375rem;
     left: 21.403rem;
-    gap: 2rem;
+    gap: 1rem;
     font-family: 'Acme', sans-serif;
     font-size: 3rem;
     font-weight: 400;
     line-height: 3.7981rem;
     text-align: left;
-    transform: translate(-100%, -70%);
+    transform: translate(-100%, -300%);
     display: flex;
     flex-direction: row;
   }
@@ -1522,9 +1522,9 @@ nav {
     margin-bottom: 2rem;
     border-radius: 10rem;
     border: 0.1875rem solid #f9a826;
-    background-color: #78787852;
+    background-color: #787878;
     color: #fff;
-    transform: translate(-60%, -200%);
+    transform: translate(-60%, -1000%);
     padding-left: 2rem;
     display: flex;
     justify-content: center;
@@ -1539,10 +1539,10 @@ nav {
     gap: 0;
     border-radius: 2.7rem;
     border: 0.1875rem solid #f9a826;
-    background-color: #78787852;
+    background-color: #787878;
     padding-left: 2rem;
     padding-top: 2rem;
-    transform: translate(-60%, -40%);
+    transform: translate(-60%, -210%);
   }
 
   .submit-button {
@@ -1556,7 +1556,7 @@ nav {
     background-color: #f9a826;
     color: #fff;
     font-size: 0.813rem;
-    transform: translate(-75%, -80%);
+    transform: translate(-75%, -970%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1569,7 +1569,7 @@ nav {
     font-size: 1rem;
     font-weight: 400;
     font-family: 'actor', sans-serif;
-    transform: translate(-63%, 1000%);
+    transform: translate(-63%, -1130%);
   }
 
   .sent {
@@ -1578,7 +1578,7 @@ nav {
     font-size: 1rem;
     font-weight: 400;
     font-family: 'actor', Arial, sans-serif;
-    transform: translate(-63%, 1000%);
+    transform: translate(-63%, -1130%);
     overflow: hidden;
   }
 
@@ -1605,7 +1605,7 @@ nav {
     display: flex;
     align-items: flex-end;
     justify-content: right;
-    transform: translate(42%, -200%);
+    transform: translate(52%, -320%);
   }
 
   .footer {
