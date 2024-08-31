@@ -123,7 +123,7 @@ function showProjectPopup(screenshots, longDescription, technologies, liveLink, 
   liveLink2.classList.add('live-link');
   liveLink2.href = liveLink;
   liveLink2.target = '_blank';
-  liveLink2.innerHTML = `<i class="fas fa-external-link-alt"></i> Live Link`;
+  liveLink2.innerHTML = `<i class='fas fa-external-link-alt'></i> Live Link`;
   liveLink2.style.borderBottom = 'none';
   liveLink2.style.textDecoration = 'none';
 
@@ -131,7 +131,7 @@ function showProjectPopup(screenshots, longDescription, technologies, liveLink, 
   sourceLink2.classList.add('source-link');
   sourceLink2.href = sourceLink;
   sourceLink2.target = '_blank';
-  sourceLink2.innerHTML = `<i class="fab fa-github"></i> Source Code`;
+  sourceLink2.innerHTML = `<i class='fab fa-github'></i> Source Code`;
   sourceLink2.style.borderBottom = 'none';
   sourceLink2.style.textDecoration = 'none';
 
@@ -231,18 +231,18 @@ const form = document.querySelector('.contact-form');
 const emailMessage = document.querySelector('.email-message');
 const formspreeUrl = 'https://formspree.io/f/xrbzqrra';
 
-// Function to save form data to local storage
 function saveFormData() {
   const name = document.getElementById('name').value;
   const phone = document.getElementById('phone').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
-  const formData = { name, phone, email, message };
+  const formData = { 
+    name, phone, email, message 
+  };
   localStorage.setItem('contactFormData', JSON.stringify(formData));
 }
 
-// Function to populate form fields with data from local storage
 function populateFormData() {
   const savedData = localStorage.getItem('contactFormData');
   if (savedData) {
@@ -254,7 +254,6 @@ function populateFormData() {
   }
 }
 
-// Populate form fields when the page loads
 populateFormData();
 
 form.addEventListener('submit', async (event) => {
@@ -266,7 +265,7 @@ form.addEventListener('submit', async (event) => {
     emailMessage.classList.add('error');
     emailMessage.classList.remove('sent');
   } else {
-    saveFormData(); // Save form data to local storage
+    saveFormData();
 
     const formData = new FormData(form);
 
@@ -283,14 +282,15 @@ form.addEventListener('submit', async (event) => {
         emailMessage.textContent = 'Message sent successfully';
         emailMessage.classList.add('sent');
         emailMessage.classList.remove('error');
-        form.reset(); // Reset the form on success
-        localStorage.removeItem('contactFormData'); // Clear local storage on successful submission
+        form.reset();
+        localStorage.removeItem('contactFormData');
       } else {
         emailMessage.textContent = 'Failed to send message';
         emailMessage.classList.add('error');
         emailMessage.classList.remove('sent');
       }
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Fetch error:', error);
       emailMessage.textContent = 'Error sending message';
       emailMessage.classList.add('error');
