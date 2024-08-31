@@ -549,7 +549,7 @@ nav {
   font-weight: 400;
   line-height: 1.2663rem;
   text-align: left;
-  color: #ED9D02;
+  color: #ed9d02;
   transform: translate(20%, -1700%);
   display: flex;
   align-items: center;
@@ -777,7 +777,7 @@ nav {
 #name,
 #phone,
 #email {
-  width:  21.26 rem;
+  width: 21.26rem;
   height: 3.0331rem;
   top: 15.0162rem;
   left: 2.8093rem;
@@ -787,7 +787,7 @@ nav {
   border: 0.1875rem solid #f9a826;
   background-color: #787878;
   color: #fff;
-  transform: translate(10%, -250%);
+  transform: translate(30%, -250%);
   padding-left: 2rem;
   display: flex;
   justify-content: center;
@@ -795,7 +795,7 @@ nav {
 }
 
 #message {
-  width:  21.26 rem;
+  width: 21.26rem;
   height: 11.9775rem;
   top: 32.8493rem;
   left: 2.8093rem;
@@ -806,7 +806,7 @@ nav {
   color: #fff;
   padding-left: 2rem;
   padding-top: 2rem;
-  transform: translate(10%, -60%);
+  transform: translate(30%, -60%);
 }
 
 .submit-button {
@@ -819,7 +819,7 @@ nav {
   border: 0.1875rem solid #f9a826;
   background-color: #f9a826;
   color: #fff;
-  transform: translate(80%, -60%);
+  transform: translate(130%, -60%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -883,7 +883,7 @@ nav {
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(50%, 700%);
+  transform: translate(80%, 700%);
 }
 
 .sent {
@@ -895,7 +895,7 @@ nav {
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(20%, 730%);
+  transform: translate(40%, 730%);
   position: relative;
   gap: 1rem;
   padding-right: 0.3rem;
@@ -1059,7 +1059,7 @@ nav {
   }
 
   span .color {
-    color: #ED9D02;
+    color: #ed9d02;
   }
 
   #home-title {
@@ -1175,7 +1175,7 @@ nav {
     left: 54.544rem;
     gap: 0;
     margin-bottom: 4rem;
-    border: 0.3125rem solid #ed9D02;
+    border: 0.3125rem solid #ed9d02;
     transform: translate(170%, -250%);
   }
 
@@ -1366,7 +1366,7 @@ nav {
     width: 35rem;
     height: 23rem;
     position: relative;
-    border: 0.125rem solid #ed9D02;
+    border: 0.125rem solid #ed9d02;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -1760,15 +1760,15 @@ nav {
   #name,
   #phone,
   #email {
-    width:  21.26 rem;
+    width: 21.26rem;
     font-size: 1.4rem;
     transform: translate(50%, -300%);
   }
 
   #message {
-    width:  21.26 rem;
+    width: 21.26rem;
     font-size: 1.6em;
-    transform: translate(65%, -80%);
+    transform: translate(50%, -80%);
   }
 
   .email-message {
