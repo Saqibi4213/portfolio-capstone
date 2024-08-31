@@ -229,7 +229,7 @@ nav {
 }
 
 .home-content h1 {
-  width: 17.1rem;
+  width: 16.0625rem;
   top: 31.78rem;
   height: 2rem;
   left: 3.43rem;
@@ -246,7 +246,7 @@ nav {
 }
 
 #home-name {
-  width: 10.3rem;
+  width: 16.5rem;
   top: 36.54rem;
   left: 3.43rem;
   height: 1.9rem;
@@ -263,7 +263,7 @@ nav {
 }
 
 #home-role {
-  width: 16.56rem;
+  width: 16.5rem;
   top: 38.59rem;
   left: 3.43rem;
   gap: 1rem;
@@ -373,7 +373,7 @@ nav {
 }
 
 .social-icons li img {
-  width: 3.5rem;
+  width: 2.53rem;
   height: 1.51rem;
 }
 
