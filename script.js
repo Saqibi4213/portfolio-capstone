@@ -123,7 +123,8 @@ function showProjectPopup(screenshots, longDescription, technologies, liveLink, 
   liveLink2.classList.add('live-link');
   liveLink2.href = liveLink;
   liveLink2.target = '_blank';
-  liveLink2.innerHTML = `<i class='fas fa-external-link-alt'></i> Live Link`;
+  // eslint-disable-next-line quotes
+  liveLink2.innerHTML = `<i class="fas fa-external-link-alt"></i> Live Link`;
   liveLink2.style.borderBottom = 'none';
   liveLink2.style.textDecoration = 'none';
 
@@ -131,7 +132,8 @@ function showProjectPopup(screenshots, longDescription, technologies, liveLink, 
   sourceLink2.classList.add('source-link');
   sourceLink2.href = sourceLink;
   sourceLink2.target = '_blank';
-  sourceLink2.innerHTML = `<i class='fab fa-github'></i> Source Code`;
+  // eslint-disable-next-line quotes
+  sourceLink2.innerHTML = `<i class="fab fa-github"></i> Source Code`;
   sourceLink2.style.borderBottom = 'none';
   sourceLink2.style.textDecoration = 'none';
 
@@ -236,9 +238,8 @@ function saveFormData() {
   const phone = document.getElementById('phone').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
-
-  const formData = { 
-    name, phone, email, message 
+  const formData = {
+    name, phone, email, message,
   };
   localStorage.setItem('contactFormData', JSON.stringify(formData));
 }
