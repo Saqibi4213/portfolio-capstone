@@ -94,7 +94,7 @@ nav {
   position: fixed;
   top: 1rem;
   left: 2.25rem;
-  transform: translate(900%, 10%);
+  transform: translate(830%, 20%);
   animation: humberger-shine 2s ease-in-out infinite;
   border-radius: 100%;
   background-color: #16151400;
@@ -229,7 +229,7 @@ nav {
 }
 
 .home-content h1 {
-  width: 16.0625rem;
+  width: 17.0625rem;
   top: 31.78rem;
   height: 2rem;
   left: 3.43rem;
@@ -238,7 +238,7 @@ nav {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 3.16rem;
-  transform: translate(-8%, 1900%);
+  transform: translate(-13%, 1900%);
   display: flex;
   align-items: center;
   justify-content: left;
@@ -272,7 +272,7 @@ nav {
   font-weight: 400;
   line-height: 1.58rem;
   text-align: left;
-  transform: translate(-8.5%, 2550%);
+  transform: translate(-12%, 2550%);
   display: flex;
   align-items: center;
   justify-content: left;
@@ -289,7 +289,7 @@ nav {
   font-weight: 400;
   line-height: 1.58rem;
   text-align: left;
-  transform: translate(-5.5%, 519%);
+  transform: translate(-6%, 519%);
   display: flex;
   align-items: center;
   justify-content: left;
@@ -787,7 +787,7 @@ nav {
   border: 0.1875rem solid #f9a826;
   background-color: #787878;
   color: #fff;
-  transform: translate(30%, -250%);
+  transform: translate(10%, -250%);
   padding-left: 2rem;
   display: flex;
   justify-content: center;
@@ -806,7 +806,7 @@ nav {
   color: #fff;
   padding-left: 2rem;
   padding-top: 2rem;
-  transform: translate(30%, -60%);
+  transform: translate(10%, -60%);
 }
 
 .submit-button {
@@ -819,7 +819,7 @@ nav {
   border: 0.1875rem solid #f9a826;
   background-color: #f9a826;
   color: #fff;
-  transform: translate(130%, -60%);
+  transform: translate(80%, -60%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -883,7 +883,7 @@ nav {
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(80%, 700%);
+  transform: translate(50%, 700%);
 }
 
 .sent {
@@ -895,7 +895,7 @@ nav {
   text-align: center;
   justify-content: center;
   display: flex;
-  transform: translate(40%, 730%);
+  transform: translate(20%, 730%);
   position: relative;
   gap: 1rem;
   padding-right: 0.3rem;
