@@ -735,7 +735,7 @@ nav {
 
 .certificate-item h3 {
   opacity: 1;
-  transform: translate(45%, -2290%);
+  transform: translate(45%, -2350%);
   display: flex;
   flex-direction: row;
   margin-inline-start: 10%;
@@ -777,7 +777,7 @@ nav {
 #name,
 #phone,
 #email {
-  width: 21.2568rem;
+  width:  21.26 rem;
   height: 3.0331rem;
   top: 15.0162rem;
   left: 2.8093rem;
@@ -795,7 +795,7 @@ nav {
 }
 
 #message {
-  width: 21.2568rem;
+  width:  21.26 rem;
   height: 11.9775rem;
   top: 32.8493rem;
   left: 2.8093rem;
@@ -1760,15 +1760,15 @@ nav {
   #name,
   #phone,
   #email {
-    width: 20rem;
+    width:  21.26 rem;
     font-size: 1.4rem;
-    transform: translate(55%, -300%);
+    transform: translate(50%, -300%);
   }
 
   #message {
-    width: 20rem;
+    width:  21.26 rem;
     font-size: 1.6em;
-    transform: translate(55%, -80%);
+    transform: translate(65%, -80%);
   }
 
   .email-message {
@@ -1785,11 +1785,11 @@ nav {
 
   .error {
     color: red;
-    transform: translate(58%, 340%);
+    transform: translate(50%, 340%);
   }
 
   .sent {
-    transform: translate(58%, 340%);
+    transform: translate(50%, 340%);
   }
 
   .footer {
