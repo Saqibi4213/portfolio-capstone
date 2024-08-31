@@ -573,8 +573,9 @@ nav {
 }
 
 .view-screenshots {
-  transform: translate(332%, -2300%);
+  transform: translate(332%, -1900%);
   width: 7rem;
+  padding: 3px;
   background-color: #ed9d02;
   border-radius: 2rem;
   color: #fff;
@@ -605,12 +606,13 @@ nav {
   justify-content: center;
   align-items: center;
   z-index: 999;
+  transform: translate(-8%);
 }
 
 .project-popup .popup-content {
-  background-color: #e7b30515;
+  background-color: #e7b2059f;
   backdrop-filter: blur(10px);
-  width: 22rem;
+  width: 25rem;
   height: auto;
   position: relative;
   border: 0.125rem solid #f9a826;
@@ -634,6 +636,7 @@ nav {
   text-align: center;
   color: #fff;
   font-size: 1.2rem;
+  font-weight: 300;
   line-height: 1.5rem;
   order: -1;
 }
@@ -666,16 +669,25 @@ nav {
   margin: 2px;
 }
 
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-top: 10px;
+}
+
 .live-link,
 .source-link {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #ed9d02;
+  color: #fff;
+  font-weight: 300;
   font-size: 20px;
   margin: 10px;
-  width: 19rem;
+  width: 9rem;
   transition:
     color 0.3s ease,
     transform 0.3s ease;
