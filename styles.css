@@ -312,11 +312,6 @@ nav {
   transform: translate(-40%, 1900%);
 }
 
-
-.social-icons li a {
-  color: #968a20e8;
-}
-
 .social-icons li a:hover {
   transform: scale(1.2);
   background-color: #ed9f0279;
@@ -1135,11 +1130,11 @@ nav {
   .social-icons li a {
     color: #ccbb1fa9;
     transition: color 0.3s;
-}
+  }
 
-  .social-icons li a:hover {   
-    color:#a58e09;
-}
+  .social-icons li a:hover {
+    color:  #a58e09;
+  }
 
   .social-icons::before {
     content: "Follow Us";
