@@ -1139,9 +1139,9 @@ nav {
   .social-icons::before {
     content: "Follow Us";
     position: absolute;
-    top: -13rem;
+    top: -4rem;
     left: 22%;
-    transform: translateX(-50%);
+    transform: translateX(-10%, -10%);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 0.8rem;
@@ -1659,7 +1659,7 @@ nav {
     align-items: center;
     display: flex;
     justify-content: right;
-    transform: translate(9%, 2%);
+    transform: translate(29%, 2%);
     top: 1rem;
   }
 
@@ -1673,7 +1673,7 @@ nav {
     margin: 0;
     border-width: 2rem;
     right: 2rem;
-    transform: translate(630%, 20%);
+    transform: translate(730%, 20%);
   }
 
   .logo {
