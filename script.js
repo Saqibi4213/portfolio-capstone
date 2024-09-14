@@ -3,32 +3,32 @@ const navLinks = document.querySelector('.nav-links');
 const closeBtn = document.querySelector('.nav-links .close-btn');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    closeBtn.style.display = navLinks.classList.contains('show') ? 'block' : 'none';
+  navLinks.classList.toggle('show');
+  closeBtn.style.display = navLinks.classList.contains('show') ? 'block' : 'none';
 });
 
 closeBtn.addEventListener('click', () => {
-    navLinks.classList.remove('show');
-    closeBtn.style.display = 'none';
+  navLinks.classList.remove('show');
+  closeBtn.style.display = 'none';
 });
 
 const userData = {
-    homeImage: 'images/employe1.png',
-    homeTitle: 'Hello there, <span class="color">I`m</span>',
-    homeName: 'Mehria Saqibi',
-    homeRole: 'I`m a <span class="color">Junior web developer</span>',
-    homeDescription: 'I`m Mehria Saqibi, a passionate junior web developer with a computer science degree. I thrive on turning complex problems into elegant web solutions.',
-    aboutImage: 'images/undraw_portfolio_update_re_jqnp 1.png',
-    aboutTitle: 'About <span class="color">Me</span>',
-    aboutRole: '<span class="color">Junior Developer</span>',
-    aboutDescription: "I'm Mehria Saqibi, a junior web developer with a Computer Science degree. With two years of teaching experience, one year as a consultant in an NGO, and a year as a translator for RumieBuilD VOLUNTEER, I bring a diverse skill set including web development, problem-solving, and communication. I thrive on creating elegant web solutions and contributing to meaningful projects.",
-    socialIcons: [
-        { url: 'https://www.linkedin.com/in/mehria-saqibi-a386a41a1', icon: 'fab fa-linkedin' },
-        { url: 'https://github.com/Saqibi4213', icon: 'fab fa-github' },
-        { url: 'https://www.facebook.com/mehria.1377', icon: 'fab fa-facebook' },
-        { url: 'https://wa.me/93704079290', icon: 'fab fa-whatsapp' }
-    ],
-    skillIcons: ['images/html-5 2.png', 'images/css-3 2.png', 'images/java-script 2.png'],
+  homeImage: 'images/employe1.png',
+  homeTitle: 'Hello there, <span class="color">I`m</span>',
+  homeName: 'Mehria Saqibi',
+  homeRole: 'I`m a <span class="color">Junior web developer</span>',
+  homeDescription: 'I`m Mehria Saqibi, a passionate junior web developer with a computer science degree. I thrive on turning complex problems into elegant web solutions.',
+  aboutImage: 'images/undraw_portfolio_update_re_jqnp 1.png',
+  aboutTitle: 'About <span class="color">Me</span>',
+  aboutRole: '<span class="color">Junior Developer</span>',
+  aboutDescription: "I'm Mehria Saqibi, a junior web developer with a Computer Science degree. With two years of  teaching experience, one year as a consultant in an NGO, and a year as a translator for RumieBuilD VOLUNTEER, Ibring a diverse skill set including web development, problem-solving, and communication. I thrive on creatingelegant web solutions and contributing to meaningful projects.",
+  socialIcons: [
+      { url: 'https://www.linkedin.com/in/mehria-saqibi-a386a41a1', icon: 'fab fa-linkedin' },
+      { url: 'https://github.com/Saqibi4213', icon: 'fab fa-github' },
+      { url: 'https://www.facebook.com/mehria.1377', icon: 'fab fa-facebook' },
+      { url: 'https://wa.me/93704079290', icon: 'fab fa-whatsapp' },
+  ],
+  skillIcons: ['images/html-5 2.png', 'images/css-3 2.png', 'images/java-script 2.png'],
 };
 
 const homeSection = document.getElementById('home');
@@ -44,14 +44,14 @@ const socialIconsContainer = homeSection.querySelector('.social-icons');
 socialIconsContainer.innerHTML = '';
 
 userData.socialIcons.forEach(({ url, icon }) => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = url;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    a.innerHTML = `<i class="${icon}" aria-hidden="true"></i>`;
-    li.appendChild(a);
-    socialIconsContainer.appendChild(li);
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = url;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.innerHTML = `<i class="${icon}" aria-hidden="true"></i>`;
+  li.appendChild(a);
+  socialIconsContainer.appendChild(li);
 });
 
 aboutSection.querySelector('#about-image').src = userData.aboutImage;
@@ -61,7 +61,7 @@ aboutSection.querySelector('#about-description').textContent = userData.aboutDes
 
 const skillIcons = aboutSection.querySelectorAll('.about-skills li img');
 skillIcons.forEach((icon, index) => {
-    icon.src = `${userData.skillIcons[index]}`;
+  icon.src = `${userData.skillIcons[index]}`;
 });
 const projects = [
   {
