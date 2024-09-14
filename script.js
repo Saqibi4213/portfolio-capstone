@@ -23,10 +23,10 @@ const userData = {
   aboutRole: '<span class="color">Junior Developer</span>',
   aboutDescription: "I'm Mehria Saqibi, a junior web developer with a Computer Science degree. With two years of  teaching experience, one year as a consultant in an NGO, and a year as a translator for RumieBuilD VOLUNTEER, Ibring a diverse skill set including web development, problem-solving, and communication. I thrive on creatingelegant web solutions and contributing to meaningful projects.",
   socialIcons: [
-      { url: 'https://www.linkedin.com/in/mehria-saqibi-a386a41a1', icon: 'fab fa-linkedin' },
-      { url: 'https://github.com/Saqibi4213', icon: 'fab fa-github' },
-      { url: 'https://www.facebook.com/mehria.1377', icon: 'fab fa-facebook' },
-      { url: 'https://wa.me/93704079290', icon: 'fab fa-whatsapp' },
+    { url: 'https://www.linkedin.com/in/mehria-saqibi-a386a41a1', icon: 'fab fa-linkedin' },
+    { url: 'https://github.com/Saqibi4213', icon: 'fab fa-github' },
+    { url: 'https://www.facebook.com/mehria.1377', icon: 'fab fa-facebook' },
+    { url: 'https://wa.me/93704079290', icon: 'fab fa-whatsapp' },
   ],
   skillIcons: ['images/html-5 2.png', 'images/css-3 2.png', 'images/java-script 2.png'],
 };
