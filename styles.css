@@ -574,6 +574,10 @@ nav {
   justify-content: center;
 }
 
+.color {
+  color: #ed9d02;
+}
+
 .view-screenshots {
   transform: translate(332%, -1900%);
   width: 7rem;
@@ -1638,9 +1642,9 @@ nav {
     justify-content: center;
     align-items: center;
     top: 10rem;
-    padding: 2rem;
-    transform: translate(65%);
-    font-size: 1.4rem;
+    padding: 1rem;
+    transform: translate(66%);
+    font-size: 2.4rem;
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -1673,7 +1677,7 @@ nav {
     margin: 0;
     border-width: 2rem;
     right: 2rem;
-    transform: translate(730%, 20%);
+    transform: translate(700%, 20%);
   }
 
   .logo {
